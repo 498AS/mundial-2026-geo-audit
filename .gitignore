@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python (cuando lleguen scripts de ejecución)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.env.local
+
+# Node
+node_modules/
+package-lock.json
+
+# Local files
+*.local.md
+data/raw/
+data/responses/
+output/
+
+# Logs
+*.log
+
+# Cache & temp
+*.tmp
+.cache/
+.pytest_cache/
+
+# API keys (NUNCA commitear)
+*.key
+*credentials*
+config.local.*
