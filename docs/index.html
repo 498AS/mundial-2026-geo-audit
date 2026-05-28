@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundial 2026 · Auditoría GEO — Planteamiento</title>
+  <style>
+    /* ============================================================
+       MCZOOPA TEMPLATE · v2.0 — adaptado a Mundial 2026 GEO
+       ============================================================ */
+    @page {
+      size: A4;
+      margin: 2cm 1.5cm 2cm 1.5cm;
+      @top-left { content: string(doc-title); font-family: 'Georgia', serif; font-size: 8pt; color: #888; margin-bottom: 5mm; }
+      @top-right { content: string(doc-section); font-family: 'Georgia', serif; font-size: 8pt; color: #888; margin-bottom: 5mm; }
+      @bottom-center { content: "Página " counter(page) " de " counter(pages); font-family: 'Georgia', serif; font-size: 8pt; color: #999; margin-top: 5mm; }
+      @bottom-right { content: "ZOOPA · 498AS"; font-family: 'Georgia', serif; font-size: 7pt; color: #bbb; margin-top: 5mm; }
+    }
+    @page :first { @top-left { content: ""; } @top-right { content: ""; } @bottom-center { content: ""; } @bottom-right { content: ""; } }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif; font-size: 11pt; line-height: 1.5; color: #1a1a1a;
+      background: #fff; max-width: 210mm; margin: 0 auto; padding: 40px;
+      string-set: doc-title attr(data-title);
+    }
+
+    /* ===== COVER ===== */
+    .cover { page-break-after: always; min-height: 92vh; display: flex; flex-direction: column; justify-content: space-between; padding: 50px 20px 40px; }
+    .cover-eyebrow { font-size: 10pt; text-transform: uppercase; letter-spacing: 2px; color: #666; margin-bottom: 28px; }
+    .cover h1 { font-size: 40pt; font-weight: 400; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 20px; max-width: 95%; }
+    .cover h1 strong { font-weight: 700; }
+    .cover-subtitle { font-size: 14.5pt; font-style: italic; color: #555; max-width: 85%; margin-bottom: 30px; line-height: 1.4; }
+    .cover-headline-metric { background: #0a0a0a; color: #fff; padding: 28px 34px; margin: 20px 0 40px; max-width: 92%; }
+    .cover-headline-metric .metric-value { font-size: 46pt; font-weight: 700; letter-spacing: -2px; line-height: 1; }
+    .cover-headline-metric .metric-label { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; opacity: 0.7; }
+    .cover-footer { display: flex; justify-content: space-between; align-items: flex-end; padding-top: 25px; border-top: 1px solid #ccc; font-size: 10pt; }
+    .cover-author strong { display: block; font-size: 12pt; margin-bottom: 3px; }
+    .cover-date { text-align: right; color: #666; }
+    .cover-brand { font-size: 9pt; font-weight: 700; letter-spacing: 1.5px; color: #000; margin-top: 4px; }
+
+    /* ===== EXEC SUMMARY ===== */
+    .exec-summary { background: #f3f3f3; padding: 25px 30px; margin-bottom: 35px; border-radius: 2px; }
+    .exec-summary h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; font-weight: 700; color: #000; }
+    .exec-summary p { font-size: 11pt; margin-bottom: 10px; }
+    .exec-summary p:last-child { margin-bottom: 0; }
+    .exec-summary strong { color: #b30000; }
+
+    /* ===== SECTIONS ===== */
+    .section { margin-bottom: 34px; page-break-inside: avoid; }
+    .section-header { display: flex; align-items: baseline; margin-bottom: 18px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+    .section-number { font-size: 9pt; font-weight: 700; letter-spacing: 2px; color: #888; margin-right: 18px; text-transform: uppercase; white-space: nowrap; }
+    .section-number::before { content: "§ "; color: #ccc; }
+    .section-title { font-size: 15pt; font-weight: 600; flex: 1; string-set: doc-section content(); }
+    .section-tag { font-size: 8pt; color: #fff; background: #b30000; padding: 3px 10px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; }
+    p.body { margin-bottom: 12px; }
+    p.lead { font-size: 12pt; color: #333; margin-bottom: 16px; }
+
+    /* ===== BOXES ===== */
+    .problem-box, .solution-box, .insight-box { padding: 14px 18px; margin-bottom: 14px; font-size: 10pt; border-radius: 2px; line-height: 1.55; }
+    .problem-box { background: #fef3f3; }
+    .problem-box::before { content: "PROBLEMA"; display: inline-block; font-size: 8pt; font-weight: 700; letter-spacing: 1.5px; color: #b30000; background: #fff; padding: 2px 8px; margin-right: 10px; border-radius: 2px; }
+    .solution-box { background: #f0f8f0; }
+    .solution-box::before { content: "QUÉ HACEMOS"; display: inline-block; font-size: 8pt; font-weight: 700; letter-spacing: 1.5px; color: #1f6b1f; background: #fff; padding: 2px 8px; margin-right: 10px; border-radius: 2px; }
+    .insight-box { background: #fef9ed; }
+    .insight-box::before { content: "EN JUEGO"; display: inline-block; font-size: 8pt; font-weight: 700; letter-spacing: 1.5px; color: #8a5800; background: #fff; padding: 2px 8px; margin-right: 10px; border-radius: 2px; }
+
+    /* ===== TESIS LIST ===== */
+    .tesis-list { counter-reset: tesis; margin: 8px 0; }
+    .tesis { counter-increment: tesis; display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 10.5pt; align-items: flex-start; }
+    .tesis:last-child { border-bottom: none; }
+    .tesis::before { content: counter(tesis, decimal-leading-zero); font-weight: 700; font-family: 'Consolas', monospace; color: #b30000; font-size: 11pt; flex-shrink: 0; line-height: 1.4; }
+    .tesis strong { color: #000; }
+
+    /* ===== HEADLINES ===== */
+    .headline-group { margin-bottom: 16px; }
+    .headline-group h4 { font-size: 9pt; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin-bottom: 8px; font-weight: 700; }
+    .headline { background: #f5f5f5; padding: 11px 16px; margin-bottom: 7px; border-radius: 2px; font-size: 10.5pt; font-style: italic; color: #1a1a1a; }
+    .headline::before { content: "“"; color: #b30000; font-weight: 700; font-style: normal; margin-right: 2px; }
+    .headline::after { content: "”"; color: #b30000; font-weight: 700; font-style: normal; }
+
+    /* ===== TABLES ===== */
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 9.5pt; }
+    th { background: #1a1a1a; color: #fff; text-align: left; padding: 9px 12px; font-weight: 500; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.5px; }
+    td { padding: 9px 12px; border-bottom: 1px solid #eaeaea; vertical-align: top; }
+    tr:nth-child(even) { background: #fafafa; }
+    .td-label { font-weight: 600; }
+    tr.highlight { background: #f0f8f0 !important; }
+    tr.highlight td { font-weight: 600; }
+
+    /* ===== CHECKLIST ===== */
+    .checklist { list-style: none; margin: 14px 0; }
+    .checklist li { display: flex; align-items: flex-start; margin-bottom: 9px; font-size: 10pt; }
+    .checkbox { width: 14px; height: 14px; border: 1.5px solid #333; margin-right: 11px; margin-top: 3px; flex-shrink: 0; border-radius: 2px; }
+
+    /* ===== BAR CHART ===== */
+    .bar-chart { margin: 18px 0; }
+    .bar-chart .bar-row { display: grid; grid-template-columns: 160px 1fr 50px; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 9.5pt; }
+    .bar-chart .bar-label { text-align: right; color: #333; font-weight: 500; }
+    .bar-chart .bar-track { background: #f0f0f0; height: 18px; border-radius: 2px; overflow: hidden; }
+    .bar-chart .bar-fill { height: 100%; background: #1a1a1a; width: var(--pct, 0%); }
+    .bar-chart .bar-fill.accent { background: #b30000; }
+    .bar-chart .bar-fill.positive { background: #1f6b1f; }
+    .bar-chart .bar-value { font-family: 'Consolas', monospace; font-weight: 700; font-size: 9pt; color: #333; }
+
+    /* ===== TIMELINE ===== */
+    .timeline { margin: 18px 0; }
+    .timeline-item { padding: 12px 16px; margin-bottom: 9px; background: #f7f7f7; border-radius: 2px; }
+    .timeline-date { font-size: 9pt; font-weight: 700; color: #b30000; letter-spacing: 1px; text-transform: uppercase; }
+    .timeline-content { font-size: 10pt; margin-top: 5px; line-height: 1.5; }
+    .timeline-content strong { color: #000; }
+
+    /* ===== COMPARE GRID ===== */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 15px 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+    .grid-item { padding: 12px 14px; background: #fafafa; font-size: 9.5pt; border-radius: 2px; line-height: 1.5; }
+    .grid-item strong { display: block; font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #b30000; margin-bottom: 4px; }
+
+    .metrics-box { background: #f3f3f3; padding: 18px 24px; margin: 16px 0; border-radius: 2px; }
+    .metric-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 10pt; border-bottom: 1px dotted #ccc; }
+    .metric-row:last-child { border-bottom: none; }
+    .metric-row .mv { font-weight: 700; font-family: 'Consolas', monospace; }
+
+    .delta { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 2px; font-size: 8.5pt; font-weight: 700; font-family: 'Consolas', monospace; }
+    .delta.positive { background: #ddf4dd; color: #1f6b1f; }
+    .delta.positive::before { content: "★ "; margin-right: 3px; }
+
+    .note { font-size: 9pt; color: #888; font-style: italic; margin-top: 8px; }
+    .page-break { page-break-before: always; }
+    .final-section { background: #f3f3f3; padding: 22px 25px; margin-top: 30px; border-radius: 2px; }
+    .final-section h3 { font-size: 13pt; margin-bottom: 12px; }
+
+    /* ===== FOOTER ===== */
+    footer { margin-top: 50px; padding-top: 25px; border-top: 2px solid #000; }
+    .footer-brands { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .footer-brand { font-size: 14pt; font-weight: 700; color: #000; }
+    .footer-brand-url { font-size: 9pt; color: #666; margin-left: 10px; }
+    .footer-info { display: flex; justify-content: space-between; font-size: 8pt; color: #999; }
+    .footer-info strong { color: #666; }
+    .footer-info a { color: #666; text-decoration: none; }
+    .footer-note { margin-top: 18px; padding-top: 10px; font-size: 8pt; color: #999; text-align: center; }
+    .footer-note .internal { font-size: 7pt; }
+
+    @media print { body { padding: 0; } .section { page-break-inside: avoid; } }
+  </style>
+</head>
+<body data-title="Mundial 2026 · Auditoría GEO">
+
+  <!-- ====== COVER ====== -->
+  <div class="cover">
+    <div>
+      <div class="cover-eyebrow">Propuesta · Observatorio fan-facing comparativo</div>
+      <h1>Mundial 2026:<br>lo que las IAs<br>les dicen a los <strong>hinchas</strong></h1>
+      <div class="cover-subtitle">Cómo ChatGPT y Gemini influyen en la opinión y las decisiones de compra de millones de personas alrededor del Mundial FIFA 2026.</div>
+    </div>
+
+    <div class="cover-headline-metric">
+      <div class="metric-value">2.400</div>
+      <div class="metric-label">prompts · 16 personas · 4 idiomas · 2 motores IA</div>
+    </div>
+
+    <div class="cover-footer">
+      <div class="cover-author">
+        <strong>Carlos Ortet</strong>
+        <span>Strategy Lead · CEO Zoopa · Director 498A</span>
+      </div>
+      <div class="cover-date">
+        <div>Mayo 2026 · v2.2</div>
+        <div class="cover-brand">ZOOPA · 498AS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== EXEC SUMMARY ====== -->
+  <div class="exec-summary">
+    <h2>Resumen Ejecutivo</h2>
+    <p><strong>El problema:</strong> las IAs generativas ya son la nueva capa de descubrimiento e influencia. Cientos de millones de personas le preguntan a ChatGPT y Gemini quién ganará, si vale la pena viajar o qué entrada comprar — y esas respuestas, que no son neutrales, moldean opinión y consumo. Nadie lo está midiendo.</p>
+    <p><strong>Qué hacemos:</strong> el primer mapa sistemático de cómo las IAs representan el Mundial 2026 a hinchas de 16 países en 4 idiomas. No auditamos una marca-empresa: auditamos al propio Mundial y a las IAs como nuevo intermediario de opinión y compra.</p>
+    <p><strong>Output:</strong> informe periodístico publicable + dataset abierto + plan de difusión con earned media tier-1 y lead generation B2B hacia los sponsors FIFA.</p>
+  </div>
+
+  <!-- ====== §1 TESIS ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 1</div>
+      <div class="section-title">Tesis a validar</div>
+      <div class="section-tag">Core</div>
+    </div>
+    <div class="tesis-list">
+      <div class="tesis"><strong>La IA tiene favorito — pero distinto en cada motor.</strong> ChatGPT y Gemini no coinciden en quién ganará. Las divergencias delatan sesgos de entrenamiento (recencia, peso del inglés, narrativas anglosajonas).</div>
+      <div class="tesis"><strong>La IA discrimina por origen del usuario.</strong> La recomendación de viajar cambia según el país desde el que se pregunta — no siempre por razones objetivas. Sesgo de "afinidad cultural" no declarado.</div>
+      <div class="tesis"><strong>El idioma es una variable oculta de sesgo.</strong> Misma pregunta en ES, EN, PT, FR → respuestas distintas. Ni FIFA ni sponsors ni broadcasters lo miden hoy.</div>
+      <div class="tesis"><strong>La IA prefiere USA como sede</strong> sobre México y Canadá. Sesgo geográfico hacia sedes anglófonas, con implicaciones para hoteles, aerolíneas y turismo.</div>
+      <div class="tesis"><strong>La IA es narradora, no predictora.</strong> Sus pronósticos no se alinean con cuotas ni scouting — pero su narrativa puede influir más que los datos.</div>
+      <div class="tesis"><strong>Selecciones sobre- e infra-representadas.</strong> Equipos sobre-mencionados por "narrativa dominante"; otros desaparecen aunque sean candidatos legítimos.</div>
+      <div class="tesis"><strong>Sponsors oficiales pierden share-of-voice.</strong> Al preguntar "¿qué cerveza/tarjeta/coche?", los FIFA Partners (Bud, Visa, Hyundai) pueden tener menos cuota que competidores → ambush marketing implícito.</div>
+      <div class="tesis"><strong>Puntos ciegos en temas controvertidos.</strong> Dynamic pricing, Aramco, visas USA, FIFA Marketplace 30% — ¿la IA los menciona, critica u oculta?</div>
+      <div class="tesis"><strong>El género y la demografía cambian la respuesta.</strong> Mujer vs hombre vs familia vs grupos — recomendaciones, sedes y partidos distintos sobre el mismo Mundial.</div>
+      <div class="tesis"><strong>La IA no entiende el nuevo modelo de negocio FIFA.</strong> No menciona dynamic pricing, no diferencia free-to-air de pay-TV, no explica FIFA Marketplace ni hospitality tiers.</div>
+    </div>
+  </div>
+
+  <!-- ====== §2 EL ESTUDIO EN BREVE ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 2</div>
+      <div class="section-title">El estudio en breve</div>
+    </div>
+    <p class="lead"><strong>Objetivo.</strong> Medir cómo las IAs generativas (ChatGPT y Gemini) están influyendo en la opinión y las decisiones de compra de millones de personas respecto al Mundial FIFA 2026.</p>
+    <p class="body"><strong>Por qué ahora.</strong> Antes la gente buscaba en Google y leía a un medio; hoy le pregunta directamente a una IA <em>"¿quién ganará?"</em>, <em>"¿vale la pena viajar?"</em>, <em>"¿qué entradas compro?"</em>, <em>"¿qué cerveza/tarjeta/coche?"</em>. La respuesta de la IA moldea —silenciosamente— opinión y consumo.</p>
+    <div class="problem-box">Esas respuestas no son neutrales. Dependen del motor, del idioma y del país del que pregunta. La IA tiene favoritos, sesgos de afinidad cultural y puntos ciegos que <strong>nadie está midiendo</strong> — ni la FIFA, ni los sponsors, ni los broadcasters.</div>
+    <div class="solution-box">Construimos el <strong>primer mapa sistemático</strong> de cómo las IAs representan el Mundial 2026 a hinchas de 16 países, en 4 idiomas. Auditamos al propio Mundial como fenómeno global y a las IAs como nuevo intermediario de opinión y consumo.</div>
+    <div class="insight-box">En juego: viajes internacionales, entradas (dynamic pricing por encima de $32.000 la final), hospedaje, merchandising, apuestas, suscripciones de streaming y la elección entre marcas sponsor y sus competidores. <strong>Un mercado de decenas de miles de millones de dólares mediado, cada vez más, por una IA que responde distinto según quién pregunte.</strong></div>
+  </div>
+
+  <!-- ====== §3 TITULARES ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 3</div>
+      <div class="section-title">Titulares que puede generar el estudio</div>
+    </div>
+    <p class="note" style="margin-bottom:14px;">Ejemplos ilustrativos. Los titulares definitivos se construyen con los datos reales (hipótesis H6).</p>
+
+    <div class="headline-group">
+      <h4>Predicción y favoritos</h4>
+      <div class="headline">ChatGPT y Gemini no se ponen de acuerdo en quién gana el Mundial 2026.</div>
+      <div class="headline">ChatGPT no apostaría su dinero por su propia predicción del Mundial.</div>
+    </div>
+    <div class="headline-group">
+      <h4>Viaje y turismo</h4>
+      <div class="headline">La IA le recomienda a un francés viajar al Mundial — pero a un argentino le dice que se quede en casa.</div>
+      <div class="headline">USA, México o Canadá: cómo la IA empuja al turista hacia un anfitrión sobre los otros.</div>
+    </div>
+    <div class="headline-group">
+      <h4>Sesgo y discriminación algorítmica</h4>
+      <div class="headline">Te tratan distinto: el sesgo de las IAs con los hinchas según su país.</div>
+      <div class="headline">Las IAs responden distinto en español, inglés y portugués sobre el mismo Mundial.</div>
+    </div>
+    <div class="headline-group">
+      <h4>Sponsors y marcas — hook B2B</h4>
+      <div class="headline">Los sponsors pagan 500 millones, pero ChatGPT recomienda a sus competidores.</div>
+      <div class="headline">Pides una cerveza para el Mundial y la IA no te dice Budweiser.</div>
+    </div>
+    <div class="headline-group">
+      <h4>Controversias</h4>
+      <div class="headline">Dynamic pricing, Aramco, visados: lo que las IAs callan sobre el Mundial 2026.</div>
+    </div>
+  </div>
+
+  <!-- ====== §4 PLAN DE DIFUSIÓN ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 4</div>
+      <div class="section-title">Plan de difusión</div>
+      <div class="section-tag">Go-to-market</div>
+    </div>
+    <p class="body">Objetivo: convertir el informe en <strong>earned media tier-1</strong> y en <strong>lead generation B2B</strong> (sponsors FIFA → GEORadar). Cuatro fases.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 0 · Pre-lanzamiento (embargo, ~2 semanas antes)</div>
+        <div class="timeline-content"><strong>Presentación a la FIFA</strong> — briefing ejecutivo de cortesía institucional antes de publicar (partner, no adversario). <strong>Briefing selectivo a sponsors clave</strong> (Coca-Cola, Visa, Adidas) con su share-of-voice individual → puerta GEORadar. <strong>Cierre de 2 media partners</strong> bajo embargo: 1 nacional + 1 internacional tier-1.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 1 · Lanzamiento (día 0)</div>
+        <div class="timeline-content"><strong>Rueda de prensa / evento</strong> en Madrid (presencial + streaming), posible co-sede con think tank para autoridad. <strong>Nota de prensa multi-idioma</strong> (ES·EN·PT·FR). <strong>Publicación simultánea</strong>: informe + microsite + dataset abierto. Exclusivas coordinadas de los partners de embargo.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 2 · Amplificación editorial (semanas 1-3)</div>
+        <div class="timeline-content"><strong>Artículos escalonados</strong> en medios partner por mercado/idioma. Infografías shareables + hilos en X y LinkedIn. Vídeo explicativo + podcast. <strong>Versiones localizadas</strong>: el ángulo "tu país" rinde en cada mercado.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Fase 3 · Long tail + B2B (mes 1-2)</div>
+        <div class="timeline-content"><strong>Outreach directo a los 7 FIFA Partners</strong> con su informe individual → conversión GEORadar. Ponencias en conferencias (GEO, marketing deportivo, AI ethics). <strong>Segunda ola durante el torneo</strong> (jun-jul): "¿la IA acertó?" — re-run de predicciones vs resultados reales = segundo ciclo de prensa.</div>
+      </div>
+    </div>
+
+    <h4 style="font-size:9pt;text-transform:uppercase;letter-spacing:1.5px;color:#888;margin:18px 0 4px;">Media partners candidatos</h4>
+    <table>
+      <tr><th>Ámbito</th><th>Medios objetivo</th><th>Ángulo</th></tr>
+      <tr><td class="td-label">Nacional (ES)</td><td>El País · La Vanguardia · Marca · AS · El Confidencial · Xataka · Newtral/Maldita</td><td>Deporte + tech + verificación IA</td></tr>
+      <tr><td class="td-label">Int. deporte</td><td>The Athletic · BBC Sport · ESPN · L'Équipe · Folha / Globo Esporte</td><td>Predicción, viaje, sesgo por país</td></tr>
+      <tr><td class="td-label">Int. business</td><td>Financial Times · Bloomberg · Forbes</td><td>Sponsors SOV, modelo de negocio FIFA</td></tr>
+      <tr><td class="td-label">Int. tech/IA</td><td>Wired · MIT Tech Review · Rest of World · The Guardian</td><td>Sesgo algorítmico por geografía e idioma</td></tr>
+    </table>
+    <div class="metrics-box">
+      <div class="metric-row"><span>Menciones en prensa tier-1 (objetivo)</span><span class="mv">10+ medios</span></div>
+      <div class="metric-row"><span>Earned media value (EMV)</span><span class="mv">a medir</span></div>
+      <div class="metric-row"><span>Leads B2B (sponsors / broadcasters)</span><span class="mv">KPI primario</span></div>
+      <div class="metric-row"><span>Descargas del dataset abierto</span><span class="mv">tracking microsite</span></div>
+    </div>
+  </div>
+
+  <!-- ====== §5 METODOLOGÍA ====== -->
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">Sección 5</div>
+      <div class="section-title">Marco metodológico</div>
+    </div>
+    <p class="body">No auditamos marca-empresa. Auditamos cómo <strong>ChatGPT y Gemini representan el torneo a hinchas de distintos países</strong>. Sobre un backbone de 3 prompts CORE comparables por persona se añaden capas (funnel × tema × entidades × edge cases). Mide sesgo IA por origen, idioma, motor y demografía.</p>
+    <div class="grid-3">
+      <div class="grid-item"><strong>Volumen</strong>150 prompts × 16 personas = 2.400 seed unique per motor</div>
+      <div class="grid-item"><strong>Motores</strong>ChatGPT 4o + Gemini 2.5 Pro (3 runs → 14.400 calls)</div>
+      <div class="grid-item"><strong>Idiomas</strong>ES · EN · PT-BR · FR (+ 4 personas bilingües)</div>
+    </div>
+    <table>
+      <tr><th>Variante ×3 por seed</th><th>Función</th></tr>
+      <tr><td class="td-label">(a) Neutra</td><td>Formulación estándar — baseline</td></tr>
+      <tr><td class="td-label">(b) Personalizada</td><td>"Desde mi país" con contexto persona — detecta personalización</td></tr>
+      <tr><td class="td-label">(c) Coloquial</td><td>Jerga local / informal — detecta fragility semántica</td></tr>
+    </table>
+    <table>
+      <tr><th>Ventana temporal</th><th>Fechas</th><th>Actividad</th></tr>
+      <tr><td class="td-label">Pre-evento</td><td>mar–may 2026</td><td>Auditoría inicial = baseline</td></tr>
+      <tr><td class="td-label">Durante</td><td>jun–jul 2026</td><td>Monitorización bi-semanal</td></tr>
+      <tr><td class="td-label">Post</td><td>ago 2026</td><td>Recalibración + cierre del informe</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== §6 PERSONAS ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 6</div>
+      <div class="section-title">Personas</div>
+    </div>
+    <table>
+      <tr><th>Tier</th><th>Personas</th><th>Función</th></tr>
+      <tr><td class="td-label">T1 · 9</td><td>Mateo AR · Beatriz BR · Pablo ES · Thomas FR · James UK · Stefan DE · Lupita MX-host · Mike USA-host · Sofía Miami-host</td><td>Fan mainstream — máximo volumen de búsqueda</td></tr>
+      <tr><td class="td-label">T2 · 5</td><td>Émilie CAN-host · Mehdi MAR · Aisha RSA-bettor · Carlos COL-casual · Diego URY-crítico</td><td>Variantes de segmento — ángulos transversales</td></tr>
+      <tr><td class="td-label">T3 B2B · 2</td><td>Patricia (VP Sponsorship FIFA) · Eduardo (CMO Sportsbook)</td><td>Cierre comercial — ángulo B2B</td></tr>
+    </table>
+    <div class="problem-box"><strong>Hueco identificado:</strong> no hay persona AFC (Asia). El AFC mueve audiencias masivas (Japón, Corea, Arabia Saudí) + 2 debutantes (Uzbekistán, Jordania). Recomendado añadir 1 (p. ej. Yuki Tanaka, Tokio). Coste marginal: ~$10 API.</div>
+  </div>
+
+  <!-- ====== §7 HIPÓTESIS ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 7</div>
+      <div class="section-title">Hipótesis</div>
+    </div>
+    <table>
+      <tr><th>#</th><th>Pregunta que resuelve</th><th>KPI principal</th></tr>
+      <tr><td class="td-label">H1</td><td>¿Quién ganará el Mundial según la IA?</td><td>Position Score · SOV</td></tr>
+      <tr><td class="td-label">H2</td><td>¿Recomienda la IA viajar? ¿A quién sí, a quién no?</td><td>Sentiment · Premise Validation</td></tr>
+      <tr><td class="td-label">H3</td><td>¿Cuál host recomienda más: México, USA o Canadá?</td><td>Attribute Affinity · Co-branding</td></tr>
+      <tr><td class="td-label">H4</td><td>¿Cambia la respuesta IA según el origen del fan?</td><td>Diff cross-persona</td></tr>
+      <tr><td class="td-label">H5</td><td>¿La IA acierta? Predicción vs cuotas reales</td><td>Benchmark externo</td></tr>
+      <tr><td class="td-label">H6</td><td>¿Qué titulares y storyboard salen para el informe?</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== §8 ESTRUCTURA PROMPTS ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 8</div>
+      <div class="section-title">Estructura de los 150 prompts por persona</div>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">A · CORE comparable</div><div class="bar-track"><div class="bar-fill accent" style="--pct: 30%"></div></div><div class="bar-value">15</div></div>
+      <div class="bar-row"><div class="bar-label">B · Funnel stages</div><div class="bar-track"><div class="bar-fill" style="--pct: 64%"></div></div><div class="bar-value">32</div></div>
+      <div class="bar-row"><div class="bar-label">C · Áreas temáticas</div><div class="bar-track"><div class="bar-fill" style="--pct: 100%"></div></div><div class="bar-value">50</div></div>
+      <div class="bar-row"><div class="bar-label">D · Entidades específicas</div><div class="bar-track"><div class="bar-fill" style="--pct: 50%"></div></div><div class="bar-value">25</div></div>
+      <div class="bar-row"><div class="bar-label">E · Sentiment-loaded</div><div class="bar-track"><div class="bar-fill" style="--pct: 30%"></div></div><div class="bar-value">15</div></div>
+      <div class="bar-row"><div class="bar-label">F · Edge cases</div><div class="bar-track"><div class="bar-fill" style="--pct: 16%"></div></div><div class="bar-value">8</div></div>
+      <div class="bar-row"><div class="bar-label">G · AIO triggers</div><div class="bar-track"><div class="bar-fill positive" style="--pct: 10%"></div></div><div class="bar-value">5</div></div>
+    </div>
+    <p class="note">Cada persona adapta sus 150 prompts a su idioma, perfil e intereses. Los 15 CORE son comparables cross-persona (backbone narrativo).</p>
+  </div>
+
+  <!-- ====== §9 OUTPUT ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 9</div>
+      <div class="section-title">Output esperado</div>
+    </div>
+    <div class="grid-3">
+      <div class="grid-item"><strong>Informe periodístico</strong>Long-read + 8-12 titulares + 4-6 infografías + quotes citables</div>
+      <div class="grid-item"><strong>Dataset publicable</strong>2.400 prompts + respuestas IA + KPIs en JSON + Notebook</div>
+      <div class="grid-item"><strong>Press release</strong>Comunicado + outreach a medios (ver §4)</div>
+    </div>
+  </div>
+
+  <!-- ====== §10 COSTES ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 10</div>
+      <div class="section-title">Costes</div>
+    </div>
+    <table>
+      <tr><th>Escenario</th><th>Motores</th><th>Coste API</th></tr>
+      <tr><td class="td-label">A · Light</td><td>ChatGPT + Gemini · 1 run</td><td>~$38</td></tr>
+      <tr class="highlight"><td class="td-label">B · Standard <span class="delta positive">recomendado</span></td><td>ChatGPT + Gemini · 3 runs · caching</td><td>~$70</td></tr>
+      <tr><td class="td-label">C · Robusto</td><td>+ Claude Sonnet 4.6</td><td>~$100</td></tr>
+      <tr><td class="td-label">D · Canon GEORadar</td><td>+ Claude + Perplexity + AIO</td><td>~$1.565</td></tr>
+    </table>
+    <div class="metrics-box">
+      <div class="metric-row"><span>LLM API (Escenario B)</span><span class="mv">$50–120</span></div>
+      <div class="metric-row"><span>QA humana (sample 5%)</span><span class="mv">$200–500</span></div>
+      <div class="metric-row"><span>Total coste hard estimado</span><span class="mv">$250–620</span></div>
+      <div class="metric-row"><span>Estudio Nielsen/YouGov equivalente</span><span class="mv">$30K–80K</span></div>
+    </div>
+    <p class="note">El ROI por dólar invertido es 100–1.000× superior a un estudio de panel equivalente, gracias a la infraestructura GEORadar.</p>
+  </div>
+
+  <!-- ====== §11 DECISIONES PENDIENTES ====== -->
+  <div class="final-section">
+    <h3>Decisiones pendientes</h3>
+    <ul class="checklist">
+      <li><div class="checkbox"></div>Validar v2.2 con el equipo Zoopa</li>
+      <li><div class="checkbox"></div>Decidir si se añade persona AFC (Japón / Arabia / Uzbekistán)</li>
+      <li><div class="checkbox"></div>Decidir si se incluye AIO en el stack (Escenario D)</li>
+      <li><div class="checkbox"></div>Definir tooling de orquestación y caching</li>
+      <li><div class="checkbox"></div>Difusión: confirmar interlocutor FIFA para el briefing previo</li>
+      <li><div class="checkbox"></div>Difusión: shortlist y contacto de media partners (1 nacional + 1 internacional)</li>
+      <li><div class="checkbox"></div>Difusión: decidir formato del evento de lanzamiento</li>
+    </ul>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-brands">
+      <div><span class="footer-brand">ZOOPA</span> <span class="footer-brand-url">zoopa.es</span></div>
+      <div><span class="footer-brand">498AS</span> <span class="footer-brand-url">498as.com</span></div>
+    </div>
+    <div class="footer-info">
+      <div>
+        <strong>ZOOPA</strong> — Innovation &amp; Creative Technology<br>
+        <a href="https://zoopa.es">zoopa.es</a> · carlos.ortet@zoopa.es
+      </div>
+      <div style="text-align: right;">
+        <strong>498AS Innovation Lab</strong> — AI R&amp;D Division<br>
+        <a href="https://498as.com">498as.com</a> · <a href="https://georadar.app">georadar.app</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      Mundial 2026 · Planteamiento Auditoría GEO · v2.2 · mayo 2026<br>
+      <span class="internal">Documento interno — Ecosistema ZOOPA/498AS · Marca observada: Mundial FIFA 2026 · Motores ChatGPT + Gemini · Idiomas ES·EN·PT·FR</span>
+    </div>
+  </footer>
+
+</body>
+</html>
