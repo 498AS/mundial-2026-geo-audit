@@ -111,7 +111,7 @@
     .timeline-content { font-size: 10pt; margin-top: 5px; line-height: 1.5; }
     .timeline-content strong { color: #000; }
 
-    /* ===== COMPARE GRID ===== */
+    /* ===== GRIDS ===== */
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 15px 0; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
     .grid-item { padding: 12px 14px; background: #fafafa; font-size: 9.5pt; border-radius: 2px; line-height: 1.5; }
@@ -131,6 +131,38 @@
     .final-section { background: #f3f3f3; padding: 22px 25px; margin-top: 30px; border-radius: 2px; }
     .final-section h3 { font-size: 13pt; margin-bottom: 12px; }
 
+    /* ===== PERSONA CARDS (anexo) ===== */
+    .annex-intro { background: #f3f3f3; padding: 18px 24px; border-radius: 2px; margin-bottom: 24px; font-size: 10pt; line-height: 1.55; }
+    .persona-card { border: 1px solid #ddd; border-radius: 2px; padding: 20px 22px; margin-bottom: 18px; page-break-inside: avoid; }
+    .persona-card.b2b { border-color: #b30000; }
+    .persona-card-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5px solid #1a1a1a; padding-bottom: 9px; margin-bottom: 12px; }
+    .persona-card-head h3 { font-size: 14pt; font-weight: 700; letter-spacing: -0.3px; }
+    .persona-badges { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+    .persona-badge { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 2px; font-weight: 700; }
+    .persona-badge.id { background: #1a1a1a; color: #fff; }
+    .persona-badge.id.b2b { background: #b30000; }
+    .persona-badge.tier { background: #f0f0f0; color: #555; }
+    .persona-desc-it { font-style: italic; color: #444; font-size: 10pt; margin-bottom: 12px; line-height: 1.5; }
+    .persona-demo { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; background: #f7f7f7; padding: 10px 14px; border-radius: 2px; margin-bottom: 12px; }
+    .persona-demo div { font-size: 8.5pt; }
+    .persona-demo div strong { display: block; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 2px; }
+    .persona-ficha p { font-size: 9.5pt; margin-bottom: 7px; line-height: 1.5; }
+    .persona-ficha p strong { color: #b30000; }
+    .persona-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0; }
+    .persona-cols h5 { font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; border-bottom: 1px solid #ddd; padding-bottom: 3px; color: #333; }
+    .persona-cols ul { list-style: none; }
+    .persona-cols li { font-size: 9pt; padding: 2px 0 2px 12px; position: relative; line-height: 1.4; }
+    .persona-cols li::before { content: "·"; position: absolute; left: 3px; color: #b30000; font-weight: 700; }
+    .persona-sub { font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: 700; margin: 12px 0 6px; }
+    .persona-pain { background: #fef3f3; padding: 10px 14px; border-radius: 2px; margin-top: 6px; }
+    .persona-pain ul { list-style: none; }
+    .persona-pain li { font-size: 9pt; padding: 2px 0 2px 14px; position: relative; }
+    .persona-pain li::before { content: "!"; position: absolute; left: 3px; color: #b30000; font-weight: 700; }
+    .persona-prompts { background: #f5f5f5; padding: 12px 16px; border-radius: 2px; margin-top: 10px; }
+    .persona-prompts ol { margin-left: 16px; }
+    .persona-prompts li { font-size: 9pt; margin-bottom: 4px; font-family: 'Consolas','Monaco',monospace; line-height: 1.4; }
+    .core-tag { background:#b30000; color:#fff; font-size:6.5pt; padding:1px 5px; margin-right:5px; letter-spacing:1px; font-family:'Georgia',serif; font-weight:700; vertical-align:middle; }
+
     /* ===== FOOTER ===== */
     footer { margin-top: 50px; padding-top: 25px; border-top: 2px solid #000; }
     .footer-brands { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
@@ -142,7 +174,7 @@
     .footer-note { margin-top: 18px; padding-top: 10px; font-size: 8pt; color: #999; text-align: center; }
     .footer-note .internal { font-size: 7pt; }
 
-    @media print { body { padding: 0; } .section { page-break-inside: avoid; } }
+    @media print { body { padding: 0; } .section, .persona-card { page-break-inside: avoid; } }
   </style>
 </head>
 <body data-title="Mundial 2026 · Auditoría GEO">
@@ -248,10 +280,30 @@
     </div>
   </div>
 
-  <!-- ====== §4 PLAN DE DIFUSIÓN ====== -->
+  <!-- ====== §4 HIPÓTESIS (movida) ====== -->
   <div class="section">
     <div class="section-header">
       <div class="section-number">Sección 4</div>
+      <div class="section-title">Hipótesis</div>
+      <div class="section-tag">H1–H6</div>
+    </div>
+    <p class="body">Las 6 hipótesis están planteadas en clave fan-facing comparativa. Cada una produce material publicable: titulares, infografías y artículos.</p>
+    <table>
+      <tr><th>#</th><th>Pregunta que resuelve</th><th>KPI principal</th></tr>
+      <tr><td class="td-label">H1</td><td>¿Quién ganará el Mundial según la IA?</td><td>Position Score · SOV</td></tr>
+      <tr><td class="td-label">H2</td><td>¿Recomienda la IA viajar? ¿A quién sí, a quién no?</td><td>Sentiment · Premise Validation</td></tr>
+      <tr><td class="td-label">H3</td><td>¿Cuál host recomienda más: México, USA o Canadá?</td><td>Attribute Affinity · Co-branding</td></tr>
+      <tr><td class="td-label">H4</td><td>¿Cambia la respuesta IA según el origen del fan?</td><td>Diff cross-persona</td></tr>
+      <tr><td class="td-label">H5</td><td>¿La IA acierta? Predicción vs cuotas reales</td><td>Benchmark externo</td></tr>
+      <tr><td class="td-label">H6</td><td>¿Qué titulares y storyboard salen para el informe?</td><td>Síntesis editorial</td></tr>
+    </table>
+    <div class="insight-box">Hipótesis bonus que el corpus permite explorar sin coste extra: <strong>H7</strong> cuota de mención de sponsors FIFA · <strong>H8</strong> sesgo por género del fan · <strong>H9</strong> sentimiento de temas controvertidos por perfil · <strong>H10</strong> coherencia LLM ↔ AI Overviews (si se incluye AIO).</div>
+  </div>
+
+  <!-- ====== §5 PLAN DE DIFUSIÓN ====== -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">Sección 5</div>
       <div class="section-title">Plan de difusión</div>
       <div class="section-tag">Go-to-market</div>
     </div>
@@ -292,10 +344,10 @@
     </div>
   </div>
 
-  <!-- ====== §5 METODOLOGÍA ====== -->
+  <!-- ====== §6 METODOLOGÍA ====== -->
   <div class="section page-break">
     <div class="section-header">
-      <div class="section-number">Sección 5</div>
+      <div class="section-number">Sección 6</div>
       <div class="section-title">Marco metodológico</div>
     </div>
     <p class="body">No auditamos marca-empresa. Auditamos cómo <strong>ChatGPT y Gemini representan el torneo a hinchas de distintos países</strong>. Sobre un backbone de 3 prompts CORE comparables por persona se añaden capas (funnel × tema × entidades × edge cases). Mide sesgo IA por origen, idioma, motor y demografía.</p>
@@ -318,12 +370,13 @@
     </table>
   </div>
 
-  <!-- ====== §6 PERSONAS ====== -->
+  <!-- ====== §7 PERSONAS (resumen) ====== -->
   <div class="section">
     <div class="section-header">
-      <div class="section-number">Sección 6</div>
-      <div class="section-title">Personas</div>
+      <div class="section-number">Sección 7</div>
+      <div class="section-title">Personas (resumen)</div>
     </div>
+    <p class="note" style="margin-bottom:12px;">Fichas completas de las 16 personas en el Anexo A (final del documento).</p>
     <table>
       <tr><th>Tier</th><th>Personas</th><th>Función</th></tr>
       <tr><td class="td-label">T1 · 9</td><td>Mateo AR · Beatriz BR · Pablo ES · Thomas FR · James UK · Stefan DE · Lupita MX-host · Mike USA-host · Sofía Miami-host</td><td>Fan mainstream — máximo volumen de búsqueda</td></tr>
@@ -331,23 +384,6 @@
       <tr><td class="td-label">T3 B2B · 2</td><td>Patricia (VP Sponsorship FIFA) · Eduardo (CMO Sportsbook)</td><td>Cierre comercial — ángulo B2B</td></tr>
     </table>
     <div class="problem-box"><strong>Hueco identificado:</strong> no hay persona AFC (Asia). El AFC mueve audiencias masivas (Japón, Corea, Arabia Saudí) + 2 debutantes (Uzbekistán, Jordania). Recomendado añadir 1 (p. ej. Yuki Tanaka, Tokio). Coste marginal: ~$10 API.</div>
-  </div>
-
-  <!-- ====== §7 HIPÓTESIS ====== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">Sección 7</div>
-      <div class="section-title">Hipótesis</div>
-    </div>
-    <table>
-      <tr><th>#</th><th>Pregunta que resuelve</th><th>KPI principal</th></tr>
-      <tr><td class="td-label">H1</td><td>¿Quién ganará el Mundial según la IA?</td><td>Position Score · SOV</td></tr>
-      <tr><td class="td-label">H2</td><td>¿Recomienda la IA viajar? ¿A quién sí, a quién no?</td><td>Sentiment · Premise Validation</td></tr>
-      <tr><td class="td-label">H3</td><td>¿Cuál host recomienda más: México, USA o Canadá?</td><td>Attribute Affinity · Co-branding</td></tr>
-      <tr><td class="td-label">H4</td><td>¿Cambia la respuesta IA según el origen del fan?</td><td>Diff cross-persona</td></tr>
-      <tr><td class="td-label">H5</td><td>¿La IA acierta? Predicción vs cuotas reales</td><td>Benchmark externo</td></tr>
-      <tr><td class="td-label">H6</td><td>¿Qué titulares y storyboard salen para el informe?</td><td>—</td></tr>
-    </table>
   </div>
 
   <!-- ====== §8 ESTRUCTURA PROMPTS ====== -->
@@ -377,7 +413,7 @@
     <div class="grid-3">
       <div class="grid-item"><strong>Informe periodístico</strong>Long-read + 8-12 titulares + 4-6 infografías + quotes citables</div>
       <div class="grid-item"><strong>Dataset publicable</strong>2.400 prompts + respuestas IA + KPIs en JSON + Notebook</div>
-      <div class="grid-item"><strong>Press release</strong>Comunicado + outreach a medios (ver §4)</div>
+      <div class="grid-item"><strong>Press release</strong>Comunicado + outreach a medios (ver §5)</div>
     </div>
   </div>
 
@@ -403,7 +439,7 @@
     <p class="note">El ROI por dólar invertido es 100–1.000× superior a un estudio de panel equivalente, gracias a la infraestructura GEORadar.</p>
   </div>
 
-  <!-- ====== §11 DECISIONES PENDIENTES ====== -->
+  <!-- ====== DECISIONES PENDIENTES ====== -->
   <div class="final-section">
     <h3>Decisiones pendientes</h3>
     <ul class="checklist">
@@ -415,6 +451,324 @@
       <li><div class="checkbox"></div>Difusión: shortlist y contacto de media partners (1 nacional + 1 internacional)</li>
       <li><div class="checkbox"></div>Difusión: decidir formato del evento de lanzamiento</li>
     </ul>
+  </div>
+
+  <!-- ============================================================
+       ANEXO A · FICHAS COMPLETAS DE LAS 16 PERSONAS
+       ============================================================ -->
+  <div class="section page-break">
+    <div class="section-header">
+      <div class="section-number">Anexo A</div>
+      <div class="section-title">Las 16 personas en detalle</div>
+    </div>
+    <div class="annex-intro">
+      Ficha completa de cada customer persona: descripción, demográficos, ficha cualitativa (quién es · cómo se informa · qué necesita de la IA · valor para el estudio), prioridades, objetivos, pain points, memories y los 5 prompts semilla. El tag <span class="core-tag">CORE</span> marca los 3 prompts comparables cross-persona.
+    </div>
+
+    <!-- P01 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Mateo Álvarez</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P01 · Argentina</span></div></div>
+      <div class="persona-desc-it">28 años, Buenos Aires, contador. Hincha de Boca y de la Selección argentina (defensora del título). Planifica viaje al Mundial 2026 con un grupo de amigos — épica de revalidar Catar 2022.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Buenos Aires</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>4.500–7k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Joven profesional ahorrador, hincha visceral, vivió Catar 2022 vía financiamiento de amigos. Organizador informal del grupo de 4–6 amigos.</p>
+        <p><strong>Cómo se informa.</strong> TyC Sports, Olé, Romero Argentina; ChatGPT por calendario, logística USA y visas; compara cuotas; YouTube (Líbero, Estación Fútbol).</p>
+        <p><strong>Qué necesita de la IA.</strong> Logística rigurosa (visa USA, conexiones, cupos FIFA), comparativa de sedes para argentinos, hospedaje sin gastar de más, mejores partidos de Argentina.</p>
+        <p><strong>Valor para el estudio.</strong> Argentina mueve uno de los mayores volúmenes de búsqueda en ES. Máxima exposición al sesgo "campeón vigente".</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Cupos FIFA garantizados</li><li>Equilibrio coste/sueldo en pesos</li><li>Coordinar grupo de amigos</li><li>Sede con buen ambiente argentino</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Estar en 2+ partidos de Argentina</li><li>Repetir épica Catar 2022</li><li>Turismo NYC o CDMX</li><li>Volver con video del partido</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Visa USA larga y restrictiva</li><li>Tipo de cambio peso/dólar aplasta presupuesto</li><li>Cupos FIFA limitados y opacos</li><li>Reventa con estafas frecuentes</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>¿Quién ganará el Mundial 2026?</li><li><span class="core-tag">CORE</span>¿Vale la pena viajar desde Argentina al Mundial 2026?</li><li><span class="core-tag">CORE</span>México, USA o Canadá — qué sede es mejor para hinchas argentinos</li><li>¿Tiene Argentina opciones reales de revalidar el título?</li><li>Cómo conseguir entradas oficiales desde Argentina sin reventa</li></ol></div>
+    </div>
+
+    <!-- P02 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Beatriz Souza</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P02 · Brasil</span></div></div>
+      <div class="persona-desc-it">34 años, São Paulo, profesora de inglés. Fan de Palmeiras y de la Seleção. Casada, sin hijos por ahora. Brasil arde por el hexacampeonato tras Catar 2022.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>São Paulo</div><div><strong>Idioma</strong>Português (BR)</div><div><strong>Gasto previsto</strong>3–6k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional clase media-alta, fanática de la Seleção. Sigue cada partido, lee análisis táctico, comparte memes en WhatsApp.</p>
+        <p><strong>Cómo se informa.</strong> Globo Esporte, ge.com, Trivela; Casimiro en streaming y FutFanatics; ChatGPT y Gemini en portugués.</p>
+        <p><strong>Qué necesita de la IA.</strong> Sedes baratas y seguras, precio del paquete Brasil→USA, opciones logísticas para llevar a su marido, comparación con Catar 2022.</p>
+        <p><strong>Valor para el estudio.</strong> Brasil mueve el mayor volumen de búsquedas en PT-BR. Único idioma PT-BR del set.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Ver a Brasil en directo</li><li>Sede segura para extranjeros</li><li>Pareja convencida de viajar</li><li>Presupuesto con real débil</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>1-2 partidos de la Seleção</li><li>Combinar turismo USA</li><li>Compartir en redes</li><li>Repetir épica con su marido</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Real débil comprime presupuesto</li><li>Visa USA exige tiempo y documentación</li><li>Cupos FIFA caros desde Brasil</li><li>Seguridad en sedes USA poco conocidas</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Quem vai ganhar a Copa do Mundo 2026</li><li><span class="core-tag">CORE</span>Vale a pena viajar do Brasil para a Copa do Mundo 2026</li><li><span class="core-tag">CORE</span>Melhor sede da Copa 2026 para torcedores brasileiros: México, EUA ou Canadá</li><li>O Brasil tem chances reais de ser hexacampeão em 2026</li><li>Cidades-sede mais seguras e baratas da Copa 2026 para fãs brasileiros</li></ol></div>
+    </div>
+
+    <!-- P03 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Pablo Martín</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P03 · España</span></div></div>
+      <div class="persona-desc-it">36 años, Sevilla, ingeniero industrial. Hincha del Real Betis y de la Roja (campeón Eurocopa 2024). Casado, 2 hijos (8 y 11). Decide en pareja si viajar a USA en familia.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Sevilla</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>6–12k EUR familiar</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Padre profesional, fan informado, sigue La Liga y la Selección. Vivió la Eurocopa 2024 con su mujer. Decide consumo familiar de ocio.</p>
+        <p><strong>Cómo se informa.</strong> AS, Marca, El País Deportes; La Sexta, Movistar; ChatGPT por calendario España, sedes family-friendly, vuelos directos MAD/SVQ.</p>
+        <p><strong>Qué necesita de la IA.</strong> Sedes seguras para familia con dos niños, vuelos directos desde Madrid, entradas planificables (vacaciones escolares julio).</p>
+        <p><strong>Valor para el estudio.</strong> Fan familiar europeo con poder adquisitivo medio-alto. La decisión "4 personas vs no" mueve 8–12k EUR.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Sede segura para niños</li><li>Vuelo directo desde Madrid</li><li>Encajar con vacaciones escolares</li><li>Presupuesto familiar acotado</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Experiencia familiar memorable</li><li>Combinar partido con turismo</li><li>Decidir con su mujer</li><li>Enganchar a los niños al fútbol</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Logística matchday con niños</li><li>Costes que escalan con 4 personas</li><li>Ventana de vacaciones escolares limita fechas</li><li>Vuelos directos MAD-USA caros en pico</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>¿Quién ganará el Mundial 2026?</li><li><span class="core-tag">CORE</span>¿Vale la pena viajar desde España al Mundial 2026 con niños?</li><li><span class="core-tag">CORE</span>México, USA o Canadá — qué sede es mejor para una familia española</li><li>¿Tiene España opciones reales tras ganar la Eurocopa 2024?</li><li>Vuelos directos desde Madrid a sedes del Mundial 2026 verano</li></ol></div>
+    </div>
+
+    <!-- P04 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Thomas Laurent</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P04 · Francia</span></div></div>
+      <div class="persona-desc-it">30 años, Lyon, consultor digital. Fan visceral de Les Bleus (campeón Rusia 2018, finalista Catar 2022). Soltero, pareja estable. Evalúa viajar a USA siguiendo a Mbappé.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Lyon</div><div><strong>Idioma</strong>Français</div><div><strong>Gasto previsto</strong>3–6k EUR</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional joven, fan que viaja a partidos, fue a Rusia 2018. Fan de Mbappé, Tchouaméni, Camavinga — generación post-2018.</p>
+        <p><strong>Cómo se informa.</strong> L'Équipe, France Football; ChatGPT en francés; After Foot (RMC), Footballogue, Téléfoot.</p>
+        <p><strong>Qué necesita de la IA.</strong> Información precisa en francés (no traducciones forzadas desde inglés), sedes con ambiente "français", vuelos directos desde París.</p>
+        <p><strong>Valor para el estudio.</strong> Francia es uno de los mayores mercados emisores europeos. Permite testear cómo responde la IA en francés frente al resto de idiomas.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Ver a Mbappé en directo</li><li>Vuelo directo CDG/LYS</li><li>Sede con comunidad francófona</li><li>Información en francés nativo</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Estar en 2 partidos de Francia</li><li>Repetir épica Rusia 2018</li><li>Combinar viaje con turismo USA</li><li>Volver con video con su pareja</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Información en francés escasa o mal traducida por la IA</li><li>Costes vuelos directos CDG-USA en verano</li><li>Cupos FIFA opacos para europeos no-host</li><li>ESTA USA vs visa según pasaporte</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Qui va gagner la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Ça vaut le coup de voyager depuis la France pour la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Mexique, États-Unis ou Canada — meilleure ville hôte pour un fan français</li><li>La France a-t-elle des chances réelles de gagner la Coupe du Monde 2026</li><li>Vols directs depuis Paris vers les villes hôtes</li></ol></div>
+    </div>
+
+    <!-- P05 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>James Carter</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P05 · UK</span></div></div>
+      <div class="persona-desc-it">40 años, Londres, abogado corporativo. England fan y Liverpool supporter. Ha viajado a 4 Mundiales. Para 2026 evalúa USA vs Canadá vs cruzar a México.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Londres</div><div><strong>Idioma</strong>Inglés (UK)</div><div><strong>Gasto previsto</strong>£5–10k</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional senior, England loyalist. Viaja a cada Mundial, conoce la mecánica FIFA, tiene contactos en agencias de viajes deportivos.</p>
+        <p><strong>Cómo se informa.</strong> The Guardian, BBC Sport, The Athletic, The Times; podcasts (Football Ramble, Guardian Football Weekly).</p>
+        <p><strong>Qué necesita de la IA.</strong> Comparativa rigurosa de las 3 sedes con criterio fan (pubs, fan zones, hospitality, transporte), upgrades hospitality.</p>
+        <p><strong>Valor para el estudio.</strong> UK es uno de los mayores mercados emisores. Añade el ángulo EN-UK (distinto al EN-US de Mike): sesgo lingüístico interno del inglés.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Hospitality upgrade decente</li><li>Sede con pubs y fan zones</li><li>Ver a England al menos 2 partidos</li><li>Conexiones de vuelo cómodas</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Quinto Mundial seguido</li><li>Más allá del fútbol (NYC, LA, Toronto)</li><li>Reservar con 12 meses</li><li>Entradas oficiales sin reventa</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Costes hospitality FIFA suben cada ciclo</li><li>Disponibilidad de partidos knockout</li><li>Hooliganismo y reputación England en algunas sedes</li><li>Cupo entradas oficiales England agotado pronto</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Who will win the World Cup 2026</li><li><span class="core-tag">CORE</span>Is it worth traveling from the UK to the World Cup 2026</li><li><span class="core-tag">CORE</span>Mexico, USA or Canada — best host country for English fans</li><li>England chances of winning the World Cup 2026 after Euro 2024</li><li>Best fan zones and pubs near World Cup 2026 host cities</li></ol></div>
+    </div>
+
+    <!-- P06 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Stefan Müller</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P06 · Alemania</span></div></div>
+      <div class="persona-desc-it">37 años, Múnich, ingeniero mecánico en BMW. Fan del Bayern y de Die Mannschaft. Tras la decepción de Catar 2022 quiere ver a Alemania resurgir bajo Nagelsmann. Casado, sin hijos.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Múnich</div><div><strong>Idioma</strong>Inglés · Alemán</div><div><strong>Gasto previsto</strong>4–8k EUR</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional senior, fan informado, viaja a Mundiales con su mujer. Vivió Brasil 2014. Crítico con la DFB tras Catar 2022. Confía en Nagelsmann.</p>
+        <p><strong>Cómo se informa.</strong> Kicker, Spiegel Sport, Süddeutsche; podcasts (Rasenfunk, Collinas Erben); ChatGPT en inglés y alemán.</p>
+        <p><strong>Qué necesita de la IA.</strong> Sedes con ambiente alemán/europeo, vuelos directos MUC/FRA, ranking realista de favoritas según scouting (no sentimiento).</p>
+        <p><strong>Valor para el estudio.</strong> Testea sesgo IA: ¿recuerda que Alemania cayó en fase de grupos en Catar 2022, o sigue posicionándola como favorita automática?</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Ver a Alemania remontar</li><li>Sede con ambiente europeo</li><li>Vuelo directo MUC/FRA</li><li>Hospitality decente sin lujos</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>2+ partidos de Alemania</li><li>Reservar antes de octubre 2025</li><li>Turismo USA / Canadá</li><li>Recuperar confianza en Die Mannschaft</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Decepción Catar 2022 todavía fresca</li><li>Costes Europa→USA en pico Mundial</li><li>Cupos oficiales DFB limitados</li><li>Dudas técnicas sobre la selección</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Who will win the World Cup 2026</li><li><span class="core-tag">CORE</span>Is it worth traveling from Germany to the World Cup 2026</li><li><span class="core-tag">CORE</span>Mexico, USA or Canada — best host country for German fans</li><li>Germany chances under Nagelsmann after Qatar disappointment</li><li>Direct flights from Munich and Frankfurt to host cities</li></ol></div>
+    </div>
+
+    <!-- P07 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Lupita Hernández</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P07 · México HOST</span></div></div>
+      <div class="persona-desc-it">32 años, CDMX, gerente de marketing. Fan del América y de la Selección Mexicana. Mundial en casa con la apertura en el Azteca — quiere estar ahí. Casada, hijo de 5 años.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>CDMX</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>30–60k MXN</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Joven profesional, mezcla orgullo nacional con experiencia familiar. Sus padres vivieron México 1986; ahora le toca a ella, con su hijo de 5 años.</p>
+        <p><strong>Cómo se informa.</strong> Récord, ESPN México, Marca Claro; ChatGPT en español por entradas Azteca, hoteles cerca de estadios, partidos accesibles.</p>
+        <p><strong>Qué necesita de la IA.</strong> Cuándo se venden las entradas FIFA en México, hoteles cerca de Azteca/Akron/BBVA, partidos accesibles vs caros, tips para llevar al niño.</p>
+        <p><strong>Valor para el estudio.</strong> México host = pico nacional de búsqueda. Permite ver cómo la IA recomienda al fan que ya vive en sede.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Entradas Estadio Azteca apertura</li><li>Llevar a su hijo a un partido del Tri</li><li>Precios en pesos accesibles</li><li>Seguridad en estadios</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Vivir el Mundial en casa</li><li>Crear memoria con su hijo</li><li>Estar en la apertura del Azteca</li><li>Ver al menos un cuartos / semis</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Entradas FIFA en USD inflan el precio en pesos</li><li>Saturación de demanda CDMX en pico Mundial</li><li>Inseguridad percibida en algunas zonas</li><li>Logística matchday con niño pequeño</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>¿Quién ganará el Mundial 2026?</li><li><span class="core-tag">CORE</span>¿Vale la pena cruzar de México a USA o Canadá para ver el Mundial?</li><li><span class="core-tag">CORE</span>¿Cuál es la mejor sede del Mundial 2026: México, USA o Canadá?</li><li>¿Tiene México opciones reales jugando en casa?</li><li>Cómo conseguir entradas oficiales para el Estadio Azteca apertura</li></ol></div>
+    </div>
+
+    <!-- P08 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Mike Johnson</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P08 · USA HOST</span></div></div>
+      <div class="persona-desc-it">38 años, Dallas, sales executive en tech. Soccer fan convert (era NFL/NBA). Mundial en casa — quiere combinar trabajo con varios partidos en distintas sedes USA.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Dallas</div><div><strong>Idioma</strong>Inglés (US)</div><div><strong>Gasto previsto</strong>$4–8k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional senior, fan moderno del soccer, sigue MLS (FC Dallas) y USMNT. Conoce a Pulisic, Reyna, Balogun, McKennie. Mujer no fan del fútbol.</p>
+        <p><strong>Cómo se informa.</strong> The Athletic, ESPN, Apple TV+ MLS Pass; ChatGPT y Gemini por ciudades sede USA; podcasts (Men in Blazers).</p>
+        <p><strong>Qué necesita de la IA.</strong> Comparativa de ciudades sede USA, partidos worth attending, rivales del USMNT, opciones para mezclar trabajo con asistencia.</p>
+        <p><strong>Valor para el estudio.</strong> USA es el host con mayor volumen de búsquedas. Fan americano moderno converso — segmento de máximo crecimiento.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Ver USMNT en partidos accesibles</li><li>Combinar matches con trabajo</li><li>Sede Dallas accesible</li><li>Llevar a amigos al partido</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>3–4 partidos en distintas sedes</li><li>Ver a USMNT en cuartos</li><li>Primer Mundial USA desde '94</li><li>Convertir a sus amigos al soccer</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Distancias entre sedes USA enormes</li><li>Costes hospitality FIFA inflados</li><li>Calendario USMNT con horarios laborales</li><li>Poca info en EN sobre sedes mexicanas y canadienses</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Who will win the World Cup 2026</li><li><span class="core-tag">CORE</span>Is it worth traveling between US host cities for the World Cup 2026</li><li><span class="core-tag">CORE</span>Which is the best host country for World Cup 2026: Mexico, USA or Canada</li><li>USMNT chances at World Cup 2026 hosting at home</li><li>Best US host city for World Cup 2026 family-friendly experience</li></ol></div>
+    </div>
+
+    <!-- P09 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Émilie Tremblay</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P09 · Canadá HOST</span></div></div>
+      <div class="persona-desc-it">34 años, Montreal, marketing manager. Bilingüe FR/EN. Fan de Canada Soccer desde el boom post-CWC 2022 (Davies, Buchanan). Único Mundial en suelo canadiense en su vida.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Montreal</div><div><strong>Idioma</strong>Français · English</div><div><strong>Gasto previsto</strong>3–5k CAD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Joven profesional, fan reciente del soccer (boom post-CWC 2022). Identidad bicultural quebequense + canadiense, bilingüe natural. Su pareja también es fan.</p>
+        <p><strong>Cómo se informa.</strong> Le Devoir, La Presse, Radio-Canada (FR); CBC, TSN, Sportsnet (EN); ChatGPT en FR y EN.</p>
+        <p><strong>Qué necesita de la IA.</strong> Comparativa Toronto vs Vancouver para fan québécois, partidos de Canadá, accesibilidad desde Montreal, opciones bilingües FR/EN.</p>
+        <p><strong>Valor para el estudio.</strong> Cubre el ángulo bilingüe FR/EN, único en el set. Permite ver cómo la IA responde la misma pregunta en FR vs EN para la misma persona.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Ver a Canadá al menos un partido</li><li>Toronto vs Vancouver según logística</li><li>Información bilingüe FR/EN</li><li>Presupuesto bajo en CAD</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Vivir el primer Mundial en Canadá</li><li>Crear memoria post-Davies generation</li><li>Estar en al menos un partido grande</li><li>Posiblemente cruzar a Buffalo / NYC</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Solo 2 sedes en Canadá (TOR + VAN)</li><li>Vancouver muy lejos desde Montreal</li><li>Información en FR escasa o mal traducida</li><li>Precios CAD se inflan en pico Mundial</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Qui va gagner la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Vaut-il la peine de voyager depuis le Québec pour la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Mexico, USA or Canada — best country for World Cup 2026</li><li>Canada national team chances hosting at home</li><li>Toronto ou Vancouver — meilleure ville hôte pour un fan québécois</li></ol></div>
+    </div>
+
+    <!-- P10 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Mehdi El Amrani</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P10 · Marruecos</span></div></div>
+      <div class="persona-desc-it">28 años, Casablanca, profesional de marketing. Fan de Wydad AC y de la selección marroquí (Atlas Lions), semifinalista histórico en Catar 2022. Plan: viajar con familia + amigos a USA.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Casablanca</div><div><strong>Idioma</strong>Français · Arabe</div><div><strong>Gasto previsto</strong>3–5k USD</div><div><strong>Continente</strong>África</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Joven profesional, identidad árabe + francesa, fan de Hakimi, Ziyech, En-Nesyri, Bono. Catar 2022 lo cambió todo. Familia con diáspora en Bélgica y Países Bajos.</p>
+        <p><strong>Cómo se informa.</strong> Le Site Info, Le Matin, Hespress (FR/AR); cuentas marroquíes en Twitter/Instagram; ChatGPT en francés.</p>
+        <p><strong>Qué necesita de la IA.</strong> Cómo conseguir visa USA siendo marroquí, sedes con comunidad árabe-francófona, comparativa con Catar 2022, calendario realista de Marruecos.</p>
+        <p><strong>Valor para el estudio.</strong> Marruecos es la Cinderella de Catar 2022 y arrastra interés del África árabe-francófona + diáspora. Testea cómo la IA representa selecciones "outsider".</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Visa USA en plazo</li><li>Ver a Marruecos en sede accesible</li><li>Comunidad marroquí/francófona local</li><li>Comida halal en sede</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Repetir épica Catar con Atlas Lions</li><li>Ir con familia + amigos</li><li>Visitar diáspora en NYC/Montreal</li><li>Compartir en redes árabes</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Visa USA exigente para pasaporte marroquí</li><li>Vuelos directos Casablanca-USA escasos</li><li>Información en français a veces mal traducida</li><li>Cupos oficiales FAR opacos</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Qui va gagner la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Vaut-il la peine de voyager du Maroc à la Coupe du Monde 2026</li><li><span class="core-tag">CORE</span>Mexique, États-Unis ou Canada — meilleure ville hôte pour un fan marocain</li><li>Le Maroc peut-il répéter l'exploit du Qatar 2022</li><li>Comment obtenir un visa pour les États-Unis depuis le Maroc</li></ol></div>
+    </div>
+
+    <!-- P11 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Sofía Restrepo</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P11 · Miami HOST</span></div></div>
+      <div class="persona-desc-it">Colombo-americana en Miami, 38 años, madre de 2 hijos (10 y 13). Decisora del plan familiar del Mundial, gasto compartido con su pareja. Marido aficionado, hijos enganchándose al fútbol.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Miami, USA</div><div><strong>Idioma</strong>ES · EN</div><div><strong>Gasto previsto</strong>4–8k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional bicultural de clase media-alta, decisora del consumo familiar de ocio. Vive el Mundial como herramienta de conexión cultural con sus hijos.</p>
+        <p><strong>Cómo se informa.</strong> ES y EN indistintamente; foros de mamás en Reddit/Facebook; reviews de seguridad; compara precios en Vivid Seats, StubHub, Ticketmaster.</p>
+        <p><strong>Qué necesita de la IA.</strong> Qué sedes son family-friendly, qué partidos tienen ambiente sano, cómo conseguir 4 entradas juntas, qué hacer los días sin partido.</p>
+        <p><strong>Valor para el estudio.</strong> Mercado hispano US = segmento de mayor crecimiento del fan estadounidense. Testea cómo la IA responde a una persona bilingüe ES+EN.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Sedes family-friendly</li><li>4 entradas juntas garantizadas</li><li>Seguridad en estadios y ciudad</li><li>Ambiente sano (no hostil)</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Experiencia familiar memorable</li><li>Conectar a sus hijos con Colombia</li><li>Vivir 1–2 partidos en directo</li><li>Combinar matchday con turismo</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Difícil conseguir 4 entradas juntas</li><li>Ambiente potencialmente hostil en partidos sensibles</li><li>Costes que escalan con menores</li><li>Contenido inconsistente entre ES y EN</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Who will win the World Cup 2026</li><li><span class="core-tag">CORE</span>¿México, USA o Canadá — qué sede es mejor para una familia hispana?</li><li>Family-friendly host cities World Cup 2026</li><li>How to buy 4 World Cup 2026 tickets together for a family</li><li>Cosas que hacer con niños alrededor de partidos en Miami</li></ol></div>
+    </div>
+
+    <!-- P12 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Aisha Bello</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P12 · Sudáfrica</span></div></div>
+      <div class="persona-desc-it">Trabaja en fintech en Johannesburgo, 29 años. Apuesta de forma consistente en grandes torneos, sigue tipsters verificados, usa modelos propios en Excel/Python. Banca de 2–5k USD.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Johannesburgo</div><div><strong>Idioma</strong>Inglés</div><div><strong>Banca</strong>2–5k USD</div><div><strong>Continente</strong>África</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Profesional joven en fintech, perfil cuantitativo. Apuesta con criterio y método — hobby competitivo. Banca segregada del salario.</p>
+        <p><strong>Cómo se informa.</strong> Compara cuotas entre 4–6 casas (Bet365, Hollywoodbets, SportPesa, Betway); tipsters en X; modelos Poisson y Elo en Excel/Python; Pinnacle Insights, FBref.</p>
+        <p><strong>Qué necesita de la IA.</strong> Comparadores de cuotas rigurosos, modelos predictivos transparentes, mercados secundarios (córners, tarjetas, goleador), datos de xG.</p>
+        <p><strong>Valor para el estudio.</strong> Reality check de H5 ("IA vs cuotas reales"). Contrasta la predicción de la IA con cuotas reales y modelos estadísticos serios.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Encontrar value bets</li><li>Comparador multi-bookmaker</li><li>Modelos propios bien calibrados</li><li>Mercados menores con valor</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>ROI positivo sobre la banca</li><li>Identificar value antes que el mercado</li><li>No exceder el bankroll definido</li><li>Mejorar sus modelos cada torneo</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Cuotas que ocultan value con margen alto</li><li>Regulación de apuestas en Sudáfrica fluctúa</li><li>Sesgo emocional al apostar a favoritos</li><li>Información de alineaciones tardía</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>Who will win the World Cup 2026</li><li>Best World Cup 2026 betting markets value</li><li>Odds comparison top goalscorer World Cup 2026</li><li>Statistical models predicting World Cup 2026 winner</li><li>Expected goals data national teams qualified for World Cup 2026</li></ol></div>
+    </div>
+
+    <!-- P13 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Carlos Jiménez</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P13 · Colombia</span></div></div>
+      <div class="persona-desc-it">Oficinista en Bogotá, 34 años. Ve el Mundial cada cuatro años, sigue a la selección colombiana, no consume fútbol entre Mundiales. Quiere ponerse al día rápido sin leer 40 páginas de FIFA.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Bogotá</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>Suscripciones · apuestas pequeñas</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Consumidor casual de fútbol, profesional urbano de clase media. Su consumo se concentra en eventos puntuales: Mundial, Copa América, finales Champions.</p>
+        <p><strong>Cómo se informa.</strong> Pregunta a ChatGPT o WhatsApp Meta AI cuando necesita una respuesta concreta; resúmenes en YouTube; TV abierta o casa de un amigo.</p>
+        <p><strong>Qué necesita de la IA.</strong> Respuestas concisas: cuándo juega Colombia, dónde ver, cómo es el formato nuevo, qué selecciones están clasificadas. Lo justo para conversar.</p>
+        <p><strong>Valor para el estudio.</strong> Representa al <strong>fan modal del Mundial</strong>: millones de consumidores casuales LATAM. La respuesta IA por defecto al usuario menos especializado.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Calendario claro y fácil</li><li>Dónde ver a Colombia</li><li>Entender el formato nuevo</li><li>Plan social con amigos/familia</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Ponerse al día sin esfuerzo</li><li>Ver los partidos de Colombia</li><li>Quedar con amigos a ver fútbol</li><li>Apostar con moderación</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Formato nuevo de 48 equipos resulta confuso</li><li>Información dispersa entre FIFA, medios y redes</li><li>Partidos a horarios complicados desde Colombia</li><li>Paywalls de plataformas con derechos</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>¿Quién ganará el Mundial 2026?</li><li>Cómo funciona el Mundial 2026 con 48 equipos</li><li>Cuándo juega Colombia el Mundial 2026</li><li>Dónde ver el Mundial 2026 en Colombia</li><li>Qué selecciones están clasificadas al Mundial 2026</li></ol></div>
+    </div>
+
+    <!-- P14 -->
+    <div class="persona-card">
+      <div class="persona-card-head"><h3>Diego Romero</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P14 · Uruguay</span></div></div>
+      <div class="persona-desc-it">Profesor de historia en Montevideo, 52 años, fan de Peñarol. Lector compulsivo de prensa deportiva. Le interesa el fútbol como fenómeno político, social y económico. Sigue debates sobre FIFA y derechos humanos.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Montevideo</div><div><strong>Idioma</strong>Español</div><div><strong>Perfil</strong>Opinador en redes</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Académico intelectualmente activo, lector de Galeano, David Goldblatt, Simon Kuper. Combina pasión futbolera con mirada crítica de las instituciones (FIFA, CONMEBOL).</p>
+        <p><strong>Cómo se informa.</strong> The Guardian Sport, Brecha, La Diaria, El Observador, Josimar, Football Benchmark; periodismo de investigación.</p>
+        <p><strong>Qué necesita de la IA.</strong> Información honesta y verificable sobre costes, impactos, controversias, decisiones FIFA, derechos humanos. Análisis crítico, no hagiográfico. Fuentes citables.</p>
+        <p><strong>Valor para el estudio.</strong> Voz amplificadora (500–2.000 personas por thread). Valida si la IA responde con narrativa institucional FIFA o con perspectiva crítica.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Análisis crítico y contextual</li><li>Datos públicos de costes</li><li>Cobertura de derechos humanos</li><li>Memoria histórica de Mundiales</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Formarse opinión con criterio</li><li>Educar a su entorno</li><li>Compartir análisis en redes</li><li>Cuestionar narrativa hegemónica</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Narrativa FIFA acrítica dominante en la IA</li><li>Datos opacos sobre costes públicos</li><li>Sportswashing y greenwashing del evento</li><li>Cobertura mediática complaciente</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla</div><ol><li><span class="core-tag">CORE</span>México, USA o Canadá — qué sede tiene mejor historial de derechos humanos</li><li>Controversias FIFA Mundial 2026</li><li>Cuánto cuesta organizar el Mundial 2026 y quién lo paga</li><li>Impacto social Mundial 2026 en ciudades sede</li><li>Por qué hay 48 equipos: críticas y consecuencias</li></ol></div>
+    </div>
+
+    <!-- P15 -->
+    <div class="persona-card b2b">
+      <div class="persona-card-head"><h3>Patricia Holloway</h3><div class="persona-badges"><span class="persona-badge tier">Tier 3 · B2B</span><span class="persona-badge id b2b">P15 · FIFA Sponsor</span></div></div>
+      <div class="persona-desc-it">VP Global Sponsorship Activations de una marca sponsor oficial FIFA (telco, financial services o beverages) con HQ en Nueva York. Gestiona los derechos oficiales a escala global. Capa B2B contexto.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Nueva York</div><div><strong>Idioma</strong>Inglés</div><div><strong>Decisión</strong>10–30M USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Ejecutiva senior con 15+ años en sports marketing global, responsable de grandes partnerships (Olímpicos, NFL, FIFA, UEFA). Reporta al CMO y al CFO.</p>
+        <p><strong>Cómo se informa.</strong> Coordina 4–6 agencias en paralelo; pasa cada idea por compliance y FIFA brand guidelines; mide brand lift con Nielsen/YouGov/Kantar y MMM trimestral.</p>
+        <p><strong>Qué necesita de la IA.</strong> Estrategia integrada para maximizar activos oficiales y consumer activations en USA y mercados emisores. Agencias que defiendan la inversión ante un CFO escéptico.</p>
+        <p><strong>Valor para el estudio.</strong> B2B contexto. ¿Cómo describe la IA a los sponsors oficiales? ¿Aparecen los mismos sponsors en respuestas a fans? Útil para H4 (sesgo por origen/rol).</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>ROI medible ante CFO</li><li>Creatividad dentro de FIFA guidelines</li><li>Activación tri-host USA+MEX+CAN</li><li>Hospitality VIP top-tier</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Maximizar brand lift</li><li>Defender inversión 150M USD ante el board</li><li>Generar earned media global</li><li>Capturar Hispanic market US</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Presión del CFO sobre ROI vs fee de sponsorship</li><li>Restricciones FIFA estrictas sobre uso de marca</li><li>Competencia con otros sponsors por share of voice</li><li>Medición de brand uplift inconsistente entre mercados</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla · B2B contexto</div><ol><li>How do FIFA World Cup official sponsors maximize activation ROI in 2026</li><li>Best agencies for FIFA sponsorship activation 2026</li><li>How to measure brand uplift from World Cup official sponsorship</li><li>World Cup 2026 hospitality activation packages for sponsors</li><li>Reputation of FIFA as an institution among official World Cup sponsors 2026</li></ol></div>
+    </div>
+
+    <!-- P16 -->
+    <div class="persona-card b2b">
+      <div class="persona-card-head"><h3>Eduardo Vargas</h3><div class="persona-badges"><span class="persona-badge tier">Tier 3 · B2B</span><span class="persona-badge id b2b">P16 · Sportsbook</span></div></div>
+      <div class="persona-desc-it">CMO de un sportsbook LATAM top-5 (perfil tipo Caliente.mx, Betano MX o Stake LATAM) con HQ en CDMX. México host = el Mundial es el evento de adquisición del año. Cierra el bucle con P12 Aisha.</div>
+      <div class="persona-demo"><div><strong>Residencia</strong>CDMX</div><div><strong>Idioma</strong>ES · EN</div><div><strong>Decisión</strong>8–20M USD</div><div><strong>Continente</strong>LATAM · HOST</div></div>
+      <div class="persona-ficha">
+        <p><strong>Quién es.</strong> Ejecutivo senior, 10–15 años en gaming/betting y FMCG. Equipo de 30–60 personas. Reporta al CEO. Su pico operativo cae jun–jul 2026.</p>
+        <p><strong>Cómo se informa.</strong> Monitoriza cuotas y promos vs Bet365, Caliente, Codere, Strendus, Betano; negocia con creators; coordina ATL TV + digital + influencer; compliance SEGOB.</p>
+        <p><strong>Qué necesita de la IA.</strong> Agencia que entienda regulación LATAM (SEGOB MX, Coljuegos CO, Lotba AR) y responsible gaming. Partnerships con ligas y creators. Métricas CAC, FTD, LTV 12m.</p>
+        <p><strong>Valor para el estudio.</strong> Cierra el bucle con P12 Aisha. Contrasta la respuesta IA desde lente consumer-bettor vs B2B-marketing. Insumo directo para H5.</p>
+      </div>
+      <div class="persona-cols">
+        <div><h5>Prioridades</h5><ul><li>Captación FTD pre-Mundial</li><li>Compliance SEGOB / Coljuegos / Lotba</li><li>Partnerships con ligas y creators</li><li>Responsible gaming sin frenar adquisición</li></ul></div>
+        <div><h5>Objetivos</h5><ul><li>Liderar share of voice betting LATAM</li><li>Triplicar FTD vs Q2 2024</li><li>Reducir CAC bajo umbral LTV 12m</li><li>App como default LATAM hispano</li></ul></div>
+      </div>
+      <div class="persona-pain"><div class="persona-sub" style="margin-top:0;color:#b30000;">Pain points</div><ul><li>Regulación cambiante por país</li><li>Restricciones FIFA a bookmakers no oficiales</li><li>Competencia agresiva en CAC en ventana Mundial</li><li>Volatilidad cambiaria peso/USD comprime margen</li></ul></div>
+      <div class="persona-prompts"><div class="persona-sub" style="margin-top:0;">5 prompts semilla · B2B contexto</div><ol><li>Estrategias de marketing para casas de apuestas durante el Mundial 2026</li><li>Regulación apuestas deportivas México SEGOB 2026 limitaciones publicitarias</li><li>Best sports betting marketing case studies World Cup LATAM 2026</li><li>Agencias de marketing especializadas en apuestas deportivas LATAM Mundial 2026</li><li>Imagen pública de FIFA y de las apuestas deportivas durante el Mundial en LATAM</li></ol></div>
+    </div>
+
   </div>
 
   <!-- ====== FOOTER ====== -->
