@@ -2,6 +2,17 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.3] - 2026-05-26
+
+**Costes API ×150 (últimas versiones de modelo) + HTML unificado**
+
+- Todos los costes de API multiplicados **×150** sobre la línea base GPT-4o, por uso de las últimas versiones premium (mayor precio por token + tokens de razonamiento). El scraping de AIO no se multiplica (no es coste de modelo).
+- Escenario B (recomendado): ~$70 → **~$10.500**. Total hard ~$250–620 → **~$7.700–18.500**.
+- Add-ons ×150: Claude +$30 → +$4.500 · Perplexity +$25 → +$3.750 · AIO +$1.440 (sin cambio).
+- Reframe de la comparativa: el estudio sigue por debajo de un panel YouGov/Nielsen, pero ya no se sostiene el claim "100–1.000× más barato".
+- Actualizado en: `04-motores-coste.md`, `01-planteamiento.md` §10, `README.md`, `docs/index.html` §10.
+- HTML (`docs/index.html`): Hipótesis reordenada a §4 (antes de Difusión) + Anexo A con las 16 fichas completas de personas (documento unificado autocontenido).
+
 ## [v2.2] - 2026-05-26
 
 **Reordenación + nuevas secciones del planteamiento** (`01-proposal/01-planteamiento.md`)

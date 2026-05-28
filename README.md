@@ -18,7 +18,7 @@
 - **150 prompts por persona** · ~2.400 prompts seed unique per motor
 - **2 motores**: ChatGPT 4o + Gemini 2.5 Pro (ampliables a Claude + Perplexity + AIO)
 - **6 hipótesis** (H1–H6) con titulares editoriales pre-mapeados
-- **Coste API estimado**: ~$50–120 USD (Escenario B con caching, 3 runs)
+- **Coste API estimado**: ~$7.500–18.000 USD (Escenario B, 3 runs, caching · últimas versiones de modelo ×150)
 - **Output**: informe periodístico + 8-12 titulares + 4-6 infografías + dataset publicable
 
 ---

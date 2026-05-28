@@ -173,8 +173,8 @@ Cada prompt seed se reformula ×3 para detectar fragility de la respuesta IA:
 |---|---|---|---|
 | **ChatGPT** | GPT-4o | Imprescindible | baseline |
 | **Gemini** | Gemini 2.5 Pro | Imprescindible | baseline |
-| Claude | Sonnet 4.6 | Add-on opcional | +$30 |
-| Perplexity | Sonar Pro | Add-on opcional | +$25 |
+| Claude | Sonnet 4.6 / Opus-class | Add-on opcional | +$4.500 |
+| Perplexity | Sonar Pro | Add-on opcional | +$3.750 |
 | Google AIO | scraping vía `498AS/ai-overviews-research` | Add-on opcional | +$1.440 |
 
 Detalle completo en `04-motores-coste.md`.
@@ -270,13 +270,13 @@ Detalle en `05-prompts-estructura.md`.
 
 | Concepto | Estimación |
 |---|---:|
-| LLM API (Escenario B: 2 motores × 3 runs × caching) | **$50–120** |
+| LLM API (Escenario B: 2 motores × 3 runs × caching · últimas versiones ×150) | **$7.500–18.000** |
 | Procesamiento + KPI extraction | tiempo interno 498A (~3 días) |
 | Editorial + infografías | tiempo interno Zoopa (~5 días) |
 | QA humana sample 5% | $200–500 |
-| **TOTAL coste hard estimado** | **$250–620** |
+| **TOTAL coste hard estimado** | **$7.700–18.500** |
 
-Detalle completo en `04-motores-coste.md`.
+> Cifras de API ajustadas **×150** sobre la línea base GPT-4o, por uso de las últimas versiones premium de los modelos (mayor precio por token + tokens de razonamiento). El scraping de AIO no se multiplica. Detalle completo en `04-motores-coste.md`.
 
 ---
 

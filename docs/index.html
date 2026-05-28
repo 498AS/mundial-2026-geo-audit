@@ -423,20 +423,21 @@
       <div class="section-number">Sección 10</div>
       <div class="section-title">Costes</div>
     </div>
+    <p class="note" style="margin-bottom:12px;">Cifras ajustadas <strong>×150</strong> sobre la línea base GPT-4o, para reflejar el uso de las <strong>últimas versiones premium</strong> de los modelos (mayor precio por token + tokens de razonamiento). El scraping de AIO no se multiplica.</p>
     <table>
       <tr><th>Escenario</th><th>Motores</th><th>Coste API</th></tr>
-      <tr><td class="td-label">A · Light</td><td>ChatGPT + Gemini · 1 run</td><td>~$38</td></tr>
-      <tr class="highlight"><td class="td-label">B · Standard <span class="delta positive">recomendado</span></td><td>ChatGPT + Gemini · 3 runs · caching</td><td>~$70</td></tr>
-      <tr><td class="td-label">C · Robusto</td><td>+ Claude Sonnet 4.6</td><td>~$100</td></tr>
-      <tr><td class="td-label">D · Canon GEORadar</td><td>+ Claude + Perplexity + AIO</td><td>~$1.565</td></tr>
+      <tr><td class="td-label">A · Light</td><td>ChatGPT + Gemini · 1 run</td><td>~$5.700</td></tr>
+      <tr class="highlight"><td class="td-label">B · Standard <span class="delta positive">recomendado</span></td><td>ChatGPT + Gemini · 3 runs · caching</td><td>~$10.500</td></tr>
+      <tr><td class="td-label">C · Robusto</td><td>+ Claude (Opus-class)</td><td>~$15.000</td></tr>
+      <tr><td class="td-label">D · Canon GEORadar</td><td>+ Claude + Perplexity + AIO (scraping no ×150)</td><td>~$20.200</td></tr>
     </table>
     <div class="metrics-box">
-      <div class="metric-row"><span>LLM API (Escenario B)</span><span class="mv">$50–120</span></div>
+      <div class="metric-row"><span>LLM API (Escenario B · últimas versiones)</span><span class="mv">$7.500–18.000</span></div>
       <div class="metric-row"><span>QA humana (sample 5%)</span><span class="mv">$200–500</span></div>
-      <div class="metric-row"><span>Total coste hard estimado</span><span class="mv">$250–620</span></div>
+      <div class="metric-row"><span>Total coste hard estimado</span><span class="mv">$7.700–18.500</span></div>
       <div class="metric-row"><span>Estudio Nielsen/YouGov equivalente</span><span class="mv">$30K–80K</span></div>
     </div>
-    <p class="note">El ROI por dólar invertido es 100–1.000× superior a un estudio de panel equivalente, gracias a la infraestructura GEORadar.</p>
+    <p class="note">Aun con las últimas versiones premium, el coste se mantiene por debajo de un estudio de panel YouGov/Nielsen equivalente — con un dataset mucho más rico gracias a la infraestructura GEORadar.</p>
   </div>
 
   <!-- ====== DECISIONES PENDIENTES ====== -->
