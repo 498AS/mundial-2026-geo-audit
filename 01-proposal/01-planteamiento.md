@@ -1,13 +1,15 @@
 # Planteamiento Auditoría GEO · Mundial FIFA 2026
 
-> **Versión**: v2.1 · 2026-05-26
+> **Versión**: v2.2 · 2026-05-26
 > **Cliente**: Zoopa / 498A Innovation Lab
 > **Marca observada**: Mundial FIFA 2026 (evento)
 > **Deliverable**: Informe periodístico publicable + dataset abierto
 
+> ¿Quién decide hoy qué selección ganará, a qué sede viajar o qué entrada comprar? Cada vez más, la respuesta empieza en ChatGPT y Gemini. Este estudio mide qué les dicen a los hinchas — y a quién.
+
 ---
 
-## Tesis a validar
+## 1. Tesis a validar
 
 1. **La IA tiene favorito — pero distinto en cada motor.** ChatGPT y Gemini no coinciden en quién ganará. Las divergencias delatan sesgos de entrenamiento (recencia, peso del inglés, narrativas anglosajonas).
 
@@ -31,7 +33,101 @@
 
 ---
 
-## Marco metodológico
+## 2. El estudio en breve
+
+**Objetivo.** Medir cómo las IAs generativas (ChatGPT y Gemini) están **influyendo en la opinión y las decisiones de compra** de millones de personas respecto al Mundial FIFA 2026.
+
+**Por qué ahora.** Las IAs generativas se han convertido en la nueva capa de descubrimiento e influencia. Antes la gente buscaba en Google y leía a un medio; hoy le pregunta directamente a una IA *"¿quién ganará?"*, *"¿vale la pena viajar?"*, *"¿qué entradas compro?"*, *"¿qué sede elijo?"*, *"¿qué cerveza/tarjeta/coche?"*. La respuesta de la IA moldea —silenciosamente— opinión y consumo.
+
+**El problema.** Esas respuestas no son neutrales. Dependen del motor, del idioma y del país del que pregunta. La IA tiene favoritos, sesgos de afinidad cultural y puntos ciegos que **nadie está midiendo** — ni la FIFA, ni los sponsors, ni los broadcasters.
+
+**Qué hacemos.** Construimos el **primer mapa sistemático** de cómo las IAs representan el Mundial 2026 a hinchas de 16 países, en 4 idiomas. No auditamos una marca-empresa: auditamos al propio Mundial como fenómeno global y a las IAs como **nuevo intermediario de opinión y consumo**.
+
+**Qué decisiones de compra están en juego.** Viajes internacionales, entradas (con dynamic pricing que ha llevado la final por encima de $32.000), hospedaje, merchandising oficial, apuestas deportivas, suscripciones de streaming, y la elección entre marcas sponsor (Coca-Cola, Visa, Adidas, Hyundai) y sus competidores. Es un mercado de **decenas de miles de millones de dólares** mediado, cada vez más, por una IA que responde distinto según quién pregunte.
+
+**Por qué nosotros.** 498A/Zoopa opera GEORadar, la plataforma de inteligencia GEO con ~1M de prompts simulados y 9M+ menciones de marca analizadas. Este estudio aplica esa metodología — habitualmente confidencial y B2B — a un fenómeno público y global, como showcase de autoridad y servicio editorial.
+
+---
+
+## 3. Titulares que puede generar el estudio
+
+> Ejemplos ilustrativos. Los titulares definitivos se construyen con los datos reales (ver hipótesis H6). Agrupados por ángulo editorial:
+
+### Predicción y favoritos
+- *"ChatGPT y Gemini no se ponen de acuerdo en quién gana el Mundial 2026."*
+- *"ChatGPT no apostaría su dinero por su propia predicción del Mundial."*
+- *"Las selecciones que la IA infravalora — y los chollos que ofrecen al apostador."*
+
+### Viaje y turismo
+- *"La IA le recomienda a un francés viajar al Mundial — pero a un argentino le dice que se quede en casa."*
+- *"USA, México o Canadá: cómo la IA empuja al turista hacia un anfitrión sobre los otros."*
+- *"Lo que ChatGPT no te cuenta sobre comprar entradas para el Mundial."*
+
+### Sesgo y discriminación algorítmica
+- *"Te tratan distinto: el sesgo de las IAs con los hinchas según su país."*
+- *"El sesgo del idioma: las IAs responden distinto en español, inglés y portugués sobre el mismo Mundial."*
+
+### Sponsors y marcas (hook B2B)
+- *"Los sponsors pagan 500 millones, pero ChatGPT recomienda a sus competidores."*
+- *"Pides una cerveza para el Mundial y la IA no te dice Budweiser: el agujero de los patrocinios oficiales."*
+
+### Controversias
+- *"Dynamic pricing, Aramco, visados: lo que las IAs callan sobre el Mundial 2026."*
+- *"¿Es seguro CDMX? Depende de a qué IA — y en qué idioma — le preguntes."*
+
+---
+
+## 4. Plan de difusión
+
+> Objetivo: convertir el informe en **earned media tier-1** y en **lead generation B2B** (sponsors FIFA → GEORadar). 4 fases.
+
+### Fase 0 · Pre-lanzamiento (embargo · ~2 semanas antes)
+
+- **Presentación a la FIFA.** Briefing ejecutivo de cortesía institucional **antes** de publicar. Gesto de partnership, no de ataque — posiciona a 498A/Zoopa como interlocutor experto y abre conversación comercial.
+- **Briefing selectivo a sponsors clave.** Compartir con 2-3 FIFA Partners (Coca-Cola, Visa, Adidas) su *share-of-voice individual* en la IA → puerta directa a GEORadar.
+- **Cierre de media partners bajo embargo.** 1 nacional (España) + 1 internacional tier-1, con acceso anticipado a cambio de exclusiva coordinada.
+
+### Fase 1 · Lanzamiento (día 0)
+
+- **Rueda de prensa / evento de presentación.** Madrid, presencial + streaming. Co-sede potencial con think tank o partner académico para reforzar autoridad metodológica.
+- **Nota de prensa multi-idioma** (ES · EN · PT · FR) con los 5 hallazgos principales.
+- **Publicación simultánea**: informe completo + microsite interactivo + dataset abierto (este repo de GitHub).
+- **Exclusivas coordinadas** de los media partners de embargo.
+
+### Fase 2 · Amplificación editorial (semanas 1-3)
+
+- **Artículos escalonados** en medios partner por mercado/idioma.
+- **Infografías shareables** + hilos en X y LinkedIn.
+- **Video explicativo / mini-doc** + episodio de podcast.
+- **Versiones localizadas**: el ángulo "tu país" rinde en cada mercado (Argentina, Brasil, España, Francia, UK, México, USA, Marruecos).
+
+### Fase 3 · Long tail + B2B (mes 1-2)
+
+- **Outreach directo a los 7 FIFA Partners** con su informe individual → conversión GEORadar.
+- **Ponencias** en conferencias (GEO, marketing deportivo, AI ethics, periodismo de datos).
+- **Segunda ola DURANTE el torneo** (jun-jul): *"¿La IA acertó?"* — re-run de predicciones vs resultados reales. Genera un segundo ciclo de prensa con coste marginal.
+
+### Media partners candidatos
+
+| Ámbito | Medios objetivo | Ángulo |
+|---|---|---|
+| **Nacional (ES)** | El País · La Vanguardia · Marca · AS · El Confidencial · Xataka · Newtral/Maldita | Deporte + tech + verificación IA |
+| **Internacional deporte** | The Athletic · BBC Sport · ESPN · L'Équipe (FR) · Folha de SP / Globo Esporte (BR) | Predicción, viaje, sesgo por país |
+| **Internacional business** | Financial Times · Bloomberg · Forbes | Sponsors share-of-voice, modelo de negocio FIFA |
+| **Internacional tech/IA** | Wired · MIT Technology Review · Rest of World · The Guardian | Sesgo algorítmico por geografía e idioma |
+
+> El ángulo **"sesgo de la IA por geografía e idioma"** es ideal para *Rest of World* y *Wired*; el ángulo **deportivo** para *The Athletic*/*ESPN*; el ángulo **sponsors/negocio** para *FT*/*Bloomberg*/*Forbes*.
+
+### KPIs de difusión
+
+- Nº de menciones en prensa tier-1 (objetivo: 10+ medios).
+- Alcance combinado (reach) y EMV (earned media value).
+- Leads B2B generados (sponsors / broadcasters interesados en GEORadar).
+- Tráfico al microsite + descargas del dataset abierto.
+
+---
+
+## 5. Marco metodológico
 
 **No auditamos marca-empresa.** Auditamos cómo **ChatGPT y Gemini representan el torneo a hinchas de distintos países**. Output: informe periodístico publicable para medios sport, lifestyle, tech — no pitch B2B.
 
@@ -93,7 +189,7 @@ Detalle completo en `04-motores-coste.md`.
 
 ---
 
-## Personas (resumen)
+## 6. Personas (resumen)
 
 Detalle completo en `02-personas.md`.
 
@@ -119,7 +215,7 @@ Ver `02-personas.md` sección "Mejoras propuestas".
 
 ---
 
-## Hipótesis (resumen)
+## 7. Hipótesis (resumen)
 
 Detalle en `03-hipotesis.md`.
 
@@ -130,11 +226,11 @@ Detalle en `03-hipotesis.md`.
 | **H3** | ¿Cuál host recomienda más: México, USA o Canadá? | Attribute Affinity · Co-branding Heatmap |
 | **H4** | ¿Cambia la respuesta IA según el origen del fan? | Diff cross-persona |
 | **H5** | ¿La IA acierta? Predicción vs cuotas reales | Benchmark externo |
-| **H6** | Storyboard del informe periodístico | — |
+| **H6** | ¿Qué titulares y storyboard salen para el informe? | — |
 
 ---
 
-## Estructura de los 150 prompts por persona
+## 8. Estructura de los 150 prompts por persona
 
 Detalle en `05-prompts-estructura.md`.
 
@@ -151,7 +247,7 @@ Detalle en `05-prompts-estructura.md`.
 
 ---
 
-## Output esperado
+## 9. Output esperado
 
 ### Informe periodístico
 - Long-read editorial con datos, citas literales de la IA, tablas comparativas, mapas de calor.
@@ -166,11 +262,11 @@ Detalle en `05-prompts-estructura.md`.
 
 ### Press release + outreach
 - Comunicado de prensa con principales hallazgos.
-- Outreach a medios target: *The Athletic*, *AS*, *L'Équipe*, *BBC Sport*, *Folha de SP*, *Forbes*, *FT*, *Wired*, *Bloomberg*.
+- Outreach a medios target (ver sección 4 · Plan de difusión).
 
 ---
 
-## Costes (resumen)
+## 10. Costes (resumen)
 
 | Concepto | Estimación |
 |---|---:|
@@ -184,7 +280,7 @@ Detalle completo en `04-motores-coste.md`.
 
 ---
 
-## Riesgos y mitigaciones
+## 11. Riesgos y mitigaciones
 
 | Riesgo | Mitigación |
 |---|---|
@@ -194,21 +290,25 @@ Detalle completo en `04-motores-coste.md`.
 | Drift temporal de modelos | Timestamp por call + pinning de modelo |
 | Aspectos no-texto (imágenes IA) | Scope claro en el informe |
 | Confusión legal sobre uso comercial respuestas IA | Disclaimer + cita literal con motor + timestamp |
+| FIFA reacciona a la defensiva | Briefing previo de cortesía (Fase 0) posiciona como partner, no adversario |
 
 ---
 
-## Decisiones pendientes
+## 12. Decisiones pendientes
 
-- [ ] **Validar v2.1** con Carlos / equipo Zoopa.
+- [ ] **Validar v2.2** con Carlos / equipo Zoopa.
 - [ ] **Decidir si se añade persona AFC** (Japón / Arabia / Uzbekistán).
 - [ ] **Decidir si se incluye AIO** (Escenario D, +$1.440).
 - [ ] **Decidir si Patricia/Eduardo siguen patrón 150** o reducen a ~50.
 - [ ] **Definir tooling de orquestación** (LangChain · script propio · pipeline GEORadar existente).
 - [ ] **Confirmar timeline**: lanzamiento de prompts vs ventana editorial pre/durante/post.
+- [ ] **Difusión**: confirmar interlocutor FIFA para el briefing previo (Fase 0).
+- [ ] **Difusión**: shortlist y contacto de media partners (1 nacional + 1 internacional para embargo).
+- [ ] **Difusión**: decidir formato del evento de lanzamiento (rueda de prensa propia vs co-sede con think tank).
 
 ---
 
-## Referencias
+## 13. Referencias
 
 - `02-personas.md` — detalle de las 16 personas
 - `03-hipotesis.md` — H1–H6 con KPI mapping

@@ -2,6 +2,16 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.2] - 2026-05-26
+
+**Reordenación + nuevas secciones del planteamiento** (`01-proposal/01-planteamiento.md`)
+
+- **Reorden**: las tesis a validar pasan a ser la sección 1 (apertura del documento).
+- **Nueva sección 2 · El estudio en breve**: intro con el objetivo del estudio — cómo las IAs influyen en opinión y decisiones de compra respecto al Mundial. Explicita el mercado en juego (viajes, entradas, hospedaje, merchandising, apuestas, streaming, marcas sponsor).
+- **Nueva sección 3 · Titulares que puede generar el estudio**: ejemplos agrupados por ángulo editorial (predicción, viaje, sesgo, sponsors, controversias).
+- **Nueva sección 4 · Plan de difusión**: 4 fases (pre-lanzamiento con briefing a FIFA + sponsors · rueda de prensa · amplificación editorial · long tail B2B). Incluye shortlist de media partners (nacional + internacional) y KPIs de difusión.
+- Decisiones pendientes ampliadas con 3 ítems de difusión (interlocutor FIFA, media partners, formato evento).
+
 ## [v2.1] - 2026-05-26
 
 **Cambios mayores**
