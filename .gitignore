@@ -29,6 +29,10 @@ data/raw/
 data/responses/
 output/
 
+# Stray HTML exports/downloads in repo root (las versiones vivas están en docs/ y 02-original/)
+/*.html
+/* (*).html
+
 # Logs
 *.log
 
