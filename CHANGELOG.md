@@ -2,6 +2,14 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.4] - 2026-05-26
+
+**Eliminada la sección "Tesis a validar" del HTML**
+
+- Removida §1 "Tesis a validar" de `docs/index.html`; renumeradas §2→§1 … §10→§9; ref cruzada §5→§4 (Output → Plan de difusión).
+- Nuevo orden HTML: 1 El estudio en breve · 2 Titulares · 3 Hipótesis · 4 Plan de difusión · 5 Metodología · 6 Personas · 7 Estructura prompts · 8 Output · 9 Costes · Anexo A (16 personas).
+- Nota: `01-proposal/01-planteamiento.md` (markdown source) mantiene su sección de tesis — pendiente de sincronizar si se desea.
+
 ## [v2.3] - 2026-05-26
 
 **Costes API ×150 (últimas versiones de modelo) + HTML unificado**
