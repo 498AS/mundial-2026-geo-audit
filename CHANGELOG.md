@@ -2,6 +2,18 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.5] - 2026-05-26
+
+**Presupuestos de personas al alza + nuevo eje climático (calor extremo)**
+
+- **Presupuestos** subidos a niveles realistas para el Mundial 2026 con dynamic pricing: Mateo 4.5-7k → 8-15k USD · Beatriz 3-6k → 8-14k USD · Pablo 6-12k → 15-25k EUR familiar · Thomas 3-6k → 7-13k EUR · James £5-10k → £15-30k · Stefan 4-8k → 8-16k EUR · Lupita 30-60k → 80-150k MXN · Mike $4-8k → $10-20k USD · Émilie 3-5k → 6-12k CAD · Mehdi 3-5k → 7-14k USD · Sofía 4-8k → 10-20k USD · Aisha 2-5k → 5-12k USD banca · Carlos → ~$400-900. Actualizado en `02-personas.md` (tabla + rationale Pablo) y en las 16 fichas del Anexo A del HTML.
+- **Nuevo eje climático**: el calor extremo (35-45 °C en México, Texas, sur USA) como factor que inclina la recomendación de la IA hacia Canadá.
+  - Nueva tesis #11 (clima → Canadá) en `01-planteamiento.md`.
+  - H3 enriquecida con factor clima + nuevo KPI "Climate Bias Index" (`03-hipotesis.md` + HTML).
+  - Nuevo grupo de titulares "Clima y calor extremo" (HTML §2 + planteamiento §3).
+  - Hipótesis bonus H11 (sesgo climático) en el HTML.
+  - Área temática 6 → "Seguridad y clima" + 2 prompts de clima en Bloque E (`05-prompts-estructura.md`).
+
 ## [v2.4] - 2026-05-26
 
 **Eliminada la sección "Tesis a validar" del HTML**

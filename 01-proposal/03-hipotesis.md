@@ -46,14 +46,17 @@
 
 **Statement**: Mundial 2026 es el primero con 3 anfitriones. Cuando un fan pregunta "¿qué sede es mejor?", la IA tiene que comparar — y probablemente sesga según país del usuario, lengua materna y motor.
 
-**Qué resuelve**: Ranking IA de las 3 sedes con justificaciones reales (precio, seguridad, ambiente, accesibilidad). Detecta el criterio implícito que la IA usa para recomendar.
+**Qué resuelve**: Ranking IA de las 3 sedes con justificaciones reales (precio, seguridad, ambiente, accesibilidad y **clima/calor extremo**). Detecta el criterio implícito que la IA usa para recomendar.
+
+> **Hipótesis climática clave**: ante el riesgo de calor extremo del verano 2026 (35–45 °C en México, Texas y el sur de USA), la IA tiende a recomendar las sedes **canadienses** (Vancouver, Toronto) como más seguras y confortables. Si el fan pide elegir entre una sede mexicana y una canadiense, el clima inclina la balanza hacia Canadá — con impacto directo en turismo, hospedaje y aerolíneas.
 
 **Titular candidato**: *"ChatGPT prefiere USA, Gemini prefiere México: la guía de viaje del Mundial que la IA no quiere que veas."*
 
 **KPIs principales**:
-- **Attribute Affinity** (sede × atributo: family-friendly, seguridad, precio, ambiente)
+- **Attribute Affinity** (sede × atributo: family-friendly, seguridad, precio, ambiente, **clima/temperatura**)
 - **Co-branding Heatmap** sede × narrativa
 - Ranking ordinal por persona (USA-MX-CAN ordering)
+- **Climate Bias Index** — ¿la IA penaliza sistemáticamente las sedes calurosas (México, Texas, sur USA) y favorece Canadá en verano?
 
 **Personas clave**: P01–P10 con prompt CORE "México, USA o Canadá" + perspectiva host (P07 Lupita, P08 Mike, P09 Émilie).
 

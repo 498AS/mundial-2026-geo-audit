@@ -8,19 +8,19 @@
 
 | # | Nombre | Rol | Tier | Geografía | Idioma | Continente | Gasto previsto |
 |---|---|---|---|---|---|---|---|
-| P01 | Mateo Álvarez | Hincha argentino · viaja | T1 | Buenos Aires | ES | Sudamérica | 4.5–7k USD |
-| P02 | Beatriz Souza | Fan Seleção · planificadora | T1 | São Paulo | PT-BR | Sudamérica | 3–6k USD |
-| P03 | Pablo Martín | Fan Roja · padre familia | T1 | Sevilla | ES | Europa | 6–12k EUR familiar |
-| P04 | Thomas Laurent | Fan Les Bleus · viaja | T1 | Lyon | FR | Europa | 3–6k EUR |
-| P05 | James Carter | England fan · veterano | T1 | London | EN | Europa | £5–10k |
-| P06 | Stefan Müller | Fan Die Mannschaft · crítico | T1 | Múnich | EN/DE | Europa | 4–8k EUR |
-| P07 | Lupita Hernández | Fan Tri · host CDMX | T1 | CDMX (host) | ES | Norteamérica | 30–60k MXN |
-| P08 | Mike Johnson | USMNT fan · host doméstico | T1 | Dallas (host) | EN | Norteamérica | $4–8k USD |
-| P09 | Émilie Tremblay | Canada Soccer · bilingüe | T2 | Montreal (host) | FR/EN | Norteamérica | 3–5k CAD |
-| P10 | Mehdi El Amrani | Fan Atlas Lions · Cinderella | T2 | Casablanca | FR/AR | África | 3–5k USD |
-| P11 | Sofía Restrepo | Familia hispana · decisora | T1 | Miami (host) | ES/EN | Norteamérica | 4–8k USD |
-| P12 | Aisha Bello | Apostadora metódica | T2 | Johannesburgo | EN | África | 2–5k USD banca |
-| P13 | Carlos Jiménez | Fan casual · oficinista | T2 | Bogotá | ES | Sudamérica | Suscripciones · apuestas pequeñas |
+| P01 | Mateo Álvarez | Hincha argentino · viaja | T1 | Buenos Aires | ES | Sudamérica | 8–15k USD |
+| P02 | Beatriz Souza | Fan Seleção · planificadora | T1 | São Paulo | PT-BR | Sudamérica | 8–14k USD |
+| P03 | Pablo Martín | Fan Roja · padre familia | T1 | Sevilla | ES | Europa | 15–25k EUR familiar |
+| P04 | Thomas Laurent | Fan Les Bleus · viaja | T1 | Lyon | FR | Europa | 7–13k EUR |
+| P05 | James Carter | England fan · veterano | T1 | London | EN | Europa | £15–30k |
+| P06 | Stefan Müller | Fan Die Mannschaft · crítico | T1 | Múnich | EN/DE | Europa | 8–16k EUR |
+| P07 | Lupita Hernández | Fan Tri · host CDMX | T1 | CDMX (host) | ES | Norteamérica | 80–150k MXN |
+| P08 | Mike Johnson | USMNT fan · host doméstico | T1 | Dallas (host) | EN | Norteamérica | $10–20k USD |
+| P09 | Émilie Tremblay | Canada Soccer · bilingüe | T2 | Montreal (host) | FR/EN | Norteamérica | 6–12k CAD |
+| P10 | Mehdi El Amrani | Fan Atlas Lions · Cinderella | T2 | Casablanca | FR/AR | África | 7–14k USD |
+| P11 | Sofía Restrepo | Familia hispana · decisora | T1 | Miami (host) | ES/EN | Norteamérica | 10–20k USD |
+| P12 | Aisha Bello | Apostadora metódica | T2 | Johannesburgo | EN | África | 5–12k USD banca |
+| P13 | Carlos Jiménez | Fan casual · oficinista | T2 | Bogotá | ES | Sudamérica | ~$400–900 · streaming + apuestas |
 | P14 | Diego Romero | Fan crítico · profesor | T2 | Montevideo | ES | Sudamérica | Opinador en redes |
 | P15 | Patricia Holloway | VP Sponsorship FIFA · B2B | T3 | NYC | EN | Norteamérica | 10–30M USD decisión |
 | P16 | Eduardo Vargas | CMO Sportsbook · B2B | T3 | CDMX | ES/EN | LATAM | 8–20M USD decisión |
@@ -67,7 +67,7 @@
 
 **P02 Beatriz Souza** · Brasil arde por el hexa post-Catar. Decide en pareja, planificadora · Único idioma PT-BR del set. Máximo volumen búsqueda Brasil.
 
-**P03 Pablo Martín** · España campeón Euro 2024, decisor familiar, 2 hijos · Fan familiar europeo con poder adquisitivo medio-alto. Ticket 8–12k EUR es uno de los más caros del set.
+**P03 Pablo Martín** · España campeón Euro 2024, decisor familiar, 2 hijos · Fan familiar europeo con poder adquisitivo medio-alto. Ticket 15–25k EUR (4 pax, precios 2026 inflados) es uno de los más caros del set.
 
 **P04 Thomas Laurent** · Francia post-Rusia 2018 + final Catar 2022, fan visceral · Testea respuesta IA en francés (la IA suele responder peor en FR que en EN).
 

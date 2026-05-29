@@ -244,6 +244,11 @@
       <div class="headline">USA, México o Canadá: cómo la IA empuja al turista hacia un anfitrión sobre los otros.</div>
     </div>
     <div class="headline-group">
+      <h4>Clima y calor extremo</h4>
+      <div class="headline">Verano de 45 °C: cómo el miedo al calor hace que la IA te mande a Canadá y no a México o Texas.</div>
+      <div class="headline">El sesgo climático de la IA: por qué Vancouver y Toronto ganan a CDMX y Dallas en pleno junio.</div>
+    </div>
+    <div class="headline-group">
       <h4>Sesgo y discriminación algorítmica</h4>
       <div class="headline">Te tratan distinto: el sesgo de las IAs con los hinchas según su país.</div>
       <div class="headline">Las IAs responden distinto en español, inglés y portugués sobre el mismo Mundial.</div>
@@ -271,12 +276,12 @@
       <tr><th>#</th><th>Pregunta que resuelve</th><th>KPI principal</th></tr>
       <tr><td class="td-label">H1</td><td>¿Quién ganará el Mundial según la IA?</td><td>Position Score · SOV</td></tr>
       <tr><td class="td-label">H2</td><td>¿Recomienda la IA viajar? ¿A quién sí, a quién no?</td><td>Sentiment · Premise Validation</td></tr>
-      <tr><td class="td-label">H3</td><td>¿Cuál host recomienda más: México, USA o Canadá?</td><td>Attribute Affinity · Co-branding</td></tr>
+      <tr><td class="td-label">H3</td><td>¿Cuál host recomienda más: México, USA o Canadá? (incl. clima/calor extremo → sesgo pro-Canadá)</td><td>Attribute Affinity · Co-branding</td></tr>
       <tr><td class="td-label">H4</td><td>¿Cambia la respuesta IA según el origen del fan?</td><td>Diff cross-persona</td></tr>
       <tr><td class="td-label">H5</td><td>¿La IA acierta? Predicción vs cuotas reales</td><td>Benchmark externo</td></tr>
       <tr><td class="td-label">H6</td><td>¿Qué titulares y storyboard salen para el informe?</td><td>Síntesis editorial</td></tr>
     </table>
-    <div class="insight-box">Hipótesis bonus que el corpus permite explorar sin coste extra: <strong>H7</strong> cuota de mención de sponsors FIFA · <strong>H8</strong> sesgo por género del fan · <strong>H9</strong> sentimiento de temas controvertidos por perfil · <strong>H10</strong> coherencia LLM ↔ AI Overviews (si se incluye AIO).</div>
+    <div class="insight-box">Hipótesis bonus que el corpus permite explorar sin coste extra: <strong>H7</strong> cuota de mención de sponsors FIFA · <strong>H8</strong> sesgo por género del fan · <strong>H9</strong> sentimiento de temas controvertidos por perfil · <strong>H10</strong> coherencia LLM ↔ AI Overviews · <strong>H11</strong> sesgo climático: ¿la IA penaliza las sedes calurosas (México, Texas, sur USA) y favorece Canadá en verano?</div>
   </div>
 
   <!-- ====== §5 PLAN DE DIFUSIÓN ====== -->
@@ -449,7 +454,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Mateo Álvarez</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P01 · Argentina</span></div></div>
       <div class="persona-desc-it">28 años, Buenos Aires, contador. Hincha de Boca y de la Selección argentina (defensora del título). Planifica viaje al Mundial 2026 con un grupo de amigos — épica de revalidar Catar 2022.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Buenos Aires</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>4.500–7k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Buenos Aires</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>8–15k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Joven profesional ahorrador, hincha visceral, vivió Catar 2022 vía financiamiento de amigos. Organizador informal del grupo de 4–6 amigos.</p>
         <p><strong>Cómo se informa.</strong> TyC Sports, Olé, Romero Argentina; ChatGPT por calendario, logística USA y visas; compara cuotas; YouTube (Líbero, Estación Fútbol).</p>
@@ -468,7 +473,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Beatriz Souza</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P02 · Brasil</span></div></div>
       <div class="persona-desc-it">34 años, São Paulo, profesora de inglés. Fan de Palmeiras y de la Seleção. Casada, sin hijos por ahora. Brasil arde por el hexacampeonato tras Catar 2022.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>São Paulo</div><div><strong>Idioma</strong>Português (BR)</div><div><strong>Gasto previsto</strong>3–6k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>São Paulo</div><div><strong>Idioma</strong>Português (BR)</div><div><strong>Gasto previsto</strong>8–14k USD</div><div><strong>Continente</strong>Sudamérica</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional clase media-alta, fanática de la Seleção. Sigue cada partido, lee análisis táctico, comparte memes en WhatsApp.</p>
         <p><strong>Cómo se informa.</strong> Globo Esporte, ge.com, Trivela; Casimiro en streaming y FutFanatics; ChatGPT y Gemini en portugués.</p>
@@ -487,12 +492,12 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Pablo Martín</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P03 · España</span></div></div>
       <div class="persona-desc-it">36 años, Sevilla, ingeniero industrial. Hincha del Real Betis y de la Roja (campeón Eurocopa 2024). Casado, 2 hijos (8 y 11). Decide en pareja si viajar a USA en familia.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Sevilla</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>6–12k EUR familiar</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Sevilla</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>15–25k EUR familiar</div><div><strong>Continente</strong>Europa</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Padre profesional, fan informado, sigue La Liga y la Selección. Vivió la Eurocopa 2024 con su mujer. Decide consumo familiar de ocio.</p>
         <p><strong>Cómo se informa.</strong> AS, Marca, El País Deportes; La Sexta, Movistar; ChatGPT por calendario España, sedes family-friendly, vuelos directos MAD/SVQ.</p>
         <p><strong>Qué necesita de la IA.</strong> Sedes seguras para familia con dos niños, vuelos directos desde Madrid, entradas planificables (vacaciones escolares julio).</p>
-        <p><strong>Valor para el estudio.</strong> Fan familiar europeo con poder adquisitivo medio-alto. La decisión "4 personas vs no" mueve 8–12k EUR.</p>
+        <p><strong>Valor para el estudio.</strong> Fan familiar europeo con poder adquisitivo medio-alto. La decisión "4 personas vs no" mueve 15–25k EUR.</p>
       </div>
       <div class="persona-cols">
         <div><h5>Prioridades</h5><ul><li>Sede segura para niños</li><li>Vuelo directo desde Madrid</li><li>Encajar con vacaciones escolares</li><li>Presupuesto familiar acotado</li></ul></div>
@@ -506,7 +511,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Thomas Laurent</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P04 · Francia</span></div></div>
       <div class="persona-desc-it">30 años, Lyon, consultor digital. Fan visceral de Les Bleus (campeón Rusia 2018, finalista Catar 2022). Soltero, pareja estable. Evalúa viajar a USA siguiendo a Mbappé.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Lyon</div><div><strong>Idioma</strong>Français</div><div><strong>Gasto previsto</strong>3–6k EUR</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Lyon</div><div><strong>Idioma</strong>Français</div><div><strong>Gasto previsto</strong>7–13k EUR</div><div><strong>Continente</strong>Europa</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional joven, fan que viaja a partidos, fue a Rusia 2018. Fan de Mbappé, Tchouaméni, Camavinga — generación post-2018.</p>
         <p><strong>Cómo se informa.</strong> L'Équipe, France Football; ChatGPT en francés; After Foot (RMC), Footballogue, Téléfoot.</p>
@@ -525,7 +530,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>James Carter</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P05 · UK</span></div></div>
       <div class="persona-desc-it">40 años, Londres, abogado corporativo. England fan y Liverpool supporter. Ha viajado a 4 Mundiales. Para 2026 evalúa USA vs Canadá vs cruzar a México.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Londres</div><div><strong>Idioma</strong>Inglés (UK)</div><div><strong>Gasto previsto</strong>£5–10k</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Londres</div><div><strong>Idioma</strong>Inglés (UK)</div><div><strong>Gasto previsto</strong>£15–30k</div><div><strong>Continente</strong>Europa</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional senior, England loyalist. Viaja a cada Mundial, conoce la mecánica FIFA, tiene contactos en agencias de viajes deportivos.</p>
         <p><strong>Cómo se informa.</strong> The Guardian, BBC Sport, The Athletic, The Times; podcasts (Football Ramble, Guardian Football Weekly).</p>
@@ -544,7 +549,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Stefan Müller</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P06 · Alemania</span></div></div>
       <div class="persona-desc-it">37 años, Múnich, ingeniero mecánico en BMW. Fan del Bayern y de Die Mannschaft. Tras la decepción de Catar 2022 quiere ver a Alemania resurgir bajo Nagelsmann. Casado, sin hijos.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Múnich</div><div><strong>Idioma</strong>Inglés · Alemán</div><div><strong>Gasto previsto</strong>4–8k EUR</div><div><strong>Continente</strong>Europa</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Múnich</div><div><strong>Idioma</strong>Inglés · Alemán</div><div><strong>Gasto previsto</strong>8–16k EUR</div><div><strong>Continente</strong>Europa</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional senior, fan informado, viaja a Mundiales con su mujer. Vivió Brasil 2014. Crítico con la DFB tras Catar 2022. Confía en Nagelsmann.</p>
         <p><strong>Cómo se informa.</strong> Kicker, Spiegel Sport, Süddeutsche; podcasts (Rasenfunk, Collinas Erben); ChatGPT en inglés y alemán.</p>
@@ -563,7 +568,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Lupita Hernández</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P07 · México HOST</span></div></div>
       <div class="persona-desc-it">32 años, CDMX, gerente de marketing. Fan del América y de la Selección Mexicana. Mundial en casa con la apertura en el Azteca — quiere estar ahí. Casada, hijo de 5 años.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>CDMX</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>30–60k MXN</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>CDMX</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>80–150k MXN</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Joven profesional, mezcla orgullo nacional con experiencia familiar. Sus padres vivieron México 1986; ahora le toca a ella, con su hijo de 5 años.</p>
         <p><strong>Cómo se informa.</strong> Récord, ESPN México, Marca Claro; ChatGPT en español por entradas Azteca, hoteles cerca de estadios, partidos accesibles.</p>
@@ -582,7 +587,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Mike Johnson</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P08 · USA HOST</span></div></div>
       <div class="persona-desc-it">38 años, Dallas, sales executive en tech. Soccer fan convert (era NFL/NBA). Mundial en casa — quiere combinar trabajo con varios partidos en distintas sedes USA.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Dallas</div><div><strong>Idioma</strong>Inglés (US)</div><div><strong>Gasto previsto</strong>$4–8k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Dallas</div><div><strong>Idioma</strong>Inglés (US)</div><div><strong>Gasto previsto</strong>$10–20k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional senior, fan moderno del soccer, sigue MLS (FC Dallas) y USMNT. Conoce a Pulisic, Reyna, Balogun, McKennie. Mujer no fan del fútbol.</p>
         <p><strong>Cómo se informa.</strong> The Athletic, ESPN, Apple TV+ MLS Pass; ChatGPT y Gemini por ciudades sede USA; podcasts (Men in Blazers).</p>
@@ -601,7 +606,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Émilie Tremblay</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P09 · Canadá HOST</span></div></div>
       <div class="persona-desc-it">34 años, Montreal, marketing manager. Bilingüe FR/EN. Fan de Canada Soccer desde el boom post-CWC 2022 (Davies, Buchanan). Único Mundial en suelo canadiense en su vida.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Montreal</div><div><strong>Idioma</strong>Français · English</div><div><strong>Gasto previsto</strong>3–5k CAD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Montreal</div><div><strong>Idioma</strong>Français · English</div><div><strong>Gasto previsto</strong>6–12k CAD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Joven profesional, fan reciente del soccer (boom post-CWC 2022). Identidad bicultural quebequense + canadiense, bilingüe natural. Su pareja también es fan.</p>
         <p><strong>Cómo se informa.</strong> Le Devoir, La Presse, Radio-Canada (FR); CBC, TSN, Sportsnet (EN); ChatGPT en FR y EN.</p>
@@ -620,7 +625,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Mehdi El Amrani</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P10 · Marruecos</span></div></div>
       <div class="persona-desc-it">28 años, Casablanca, profesional de marketing. Fan de Wydad AC y de la selección marroquí (Atlas Lions), semifinalista histórico en Catar 2022. Plan: viajar con familia + amigos a USA.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Casablanca</div><div><strong>Idioma</strong>Français · Arabe</div><div><strong>Gasto previsto</strong>3–5k USD</div><div><strong>Continente</strong>África</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Casablanca</div><div><strong>Idioma</strong>Français · Arabe</div><div><strong>Gasto previsto</strong>7–14k USD</div><div><strong>Continente</strong>África</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Joven profesional, identidad árabe + francesa, fan de Hakimi, Ziyech, En-Nesyri, Bono. Catar 2022 lo cambió todo. Familia con diáspora en Bélgica y Países Bajos.</p>
         <p><strong>Cómo se informa.</strong> Le Site Info, Le Matin, Hespress (FR/AR); cuentas marroquíes en Twitter/Instagram; ChatGPT en francés.</p>
@@ -639,7 +644,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Sofía Restrepo</h3><div class="persona-badges"><span class="persona-badge tier">Tier 1</span><span class="persona-badge id">P11 · Miami HOST</span></div></div>
       <div class="persona-desc-it">Colombo-americana en Miami, 38 años, madre de 2 hijos (10 y 13). Decisora del plan familiar del Mundial, gasto compartido con su pareja. Marido aficionado, hijos enganchándose al fútbol.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Miami, USA</div><div><strong>Idioma</strong>ES · EN</div><div><strong>Gasto previsto</strong>4–8k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Miami, USA</div><div><strong>Idioma</strong>ES · EN</div><div><strong>Gasto previsto</strong>10–20k USD</div><div><strong>Continente</strong>Norteamérica · HOST</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional bicultural de clase media-alta, decisora del consumo familiar de ocio. Vive el Mundial como herramienta de conexión cultural con sus hijos.</p>
         <p><strong>Cómo se informa.</strong> ES y EN indistintamente; foros de mamás en Reddit/Facebook; reviews de seguridad; compara precios en Vivid Seats, StubHub, Ticketmaster.</p>
@@ -658,7 +663,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Aisha Bello</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P12 · Sudáfrica</span></div></div>
       <div class="persona-desc-it">Trabaja en fintech en Johannesburgo, 29 años. Apuesta de forma consistente en grandes torneos, sigue tipsters verificados, usa modelos propios en Excel/Python. Banca de 2–5k USD.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Johannesburgo</div><div><strong>Idioma</strong>Inglés</div><div><strong>Banca</strong>2–5k USD</div><div><strong>Continente</strong>África</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Johannesburgo</div><div><strong>Idioma</strong>Inglés</div><div><strong>Banca</strong>5–12k USD</div><div><strong>Continente</strong>África</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Profesional joven en fintech, perfil cuantitativo. Apuesta con criterio y método — hobby competitivo. Banca segregada del salario.</p>
         <p><strong>Cómo se informa.</strong> Compara cuotas entre 4–6 casas (Bet365, Hollywoodbets, SportPesa, Betway); tipsters en X; modelos Poisson y Elo en Excel/Python; Pinnacle Insights, FBref.</p>
@@ -677,7 +682,7 @@
     <div class="persona-card">
       <div class="persona-card-head"><h3>Carlos Jiménez</h3><div class="persona-badges"><span class="persona-badge tier">Tier 2</span><span class="persona-badge id">P13 · Colombia</span></div></div>
       <div class="persona-desc-it">Oficinista en Bogotá, 34 años. Ve el Mundial cada cuatro años, sigue a la selección colombiana, no consume fútbol entre Mundiales. Quiere ponerse al día rápido sin leer 40 páginas de FIFA.</div>
-      <div class="persona-demo"><div><strong>Residencia</strong>Bogotá</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>Suscripciones · apuestas pequeñas</div><div><strong>Continente</strong>Sudamérica</div></div>
+      <div class="persona-demo"><div><strong>Residencia</strong>Bogotá</div><div><strong>Idioma</strong>Español</div><div><strong>Gasto previsto</strong>~$400–900 · streaming + apuestas</div><div><strong>Continente</strong>Sudamérica</div></div>
       <div class="persona-ficha">
         <p><strong>Quién es.</strong> Consumidor casual de fútbol, profesional urbano de clase media. Su consumo se concentra en eventos puntuales: Mundial, Copa América, finales Champions.</p>
         <p><strong>Cómo se informa.</strong> Pregunta a ChatGPT o WhatsApp Meta AI cuando necesita una respuesta concreta; resúmenes en YouTube; TV abierta o casa de un amigo.</p>

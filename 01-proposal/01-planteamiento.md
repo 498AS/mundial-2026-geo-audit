@@ -31,6 +31,8 @@
 
 10. **La IA no entiende el modelo de negocio nuevo de FIFA.** No menciona dynamic pricing, no diferencia free-to-air de pay-TV, no explica FIFA Marketplace ni hospitality tiers.
 
+11. **El clima inclina la recomendación hacia Canadá.** Ante el riesgo de calor extremo del verano 2026 (35–45 °C en México, Texas y sur de USA), la IA tiende a recomendar las sedes canadienses (Vancouver, Toronto) como más seguras y confortables — un sesgo climático con impacto directo en turismo, hospedaje y aerolíneas.
+
 ---
 
 ## 2. El estudio en breve
@@ -62,6 +64,10 @@
 - *"La IA le recomienda a un francés viajar al Mundial — pero a un argentino le dice que se quede en casa."*
 - *"USA, México o Canadá: cómo la IA empuja al turista hacia un anfitrión sobre los otros."*
 - *"Lo que ChatGPT no te cuenta sobre comprar entradas para el Mundial."*
+
+### Clima y calor extremo
+- *"Verano de 45 °C: cómo el miedo al calor hace que la IA te mande a Canadá y no a México o Texas."*
+- *"El sesgo climático de la IA: por qué Vancouver y Toronto ganan a CDMX y Dallas en pleno junio."*
 
 ### Sesgo y discriminación algorítmica
 - *"Te tratan distinto: el sesgo de las IAs con los hinchas según su país."*
@@ -223,7 +229,7 @@ Detalle en `03-hipotesis.md`.
 |---|---|---|
 | **H1** | ¿Quién ganará el Mundial según la IA? | Position Score · SOV |
 | **H2** | ¿Recomienda la IA viajar? ¿A quién sí, a quién no? | Sentiment Score · Premise Validation |
-| **H3** | ¿Cuál host recomienda más: México, USA o Canadá? | Attribute Affinity · Co-branding Heatmap |
+| **H3** | ¿Cuál host recomienda más: México, USA o Canadá? (incl. **clima/calor extremo** → sesgo pro-Canadá) | Attribute Affinity · Co-branding Heatmap |
 | **H4** | ¿Cambia la respuesta IA según el origen del fan? | Diff cross-persona |
 | **H5** | ¿La IA acierta? Predicción vs cuotas reales | Benchmark externo |
 | **H6** | ¿Qué titulares y storyboard salen para el informe? | — |

@@ -132,7 +132,7 @@ Durante/después de la experiencia:
 | **3. Sedes / estadios** | Atmósfera · acceso · servicios · seguridad · transporte |
 | **4. Sponsors / marcas oficiales** | Cervezas · refrescos · tarjetas · coches · móviles · TVs |
 | **5. Broadcasting / streaming** | Dónde ver · free-to-air · pay-TV · streaming · horarios |
-| **6. Seguridad personal** | Sedes · transporte · zonas · emergencias · servicios consulares |
+| **6. Seguridad y clima** | Sedes · transporte · emergencias · **calor extremo** · golpe de calor · partidos a mediodía · temperaturas por ciudad |
 | **7. Familia / niños** | Sedes family · planes con niños · zonas seguras · precios |
 | **8. Apuestas** | Cuotas · mercados · plataformas · responsible gaming · legalidad |
 | **9. Controversias** | Dynamic pricing · Aramco · visados · derechos humanos · sostenibilidad |
@@ -194,6 +194,8 @@ KPI clave: **Premise Validation** (acepta / corrige / matiza).
 13. *"¿Las multas a la reventa están funcionando o es teatro?"*
 14. *"¿Por qué Aramco patrocina deportes con tan mala imagen?"*
 15. *"¿La selección de [mi país] no tiene posibilidades reales?"*
+16. *"¿Hace demasiado calor para ir al Mundial en México o Texas en junio-julio?"*
+17. *"Por el calor extremo, ¿es mejor elegir una sede en Canadá que en México o el sur de USA?"*
 
 ---
 
