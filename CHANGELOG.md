@@ -2,6 +2,12 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.6] - 2026-05-26
+
+**Infra · onboarding para edición vía Claude Code**
+
+- Añadido `CLAUDE.md` en la raíz con el contexto operativo del repo: doble formato paralelo (`.md` ↔ HTML), mapa de archivos, flujo de publicación, convenciones de commit/CHANGELOG, snapshot del estado v2.5 y lista de no-go's. Claude Code lo carga automáticamente al abrir el repo, por lo que cualquier colaborador puede pedir cambios sin onboarding manual.
+
 ## [v2.5] - 2026-05-26
 
 **Presupuestos de personas al alza + nuevo eje climático (calor extremo)**
