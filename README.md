@@ -29,6 +29,7 @@
 mundial-2026-geo-audit/
 ├── README.md                                                     ← Este archivo
 ├── CHANGELOG.md                                                  ← Historial de versiones
+├── CLAUDE.md                                                     ← Contexto auto-cargado por Claude Code
 ├── 00-context/
 │   ├── mundial-fifa-2026.md                                      ← Datos del torneo (sponsors, revenue, modelo de negocio)
 │   └── georadar-workflow.md                                      ← Por qué encaja con metodología GEORadar
@@ -38,9 +39,25 @@ mundial-2026-geo-audit/
 │   ├── 03-hipotesis.md                                           ← H1–H6 con KPI mapping
 │   ├── 04-motores-coste.md                                       ← Stack + escenarios coste
 │   └── 05-prompts-estructura.md                                  ← Template de 150 prompts/persona
-└── 02-original/
-    └── ZOOPA_MUNDIAL2026_PROPUESTA_PERSONAS_20260521_v02.html    ← HTML original v02 (21 may 2026)
+├── 02-original/
+│   └── ZOOPA_MUNDIAL2026_PROPUESTA_PERSONAS_20260521_v02.html    ← HTML original v02 (21 may 2026)
+└── docs/                                                         ← Publicado por GitHub Pages
+    ├── index.html                                                ← Planteamiento (live)
+    ├── informe.html                                              ← INFORME del estudio · v2 junio 2026
+    └── informe.pdf                                               ← Versión PDF imprimible
 ```
+
+---
+
+## 📊 Informe del estudio (v2 · junio 2026)
+
+Los **resultados del audit** ya están publicados:
+
+- **Web**: https://498as.github.io/mundial-2026-geo-audit/informe.html
+- **PDF**: https://498as.github.io/mundial-2026-geo-audit/informe.pdf
+- **Fuente**: `docs/informe.html`
+
+4.690 respuestas IA · 17 perfiles · 4 idiomas · Gemini + ChatGPT · foto pre-evento junio 2026.
 
 ---
 

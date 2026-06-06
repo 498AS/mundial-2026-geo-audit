@@ -49,8 +49,10 @@ Antes de hacer un cambio:
 │   └── 05-prompts-estructura.md           ← Template de 150 prompts/persona
 ├── 02-original/
 │   └── ZOOPA_MUNDIAL2026_..._v02.html     ← Snapshot histórico — NO EDITAR
-└── docs/
-    └── index.html                         ← HTML publicado por GitHub Pages
+└── docs/                                  ← Publicado por GitHub Pages
+    ├── index.html                         ← Planteamiento (live)
+    ├── informe.html                       ← INFORME del estudio · v2 junio 2026
+    └── informe.pdf                        ← Versión PDF del informe
 ```
 
 ---

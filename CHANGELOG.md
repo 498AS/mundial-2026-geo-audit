@@ -2,6 +2,15 @@
 
 > Historial de decisiones de la propuesta de auditoría GEO Mundial 2026.
 
+## [v2.7] - 2026-06-06
+
+**Subido el informe del estudio (resultados v2 · junio 2026)**
+
+- `docs/informe.html` · informe del Mundial 2026 v2 (Gemini y ChatGPT), foto pre-evento junio 2026. 4.690 respuestas IA, 17 perfiles, 4 idiomas, 12 secciones (resumen ejecutivo, H1–H4, sentimiento y atributos, fuentes, highlights, conclusión, metodología, prompts, glosario).
+- `docs/informe.pdf` · versión PDF imprimible generada con Chrome headless (1.2 MB · 14 páginas A4).
+- Servido en GitHub Pages: https://498as.github.io/mundial-2026-geo-audit/informe.html y https://498as.github.io/mundial-2026-geo-audit/informe.pdf
+- README y CLAUDE.md actualizados con la nueva pieza + sección dedicada al informe.
+
 ## [v2.6] - 2026-05-26
 
 **Infra · onboarding para edición vía Claude Code**

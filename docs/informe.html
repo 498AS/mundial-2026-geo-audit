@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informe GEO - Mundial FIFA 2026 | Junio 2026 (v2)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f8fa; --surface: #ffffff; --text: #111114; --text-secondary: #5c5c6b;
+      --text-tertiary: #8a8a96; --positive: #16a34a; --negative: #dc2626; --warning: #d97706;
+      --accent: #2563eb; --border: rgba(0,0,0,0.06); --border-strong: rgba(0,0,0,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Inter",system-ui,sans-serif; font-size:12px; line-height:1.7; color:var(--text); background:var(--bg); }
+    .report { max-width:210mm; margin:0 auto; padding:0 16px; }
+    @media screen { .page { margin:24px auto; } }
+    @page { size:A4; margin:0; }
+    @media print {
+      body { background:white; }
+      .page { margin:0; page-break-after:always; box-shadow:none!important; }
+      .sidebar,.sidebar-toggle { display:none!important; }
+    }
+    .sidebar { position:fixed; top:0; left:0; bottom:0; width:220px; z-index:1000; background:rgba(255,255,255,0.95); backdrop-filter:blur(16px); color:var(--text-secondary); padding:24px 16px; overflow-y:auto; font-size:10.5px; border-right:1px solid var(--border); box-shadow:4px 0 24px rgba(0,0,0,0.04); border-radius:0 16px 16px 0; transition:transform .3s ease; }
+    .sidebar-logo { margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+    .sidebar-logo span { font-size:12px; font-weight:800; color:var(--text); letter-spacing:2px; text-transform:uppercase; }
+    .sidebar-item { display:flex; align-items:baseline; gap:8px; padding:6px 10px; margin-bottom:2px; border-radius:8px; transition:all .15s ease; text-decoration:none; color:var(--text-secondary); }
+    .sidebar-item:hover { color:var(--text); background:rgba(0,0,0,0.03); }
+    .sidebar-item-num { font-weight:700; min-width:18px; font-size:9px; color:var(--text-tertiary); }
+    .sidebar-item-text { font-weight:500; font-size:10.5px; }
+    .sidebar-toggle { position:fixed; top:14px; left:14px; z-index:1001; width:36px; height:36px; background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:10px; display:none; align-items:center; justify-content:center; cursor:pointer; font-size:16px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+    @media screen and (min-width:900px) { .report { margin-left:232px; } }
+    @media screen and (max-width:899px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:translateX(0); } .sidebar-toggle { display:flex; } }
+    .cover { width:210mm; min-height:297mm; padding:52px; background:linear-gradient(165deg,#0f172a 0%,#1e293b 50%,#0f172a 100%); color:#fff; border-radius:16px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 4px 24px rgba(0,0,0,0.12); }
+    .cover-top { display:flex; justify-content:space-between; }
+    .cover-badge { font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; border:1px solid rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; }
+    .cover-date { font-size:11px; color:rgba(255,255,255,0.5); }
+    .cover-main { margin:50px 0 36px; }
+    .cover-label { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:18px; }
+    .cover-title { font-size:48px; font-weight:900; line-height:1.05; letter-spacing:-2px; margin-bottom:22px; }
+    .cover-subtitle { font-size:14px; color:rgba(255,255,255,0.65); max-width:520px; line-height:1.75; }
+    .cover-brand { display:flex; align-items:center; gap:20px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.1); }
+    .cover-brand-logo { width:48px; height:48px; background:#fff; border-radius:12px; display:flex; align-items:center; justify-content:center; padding:6px; }
+    .cover-brand-info h2 { font-size:26px; font-weight:800; }
+    .cover-brand-info p { font-size:12px; color:rgba(255,255,255,0.45); margin-top:4px; }
+    .cover-metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .cover-metric { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:20px 16px; text-align:center; border-radius:12px; }
+    .cover-metric-value { font-size:34px; font-weight:900; letter-spacing:-1.5px; }
+    .cover-metric-label { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:6px; }
+    .page:not(.cover) { width:210mm; min-height:297mm; padding:44px 48px 72px; background:var(--surface); position:relative; border-radius:16px; box-shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.06); border:1px solid var(--border); }
+    .section-header { display:flex; align-items:baseline; gap:14px; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid var(--text); }
+    .section-number { font-size:36px; font-weight:900; color:rgba(0,0,0,0.08); }
+    .section-title { font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+    .page-footer { position:absolute; bottom:28px; left:48px; right:48px; display:flex; justify-content:space-between; padding-top:12px; border-top:1px solid var(--border); font-size:9px; color:var(--text-tertiary); font-weight:600; letter-spacing:0.5px; text-transform:uppercase; }
+    .metric-grid { display:grid; gap:10px; margin-bottom:18px; }
+    .metric-grid.cols-2 { grid-template-columns:repeat(2,1fr); }
+    .metric-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
+    .metric-grid.cols-4 { grid-template-columns:repeat(4,1fr); }
+    .metric-card { background:var(--surface); padding:16px 18px; border-radius:12px; border:1px solid var(--border); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+    .metric-card.accent-positive { border-color:rgba(22,163,74,0.15); background:rgba(22,163,74,0.03); }
+    .metric-card.accent-negative { border-color:rgba(220,38,38,0.15); background:rgba(220,38,38,0.03); }
+    .metric-card.accent-warning { border-color:rgba(217,119,6,0.15); background:rgba(217,119,6,0.03); }
+    .metric-card.accent-blue { border-color:rgba(37,99,235,0.15); background:rgba(37,99,235,0.03); }
+    .metric-card-label { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-tertiary); margin-bottom:6px; }
+    .metric-card-value { font-size:28px; font-weight:900; letter-spacing:-1.5px; line-height:1; }
+    .metric-card-desc { font-size:10px; color:var(--text-secondary); margin-top:6px; line-height:1.4; }
+    .insight { border-radius:10px; background:rgba(37,99,235,0.04); border:1px solid rgba(37,99,235,0.12); padding:16px 18px; margin-bottom:14px; }
+    .insight.positive { background:rgba(22,163,74,0.04); border-color:rgba(22,163,74,0.12); }
+    .insight.negative { background:rgba(220,38,38,0.04); border-color:rgba(220,38,38,0.12); }
+    .insight.warning { background:rgba(217,119,6,0.04); border-color:rgba(217,119,6,0.12); }
+    .insight.dark { background:#1e293b; color:#e2e8f0; border:none; }
+    .insight-title { font-size:11px; font-weight:700; margin-bottom:5px; }
+    .insight p { font-size:11px; color:var(--text-secondary); line-height:1.65; }
+    .callout { background:#1e293b; color:#f1f5f9; padding:18px 22px; margin:16px 0; border-radius:12px; }
+    .callout p { font-size:11.5px; line-height:1.65; color:#cbd5e1; } .callout strong { color:#f1f5f9; }
+    table { width:100%; border-collapse:collapse; font-size:10.5px; }
+    th { background:#f0f0f3; color:#333; padding:8px 10px; text-align:left; font-weight:700; font-size:9px; text-transform:uppercase; letter-spacing:0.5px; }
+    th:first-child { border-radius:8px 0 0 0; } th:last-child { border-radius:0 8px 0 0; }
+    td { padding:7px 10px; border-bottom:1px solid var(--border); }
+    tr.target-brand td { background:rgba(37,99,235,0.04); font-weight:700; }
+    .bar { height:7px; background:#eee; border-radius:4px; width:100%; }
+    .bar-fill { height:100%; border-radius:4px; background:#334155; }
+    .bar-fill.positive { background:var(--positive); } .bar-fill.blue { background:var(--accent); } .bar-fill.warning { background:var(--warning); } .bar-fill.negative { background:var(--negative); }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .subsection-title { font-size:13px; font-weight:800; letter-spacing:-0.2px; margin:18px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border-strong); }
+    .verbatim { border-radius:10px; background:#fafafa; border:1px solid rgba(0,0,0,0.06); padding:14px 16px; margin:10px 0; }
+    .verbatim.positive { border-color:rgba(22,163,74,0.15); background:rgba(22,163,74,0.03); }
+    .verbatim.negative { border-color:rgba(220,38,38,0.15); background:rgba(220,38,38,0.03); }
+    .verbatim.warning { border-color:rgba(217,119,6,0.15); background:rgba(217,119,6,0.03); }
+    .verbatim-tag { font-size:9px; font-weight:700; color:var(--text-tertiary); margin-bottom:5px; text-transform:uppercase; letter-spacing:0.5px; }
+    .verbatim-question { font-size:10px; color:var(--text-secondary); margin-bottom:6px; font-style:italic; }
+    .verbatim-text { font-size:11px; line-height:1.65; color:var(--text-secondary); }
+    .verbatim-meta { font-size:9px; color:var(--text-tertiary); margin-top:7px; }
+    .engine-badge { display:inline-block; font-size:8px; font-weight:700; padding:2px 7px; letter-spacing:0.5px; text-transform:uppercase; border-radius:4px; }
+    .engine-badge.chatgpt { background:#fce7f3; color:#be185d; }
+    .engine-badge.gemini { background:#dbeafe; color:#1d4ed8; }
+    .verbatim.engine-chatgpt { border-left:4px solid #be185d; }
+    .verbatim.engine-gemini { border-left:4px solid #1d4ed8; }
+    th.col-chatgpt { background:#fce7f3; color:#be185d; }
+    th.col-gemini { background:#dbeafe; color:#1d4ed8; }
+    .metric-card.engine-chatgpt { border-left:4px solid #be185d; }
+    .metric-card.engine-gemini { border-left:4px solid #1d4ed8; }
+    .label-tag { font-size:8px; font-weight:700; padding:2px 7px; border-radius:4px; text-transform:uppercase; }
+    .label-tag.green { background:#dcfce7; color:var(--positive); }
+    .label-tag.red { background:#fee2e2; color:var(--negative); }
+    .label-tag.amber { background:#fef3c7; color:var(--warning); }
+    .label-tag.blue { background:#dbeafe; color:var(--accent); }
+    .swot-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
+    .swot-cell { padding:16px; border-radius:10px; }
+    .swot-cell h4 { font-size:11px; font-weight:800; margin-bottom:8px; }
+    .swot-cell ul { margin:0; padding-left:16px; font-size:10px; line-height:1.6; }
+    .swot-cell.strengths { background:rgba(22,163,74,0.04); border:1px solid rgba(22,163,74,0.12); }
+    .swot-cell.weaknesses { background:rgba(220,38,38,0.04); border:1px solid rgba(220,38,38,0.12); }
+    .swot-cell.opportunities { background:rgba(37,99,235,0.04); border:1px solid rgba(37,99,235,0.12); }
+    .swot-cell.threats { background:rgba(217,119,6,0.04); border:1px solid rgba(217,119,6,0.12); }
+    .table-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:10px; padding-bottom:6px; border-bottom:1px solid var(--border-strong); }
+    .index-row { display:flex; justify-content:space-between; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--border); }
+    .index-row-left { display:flex; align-items:baseline; gap:18px; }
+    .index-num { font-size:11px; font-weight:700; color:var(--text-tertiary); min-width:22px; }
+    .index-name { font-size:13px; font-weight:600; }
+    .index-sub { font-size:10px; color:var(--text-tertiary); font-weight:500; }
+    .index-pages { font-size:11px; font-weight:600; color:var(--text-tertiary); }
+  </style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span>GEORadar</span></div>
+  <a class="sidebar-item" href="#resumen"><span class="sidebar-item-num">01</span><span class="sidebar-item-text">Resumen ejecutivo</span></a>
+  <a class="sidebar-item" href="#h1"><span class="sidebar-item-num">02</span><span class="sidebar-item-text">H1 Viaje y origen</span></a>
+  <a class="sidebar-item" href="#h2"><span class="sidebar-item-num">03</span><span class="sidebar-item-text">H2 Sede y clima</span></a>
+  <a class="sidebar-item" href="#h3"><span class="sidebar-item-num">04</span><span class="sidebar-item-text">H3 Favoritos</span></a>
+  <a class="sidebar-item" href="#h4"><span class="sidebar-item-num">05</span><span class="sidebar-item-text">H4 Gemini y ChatGPT</span></a>
+  <a class="sidebar-item" href="#sentimiento"><span class="sidebar-item-num">06</span><span class="sidebar-item-text">Sentimiento y atributos</span></a>
+  <a class="sidebar-item" href="#fuentes"><span class="sidebar-item-num">07</span><span class="sidebar-item-text">Fuentes</span></a>
+  <a class="sidebar-item" href="#titulares"><span class="sidebar-item-num">08</span><span class="sidebar-item-text">Highlights del estudio</span></a>
+  <a class="sidebar-item" href="#conclusion"><span class="sidebar-item-num">09</span><span class="sidebar-item-text">Conclusión</span></a>
+  <a class="sidebar-item" href="#metodologia"><span class="sidebar-item-num">10</span><span class="sidebar-item-text">Metodología</span></a>
+  <a class="sidebar-item" href="#prompts"><span class="sidebar-item-num">11</span><span class="sidebar-item-text">Estudio de prompts</span></a>
+  <a class="sidebar-item" href="#glosario"><span class="sidebar-item-num">12</span><span class="sidebar-item-text">Glosario y leyenda</span></a>
+</div>
+<button class="sidebar-toggle" id="sidebarToggle" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<div class="report">
+
+<!-- PORTADA -->
+<div class="page cover" id="cover">
+  <div class="cover-top">
+    <div class="cover-badge">Auditoría GEO &middot; Observatorio fan-facing</div>
+    <div class="cover-date">Junio 2026 &middot; v2</div>
+  </div>
+  <div class="cover-main">
+    <div class="cover-label">Cómo dos IAs representan el Mundial a los aficionados</div>
+    <h1 class="cover-title">MUNDIAL 2026:<br>dos IAs,<br>dos relatos</h1>
+    <p class="cover-subtitle">Mapa comparativo de cómo Gemini y ChatGPT responden a aficionados de 16 perfiles y 4 idiomas sobre el Mundial FIFA 2026: a quién dan por favorito, a quién recomiendan viajar, qué sede sugieren, y en qué se contradicen las dos grandes IAs según quién pregunta.</p>
+    <div class="cover-brand">
+      <div class="cover-brand-logo"><span style="font-size:22px;">⚽</span></div>
+      <div class="cover-brand-info"><h2>Mundial FIFA 2026</h2><p>Marca observada: el evento &middot; Productores: ZOOPA / 498 Advisory Services</p></div>
+    </div>
+  </div>
+  <div class="cover-metrics">
+    <div class="cover-metric"><div class="cover-metric-value">4.690</div><div class="cover-metric-label">Respuestas IA</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">2</div><div class="cover-metric-label">Motores</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">17</div><div class="cover-metric-label">Personas</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">4</div><div class="cover-metric-label">Idiomas</div></div>
+  </div>
+  <div style="text-align:center; margin-top:14px; font-size:10px; color:rgba(255,255,255,0.3);">Motores analizados: <span style="color:#93c5fd;">Gemini</span> y <span style="color:#f9a8d4;">ChatGPT</span> &middot; ventana pre-evento (junio 2026).</div>
+  <div style="text-align:center; padding-top:14px; border-top:1px solid rgba(255,255,255,0.06); margin-top:12px; font-size:10px; color:rgba(255,255,255,0.2);">GEORadar by 498 Advisory Services &middot; 2026</div>
+</div>
+
+<!-- ÍNDICE -->
+<div class="page" id="indice">
+  <div class="section-header"><span class="section-number">00</span><h2 class="section-title">Índice</h2></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">01</span><div><span class="index-name">Resumen ejecutivo</span><br><span class="index-sub">las dos IAs frente a frente</span></div></div><span class="index-pages">3</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">02</span><div><span class="index-name">H1 · ¿Recomienda viajar, y a quién?</span><br><span class="index-sub">la recomendación según el origen</span></div></div><span class="index-pages">4</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">03</span><div><span class="index-name">H2 · ¿Qué sede sugiere?</span><br><span class="index-sub">una IA elige, la otra no</span></div></div><span class="index-pages">5</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">04</span><div><span class="index-name">H3 · ¿Quién gana según la IA?</span><br><span class="index-sub">el mapa de favoritos en los dos motores</span></div></div><span class="index-pages">6</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">05</span><div><span class="index-name">H4 · Gemini frente a ChatGPT</span><br><span class="index-sub">el sesgo por motor, el corazón del estudio</span></div></div><span class="index-pages">7</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">06</span><div><span class="index-name">Sentimiento y atributos</span><br><span class="index-sub">el tono y los temas en los dos motores</span></div></div><span class="index-pages">8</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">07</span><div><span class="index-name">Fuentes</span><br><span class="index-sub">de dónde saca la IA su relato del Mundial</span></div></div><span class="index-pages">9</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">08</span><div><span class="index-name">Highlights del estudio</span><br><span class="index-sub">cómo la IA habla del evento a cada perfil</span></div></div><span class="index-pages">10</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">09</span><div><span class="index-name">Conclusión</span><br><span class="index-sub">qué nos dicen las dos IAs juntas</span></div></div><span class="index-pages">11</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">10</span><div><span class="index-name">Metodología</span><br><span class="index-sub">qué hace especial esta auditoría</span></div></div><span class="index-pages">12</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">11</span><div><span class="index-name">Estudio de prompts</span><br><span class="index-sub">qué se ha preguntado, a quién y en qué motores</span></div></div><span class="index-pages">13</span></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">12</span><div><span class="index-name">Glosario y leyenda de valores</span><br><span class="index-sub">qué medimos y cómo leer cada cifra</span></div></div><span class="index-pages">14</span></div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>2</span></div>
+</div>
+
+<!-- 01 RESUMEN EJECUTIVO -->
+<div class="page" id="resumen">
+  <div class="section-header"><span class="section-number">01</span><h2 class="section-title">Resumen ejecutivo</h2></div>
+
+  <div class="callout">
+    <p><strong>El dato central:</strong> para millones de aficionados, la IA ya es quien aconseja si ir al Mundial, a qué sede y con qué expectativa. Y ese consejo no es neutral: enmarca asistir como un problema de coste, casi nunca anima abiertamente a ir, empuja a unos orígenes más que a otros y recomienda México por encima de las demás sedes. La IA se ha convertido en un intermediario silencioso entre la FIFA y su público.</p>
+  </div>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card accent-negative"><div class="metric-card-label">El coste manda</div><div class="metric-card-value">85%</div><div class="metric-card-desc">de las respuestas de Gemini sobre viajar sacan el coste (ChatGPT 67%)</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">Sede favorita de la IA</div><div class="metric-card-value">México</div><div class="metric-card-desc">la más recomendada por las dos IAs, por encima de USA</div></div>
+    <div class="metric-card accent-warning"><div class="metric-card-label">Gemini se inhibe</div><div class="metric-card-value">29%</div><div class="metric-card-desc">de sus respuestas sobre sede son "depende"; ChatGPT solo 9%</div></div>
+    <div class="metric-card accent-positive"><div class="metric-card-label">Animan a ir</div><div class="metric-card-value">&lt;10%</div><div class="metric-card-desc">rara vez un "sí, ve" claro: la IA frena más que anima</div></div>
+  </div>
+
+  <div class="subsection-title">Los 5 hallazgos para FIFA</div>
+  <div class="insight negative">
+    <div class="insight-title">1. La IA frena la asistencia con la calculadora</div>
+    <p>Cuando un aficionado pregunta si ir, la IA responde con costes: <span style="color:#1d4ed8;">Gemini</span> saca el precio en el <strong>85%</strong> de sus respuestas de viaje y <span style="color:#be185d;">ChatGPT</span> en el <strong>67%</strong>. Y casi ninguna anima abiertamente a ir (menos del 10%). La IA enmarca el Mundial como <strong>caro</strong> antes que como experiencia.</p>
+  </div>
+  <div class="insight">
+    <div class="insight-title">2. México enamora a la IA como sede</div>
+    <p>Las dos IAs recomiendan <strong>México</strong> por encima de USA y Canadá (ambiente, Fan Festival del Zócalo). USA, pese a albergar más partidos que nadie, recibe el empuje más bajo. La IA reparte el foco entre sedes de forma <strong>desigual</strong>.</p>
+  </div>
+  <div class="insight warning">
+    <div class="insight-title">3. La IA trata distinto según el origen</div>
+    <p><span style="color:#1d4ed8;">Gemini</span> responde <strong>"vale totalmente la pena"</strong> a un aficionado de Canadá o Francia, y <strong>"depende de tu presupuesto"</strong> a uno de Argentina, Brasil o Marruecos. El acceso simbólico al evento no se reparte igual.</p>
+  </div>
+  <div class="insight negative">
+    <div class="insight-title">4. La IA no ayuda a las familias a decidir</div>
+    <p>Ante "mejor sede para mi familia", las dos IAs responden con <strong>coste de vida y sistema educativo</strong>, como si la familia quisiera emigrar y no asistir al torneo. Pierde la oportunidad de ayudar a planificar la asistencia familiar.</p>
+  </div>
+  <div class="insight warning">
+    <div class="insight-title">5. El calor es el punto débil del relato</div>
+    <p>Las dos IAs hablan en <strong>negativo</strong> del clima de las sedes: un riesgo de imagen para las ciudades más calurosas en pleno verano (junio-julio). Es, junto al precio, el único tema donde la IA introduce reparos sobre el evento.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>3</span></div>
+</div>
+
+<!-- 05 H1 VIAJE Y ORIGEN -->
+<div class="page" id="h1">
+  <div class="section-header"><span class="section-number">02</span><h2 class="section-title">H1 · ¿Recomienda viajar, y a quién?</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Aquí los dos motores divergen de forma clara. <span style="color:#1d4ed8;">Gemini</span> modula el <strong>entusiasmo</strong> según el origen; <span style="color:#be185d;">ChatGPT</span> responde con un <strong>análisis uniforme y detallado</strong> a casi todos.</p>
+
+  <div class="table-title">Tono de la recomendación según motor y origen</div>
+  <table>
+    <tr><th>Perfil / Origen</th><th class="col-gemini">Gemini</th><th class="col-chatgpt">ChatGPT</th></tr>
+    <tr><td>Émilie (Canadá)</td><td>"¡Por supuesto! ...vale la pena"</td><td>Detalle de sedes y fechas</td></tr>
+    <tr><td>Thomas (Francia)</td><td>"¡Por supuesto! ...vale la pena"</td><td>Análisis con fuentes</td></tr>
+    <tr><td>Mateo (Argentina)</td><td>"Depende del presupuesto" (frío)</td><td>Costes + calendario de Argentina</td></tr>
+    <tr><td>Mehdi (Marruecos)</td><td>"Dependerá de varios factores"</td><td>Costes + calendario de Marruecos</td></tr>
+  </table>
+
+  <div class="insight negative">
+    <div class="insight-title">El sesgo de Gemini, en una frase</div>
+    <p><span style="color:#1d4ed8;">Gemini</span> arranca con un <strong>"¡Por supuesto!"</strong> para la aficionada canadiense y el francés, pero con un <strong>"depende de tu presupuesto"</strong> para el argentino y el marroquí. Empuja a viajar según la cercanía y el poder adquisitivo que asocia a cada origen.</p>
+  </div>
+  <div class="insight positive">
+    <div class="insight-title">ChatGPT reparte más parejo</div>
+    <p><span style="color:#be185d;">ChatGPT</span> da a casi todos el mismo análisis detallado (costes, vuelos, requisitos) y hasta personaliza con datos útiles: al marroquí le lista el <strong>calendario de partidos de Marruecos</strong>, al argentino le recuerda que la selección ya está clasificada. Menos sesgo de entusiasmo, más servicio.</p>
+  </div>
+
+  <div class="verbatim positive engine-gemini">
+    <div class="verbatim-tag"><span class="engine-badge gemini">Gemini</span> Consideración &middot; Émilie (Canadá, en francés)</div>
+    <div class="verbatim-question">¿Vale la pena viajar desde Quebec al Mundial 2026?</div>
+    <div class="verbatim-text">"<strong>¡Por supuesto!</strong> Viajar desde Quebec al Mundial 2026 vale totalmente la pena, sobre todo para una recién aficionada al fútbol como usted."</div>
+  </div>
+  <div class="verbatim engine-chatgpt">
+    <div class="verbatim-tag"><span class="engine-badge chatgpt">ChatGPT</span> Consideración &middot; Mehdi (Marruecos, en francés)</div>
+    <div class="verbatim-question">¿Vale la pena viajar desde Marruecos al Mundial 2026?</div>
+    <div class="verbatim-text">"...Marruecos, tras su gran actuación en 2022, vuelve a esta edición. <strong>Calendario de Marruecos: 13 de junio Brasil-Marruecos en Nueva York/Nueva Jersey; 19 de junio Escocia-Marruecos...</strong>"</div>
+    <div class="verbatim-meta">Respuesta de servicio: datos concretos y útiles, sin sesgo de entusiasmo.</div>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>4</span></div>
+</div>
+
+<!-- 06 H2 SEDE Y CLIMA -->
+<div class="page" id="h2">
+  <div class="section-header"><span class="section-number">03</span><h2 class="section-title">H2 · ¿Qué sede sugiere? México, USA o Canadá</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">La mayor diferencia entre motores: <span style="color:#1d4ed8;">Gemini</span> <strong>evita elegir</strong> sede; <span style="color:#be185d;">ChatGPT</span> <strong>sí recomienda una</strong>, adaptada al perfil que pregunta.</p>
+
+  <div class="table-title">Qué sede recomienda ChatGPT por perfil</div>
+  <table>
+    <tr><th>Perfil</th><th>Sede que elige ChatGPT</th><th>Motivo</th></tr>
+    <tr><td>James (UK)</td><td><strong>México</strong></td><td>"El anfitrión más vibrante", Fan Festival del Zócalo</td></tr>
+    <tr><td>Stefan (Alemania)</td><td><strong>USA</strong></td><td>Conveniencia de viaje y husos horarios</td></tr>
+    <tr><td>Diego (Uruguay, crítico)</td><td><strong>Canadá</strong></td><td>Mejor historial de derechos humanos</td></tr>
+    <tr><td>Gemini (todos)</td><td><em>Ninguna</em></td><td>"Los tres comparten organización, depende de ti"</td></tr>
+  </table>
+
+  <div class="metric-grid cols-3">
+    <div class="metric-card accent-negative"><div class="metric-card-label">Clima (Gemini)</div><div class="metric-card-value">−0,07</div><div class="metric-card-desc">El calor preocupa</div></div>
+    <div class="metric-card accent-negative"><div class="metric-card-label">Clima (ChatGPT)</div><div class="metric-card-value">−0,08</div><div class="metric-card-desc">Mismo reparo por el calor</div></div>
+    <div class="metric-card accent-positive"><div class="metric-card-label">Ambiente futbolero</div><div class="metric-card-value">+0,51</div><div class="metric-card-desc">ChatGPT vende muy bien la experiencia del aficionado</div></div>
+  </div>
+
+  <div class="insight negative">
+    <div class="insight-title">El punto ciego compartido: "mejor sede" leído como "mejor país para vivir"</div>
+    <p>Tanto Gemini como ChatGPT, ante los perfiles familiares (Pablo, familia española), responden con <strong>coste de vida, calidad de vida y sistema educativo</strong>, como si preguntaran dónde emigrar y no dónde ver el Mundial. Es un fallo de contexto que comparten <strong>las dos IAs</strong>.</p>
+  </div>
+
+  <div class="verbatim positive engine-chatgpt">
+    <div class="verbatim-tag"><span class="engine-badge chatgpt">ChatGPT</span> Consideración &middot; James (UK, en inglés)</div>
+    <div class="verbatim-question">México, USA o Canadá: mejor país anfitrión para aficionados ingleses</div>
+    <div class="verbatim-text">"Para los aficionados ingleses, <strong>México destaca como el país anfitrión más vibrante</strong>. Ciudad de México ofrece una experiencia única, con el FIFA Fan Festival en el Zócalo para más de 100.000 personas."</div>
+  </div>
+  <div class="verbatim engine-gemini">
+    <div class="verbatim-tag"><span class="engine-badge gemini">Gemini</span> Consideración &middot; Mike (USA, en inglés)</div>
+    <div class="verbatim-question">¿Cuál es el mejor país anfitrión del Mundial 2026: México, USA o Canadá?</div>
+    <div class="verbatim-text">"No hay un único 'mejor' anfitrión entre los tres, ya que <strong>las tres naciones comparten la organización</strong>. Es la primera vez que el torneo se celebra en tres países."</div>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>5</span></div>
+</div>
+
+<!-- 07 H3 FAVORITOS -->
+<div class="page" id="h3">
+  <div class="section-header"><span class="section-number">04</span><h2 class="section-title">H3 · ¿Quién gana según la IA?</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Ante "¿quién ganará el Mundial 2026?", los dos motores coinciden en la favorita pero <strong>llegan a ella de forma distinta</strong>: ChatGPT cita fuentes y cuotas actualizadas; Gemini tira de memoria.</p>
+
+  <div class="table-title">Favoritas que nombra cada motor</div>
+  <table>
+    <tr><th>#</th><th>Selección</th><th class="col-gemini">Gemini</th><th class="col-chatgpt">ChatGPT</th></tr>
+    <tr class="target-brand"><td>1</td><td><strong>España</strong></td><td>Favorita (16%, "favorita ajustada")</td><td>Favorita (16-18%, campeona de Europa)</td></tr>
+    <tr><td>2</td><td>Francia</td><td>Cuotas +450/+500</td><td>Cuota ~5,5 (18%); 1ª para francófonos</td></tr>
+    <tr><td>3</td><td>Inglaterra / Argentina</td><td>Mencionadas</td><td>Argentina ~16,7%; ambas citadas</td></tr>
+    <tr><td>4</td><td>Brasil / Alemania / Portugal</td><td>Por historia</td><td>Citadas con probabilidad &gt;10%</td></tr>
+  </table>
+
+  <div class="insight">
+    <div class="insight-title">Qué significa y por qué</div>
+    <p>España encabeza en ambas IAs porque las dos reproducen el <strong>consenso de las casas de apuestas</strong>. La diferencia está en la fuente: ChatGPT enlaza artículos reales y da cuotas al día; Gemini repite un dato aprendido. Para el aficionado, el favorito es el mismo, pero la <em>fiabilidad</em> de la respuesta no.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>El matiz que importa:</strong> ChatGPT ordena <strong>Francia primero</strong> cuando pregunta un francófono (Thomas, Émilie), un sesgo de afinidad sutil. Gemini, en cambio, es más vago con los perfiles latinos: a Mateo (Argentina) le da una respuesta emocional sin favorito claro, mientras a ChatGPT le da a Mateo el mismo análisis concreto que a un anglófono.</p>
+  </div>
+
+  <div class="verbatim positive engine-chatgpt">
+    <div class="verbatim-tag"><span class="engine-badge chatgpt">ChatGPT</span> Reconocimiento &middot; Aisha (Sudáfrica, en inglés)</div>
+    <div class="verbatim-question">¿Quién ganará el Mundial 2026?</div>
+    <div class="verbatim-text">"<strong>A 1 de junio de 2026</strong>, el Mundial arranca el 11 de junio y la final es el 19 de julio. 48 selecciones en USA, Canadá y México. Favoritas: <strong>España</strong>, campeona de Europa vigente, con una plantilla profunda..." <span style="color:var(--text-tertiary);">[cita fourfourtwo.com]</span></div>
+    <div class="verbatim-meta">Fecha correcta y fuente web enlazada.</div>
+  </div>
+  <div class="verbatim warning engine-gemini">
+    <div class="verbatim-tag"><span class="engine-badge gemini">Gemini</span> Reconocimiento &middot; Mateo (Argentina, en español)</div>
+    <div class="verbatim-question">¿Quién ganará el Mundial 2026?</div>
+    <div class="verbatim-text">"¡Qué buena pregunta! Aún es muy pronto para decirlo con certeza, ya que <strong>faltan dos años</strong> y el rendimiento de los equipos puede cambiar mucho..."</div>
+    <div class="verbatim-meta">Sin favorito concreto y con error de calendario: ya es junio de 2026.</div>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>6</span></div>
+</div>
+
+<!-- 08 H4 GEMINI Y CHATGPT -->
+<div class="page" id="h4">
+  <div class="section-header"><span class="section-number">05</span><h2 class="section-title">H4 · Gemini frente a ChatGPT</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">El corazón del observatorio. Con los dos motores ya se puede afirmar: <strong>la IA que elige el aficionado cambia el Mundial que recibe</strong>. No solo por el idioma, también por el motor.</p>
+
+  <div class="table-title">Las dos IAs frente a frente</div>
+  <table>
+    <tr><th>Dimensión</th><th class="col-gemini">Gemini</th><th class="col-chatgpt">ChatGPT</th></tr>
+    <tr><td><strong>Frescura temporal</strong></td><td>Cree que "faltan dos años"</td><td>Fecha correcta, "a 1 de junio de 2026"</td></tr>
+    <tr><td><strong>Fuentes</strong></td><td>Responde de memoria, sin enlaces</td><td>Cita web real (medios, casas de apuestas)</td></tr>
+    <tr><td><strong>Exactitud en lo más reciente</strong></td><td>16/17 perfiles correctos</td><td>17/17 perfiles correctos</td></tr>
+    <tr><td><strong>Sesgo de concreción</strong></td><td>Vago con perfiles latinos</td><td>Concreto con todos</td></tr>
+    <tr><td><strong>Elección de sede</strong></td><td>Evita elegir</td><td>Elige una según el perfil</td></tr>
+    <tr><td><strong>Punto ciego "emigrar"</strong></td><td>Sí</td><td>Sí (compartido)</td></tr>
+  </table>
+
+  <div class="callout">
+    <p><strong>La conclusión de H4:</strong> el sesgo no es solo por origen, también es por motor. <span style="color:#f9a8d4;">ChatGPT</span> es más fresco, más fiable y más decidido porque busca en la web; <span style="color:#93c5fd;">Gemini</span> es más rápido pero arrastra los límites de su memoria. Un mismo aficionado, dos IAs, dos Mundiales distintos.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="insight"><div class="insight-title">Donde coinciden</div><p>Favorita (España), tono neutral (99%), reparo por el calor de las sedes, y el punto ciego de "mejor sede = emigrar". El consenso de base es común.</p></div>
+    <div class="insight warning"><div class="insight-title">Donde se separan</div><p>Frescura, fuentes, exactitud factual y voluntad de recomendar. Ahí ChatGPT y Gemini ofrecen experiencias claramente distintas al aficionado.</p></div>
+  </div>
+
+  <div class="verbatim engine-gemini">
+    <div class="verbatim-tag"><span class="engine-badge gemini">Gemini</span> Reconocimiento &middot; Stefan (Alemania, en inglés)</div>
+    <div class="verbatim-question">¿Quién ganará el Mundial 2026?</div>
+    <div class="verbatim-text">"<strong>Alemania</strong>, con su rica historia futbolística, es siempre un equipo a seguir. Dado tu perfil de ingeniero mecánico, sabrás apreciar que el alto rendimiento sostenido se apoya en sistemas robustos."</div>
+    <div class="verbatim-meta">Gemini reorienta el favorito hacia la selección del que pregunta y adapta la metáfora a su profesión.</div>
+  </div>
+
+  <div class="subsection-title">Apunte de frescura: el caso Tim Payne</div>
+  <p style="font-size:11px; color:var(--text-secondary);">Como prueba de actualidad se introdujo a propósito el caso de <strong>Tim Payne</strong>, el jugador de Nueva Zelanda viralizado pocos días antes por una campaña en redes. El acierto fue muy alto en las dos IAs, algo notable para un fenómeno tan reciente: <span style="color:#be185d;">ChatGPT</span> dio la información correcta a <strong>los 17 perfiles</strong> y <span style="color:#1d4ed8;">Gemini</span> a <strong>16 de 17</strong>, con una única alucinación, en el perfil brasileño. Las dos IAs demuestran estar al día del evento casi en tiempo real.</p>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>7</span></div>
+</div>
+
+<!-- 10 SENTIMIENTO Y ATRIBUTOS -->
+<div class="page" id="sentimiento">
+  <div class="section-header"><span class="section-number">06</span><h2 class="section-title">Sentimiento y atributos</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">¿Con qué tono hablan del Mundial las dos IAs? Las dos son <strong>marcadamente neutrales y factuales</strong>: informan más que entusiasman. A nivel de tono, apenas hay diferencia entre motores.</p>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card engine-gemini"><div class="metric-card-label">Neutral (Gemini)</div><div class="metric-card-value">98,7%</div><div class="metric-card-desc">sin carga emocional</div></div>
+    <div class="metric-card engine-chatgpt"><div class="metric-card-label">Neutral (ChatGPT)</div><div class="metric-card-value">98,9%</div><div class="metric-card-desc">prácticamente idéntico</div></div>
+    <div class="metric-card"><div class="metric-card-label">BIS Gemini</div><div class="metric-card-value">54,5</div><div class="metric-card-desc">aparece sin destacar</div></div>
+    <div class="metric-card"><div class="metric-card-label">BIS ChatGPT</div><div class="metric-card-value">54,8</div><div class="metric-card-desc">prácticamente igual</div></div>
+  </div>
+
+  <div class="table-title">Sentimiento por tema (atributos)</div>
+  <table>
+    <tr><th>Tema</th><th class="col-gemini">Gemini</th><th class="col-chatgpt">ChatGPT</th><th>Lectura</th></tr>
+    <tr><td>Ambiente futbolero</td><td>+0,48</td><td>+0,51</td><td><span class="label-tag green">Muy positivo</span></td></tr>
+    <tr><td>Seguridad</td><td>+0,17</td><td>+0,11</td><td><span class="label-tag blue">Positivo</span></td></tr>
+    <tr><td>Precio / presupuesto</td><td>−0,04</td><td>+0,02</td><td><span class="label-tag amber">Tema sensible</span></td></tr>
+    <tr><td>Clima de las sedes</td><td>−0,07</td><td>−0,08</td><td><span class="label-tag red">Negativo</span></td></tr>
+  </table>
+
+  <div class="insight">
+    <div class="insight-title">Qué significa</div>
+    <p>El tema más voluminoso es el <strong>precio</strong> (más de 600 menciones en cada motor) y es el más tibio: la conversación de coste tiñe de reparo el relato. El <strong>clima</strong> es el punto sensible compartido (negativo en las dos IAs): el calor de las sedes preocupa. En cambio el ambiente futbolero recibe tono muy favorable. La foto, común a los dos motores: venden bien la experiencia, pero alertan del bolsillo y del calor.</p>
+  </div>
+
+  <div class="verbatim warning engine-chatgpt">
+    <div class="verbatim-tag"><span class="engine-badge chatgpt">ChatGPT</span> Decisión &middot; consideración de coste</div>
+    <div class="verbatim-question">¿Cuánto debería presupuestar para ir al Mundial 2026?</div>
+    <div class="verbatim-text">"Viajar al Mundial exige una <strong>planificación financiera detallada</strong>: vuelos, alojamiento, entradas oficiales y desplazamientos entre las 16 sedes pueden disparar el coste."</div>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>8</span></div>
+</div>
+
+<!-- 07 FUENTES -->
+<div class="page" id="fuentes">
+  <div class="section-header"><span class="section-number">07</span><h2 class="section-title">Fuentes: ¿de dónde saca la IA su relato?</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Cada respuesta se apoya en fuentes. ¿Dónde bebe cada motor para hablar del Mundial a los aficionados? Aquí aparece una de las diferencias más nítidas entre los dos: <strong>no leen las mismas páginas</strong>.</p>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card engine-chatgpt"><div class="metric-card-label">Fuentes oficiales (ChatGPT)</div><div class="metric-card-value">16,7%</div><div class="metric-card-desc">citas a dominios FIFA</div></div>
+    <div class="metric-card engine-gemini"><div class="metric-card-label">Fuentes oficiales (Gemini)</div><div class="metric-card-value">10,0%</div><div class="metric-card-desc">casi la mitad que ChatGPT</div></div>
+    <div class="metric-card engine-chatgpt"><div class="metric-card-label">1ª fuente ChatGPT</div><div class="metric-card-value">fifa.com</div><div class="metric-card-desc">la web oficial, en cabeza</div></div>
+    <div class="metric-card engine-gemini"><div class="metric-card-label">1ª fuente Gemini</div><div class="metric-card-value">YouTube</div><div class="metric-card-desc">vídeo por delante de FIFA</div></div>
+  </div>
+
+  <div class="table-title">Top 5 fuentes citadas por motor (nº de citas)</div>
+  <table>
+    <tr><th>#</th><th class="col-gemini">Gemini</th><th class="col-chatgpt">ChatGPT</th></tr>
+    <tr><td>1</td><td>YouTube &middot; 255</td><td>fifa.com &middot; 374</td></tr>
+    <tr><td>2</td><td>Google / vertexaisearch &middot; 208</td><td>as.com &middot; 357</td></tr>
+    <tr><td>3</td><td>goal.com &middot; 165</td><td>elpais.com &middot; 312</td></tr>
+    <tr><td>4</td><td>fifa.com &middot; 163</td><td>infobae.com &middot; 282</td></tr>
+    <tr><td>5</td><td>infobae.com &middot; 155</td><td>goal.com &middot; 276</td></tr>
+  </table>
+
+  <div class="insight">
+    <div class="insight-title">Qué significa</div>
+    <p>Ambos beben de la misma <strong>prensa deportiva</strong> (goal.com, infobae, as.com, elpais.com), pero priorizan distinto: <strong>ChatGPT</strong> encabeza con la <strong>web oficial de la FIFA</strong> y se apoya casi el doble en fuentes oficiales (16,7% frente al 10,0% de Gemini), mientras <strong>Gemini</strong> antepone <strong>YouTube</strong> y un redirector de Google a la propia FIFA.</p>
+  </div>
+
+  <div class="insight warning">
+    <div class="insight-title">El punto ciego de Gemini</div>
+    <p>La 2ª fuente de Gemini (208 citas) es <strong>vertexaisearch.cloud.google.com</strong>, un redirector interno de Google que <strong>oculta la página de origen</strong> tras un enlace propio. Es contenido que la FIFA no puede rastrear ni influir directamente: una parte del relato de Gemini sobre el Mundial es, para la organización, una caja negra.</p>
+  </div>
+
+  <div class="insight warning">
+    <div class="insight-title">¿Qué hay detrás del YouTube de Gemini?</div>
+    <p>La fuente nº1 de Gemini <strong>no es un canal, son 256 vídeos distintos</strong> para unas 295 citas: casi uno por vídeo, el más citado apenas 8 veces y un 9% son Shorts. Por su contenido, son <strong>vídeos de creadores independientes y canales de aficionados</strong>, no de la FIFA ni de las cadenas oficiales: guías de "dónde ver el partido gratis", rankings de hoteles y sedes, predicciones de favoritos y Balón de Oro, avisos de estafas de reventa e incluso memes del sorteo. Es decir, la fuente principal de Gemini es contenido sobre el que la <strong>FIFA no tiene ningún control editorial</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>La lectura:</strong> la web oficial ya compite por la atención de la IA con YouTube y la prensa deportiva. En ChatGPT, fifa.com gana esa batalla; en Gemini queda en cuarto lugar, por detrás de una nube difusa de vídeos de creadores. Reforzar la presencia en las fuentes que cada motor prioriza (vídeo y prensa para Gemini, dominios oficiales para ChatGPT) es la palanca directa para que la IA cuente el Mundial con datos oficiales.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>9</span></div>
+</div>
+
+<!-- 08 TITULARES -->
+<div class="page" id="titulares">
+  <div class="section-header"><span class="section-number">08</span><h2 class="section-title">Highlights del estudio</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Cómo la IA habla del Mundial a sus aficionados, y cómo cambia el mensaje según quién pregunta. Cada highlight va anclado a un dato del estudio.</p>
+
+  <div class="insight negative">
+    <div class="insight-title">1. La IA frena la asistencia</div>
+    <p>"Pregunta a la IA si ir al Mundial y te responde con la calculadora: el coste aparece en el <strong>85%</strong> de las respuestas de Gemini sobre viajar, y casi ninguna IA anima abiertamente a ir." <span class="label-tag blue">Viaje</span></p>
+  </div>
+  <div class="insight">
+    <div class="insight-title">2. México enamora a la IA</div>
+    <p>"Las dos grandes IAs recomiendan <strong>México</strong> como sede por encima de USA y Canadá. USA, con más partidos que nadie, recibe el empuje más bajo." <span class="label-tag blue">Sede</span></p>
+  </div>
+  <div class="insight warning">
+    <div class="insight-title">3. El viaje, por código postal</div>
+    <p>"La IA dice 'vale totalmente la pena' a un canadiense o un francés, y 'depende de tu presupuesto' a un argentino, un brasileño o un marroquí." <span class="label-tag blue">Origen</span></p>
+  </div>
+  <div class="insight">
+    <div class="insight-title">4. Una IA elige sede; la otra no</div>
+    <p>"Gemini se inhibe ('depende') en <strong>1 de cada 3</strong> respuestas sobre dónde ir; ChatGPT recomienda una sede el <strong>90%</strong> de las veces." <span class="label-tag blue">Sede</span></p>
+  </div>
+  <div class="insight negative">
+    <div class="insight-title">5. La IA no ayuda a las familias</div>
+    <p>"Pregunta por la mejor sede para tu familia y la IA te dice dónde se vive mejor, no dónde disfrutar del Mundial." <span class="label-tag blue">Familia</span></p>
+  </div>
+  <div class="insight warning">
+    <div class="insight-title">6. El calor, el punto débil del relato</div>
+    <p>"Las dos IAs hablan en negativo del clima de las sedes: un riesgo de imagen para las ciudades más calurosas en pleno verano." <span class="label-tag blue">Clima</span></p>
+  </div>
+  <div class="insight positive">
+    <div class="insight-title">7. La IA va al día de tu evento</div>
+    <p>"Incluso con un fenómeno viral de hace días, las dos IAs aciertan con casi todos los perfiles: ChatGPT con los 17 y Gemini con 16 de 17." <span class="label-tag blue">Frescura</span></p>
+  </div>
+
+  <div class="callout">
+    <p><strong>En conjunto:</strong> estos titulares no van sobre tecnología, sino sobre cómo la IA moldea hoy las decisiones de millones de aficionados sobre el Mundial: si acuden, a qué sede y con qué expectativa de coste y de experiencia.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>10</span></div>
+</div>
+
+<!-- 09 CONCLUSIÓN -->
+<div class="page" id="conclusion">
+  <div class="section-header"><span class="section-number">09</span><h2 class="section-title">Conclusión</h2></div>
+
+  <p style="font-size:12.5px; color:var(--text); margin-bottom:16px; line-height:1.8;">La conclusión es clara: la IA ya es un intermediario entre el torneo y su público, y no es neutral. No actúa como altavoz del evento. Enmarca asistir como caro, rara vez anima a ir, recomienda México por encima de las demás sedes, trata distinto al aficionado según su país, no ayuda a las familias a decidir y, a veces, da datos erróneos del propio Mundial. Cada respuesta de la IA es una microdecisión de viaje, de entradas y de percepción que ya no controla la organización.</p>
+
+  <div class="swot-grid">
+    <div class="swot-cell strengths"><h4>Lo que juega a favor del evento</h4><ul><li>Cobertura altísima: la IA siempre entra al tema</li><li>México y el ambiente futbolero salen muy bien valorados</li><li>El formato de 48 equipos recibe tono positivo</li></ul></div>
+    <div class="swot-cell weaknesses"><h4>Riesgos en el relato de la IA</h4><ul><li>El coste domina y frena la asistencia</li><li>USA, infrarrepresentada como sede pese a tener más partidos</li><li>El calor de las sedes, en negativo</li><li>Datos erróneos puntuales del torneo</li></ul></div>
+    <div class="swot-cell opportunities"><h4>Qué puede hacer la FIFA</h4><ul><li>Alimentar a las IAs con contenido oficial (precios reales, info de sedes, seguridad, clima)</li><li>Reequilibrar la recomendación entre sedes</li><li>Difundir estos datos como earned media</li></ul></div>
+    <div class="swot-cell threats"><h4>A vigilar</h4><ul><li>El sesgo por origen puede leerse como inequidad de acceso</li><li>Validar la evolución durante el torneo (segunda ola)</li><li>Contraste de la predicción con el resultado real (H5)</li></ul></div>
+  </div>
+
+  <p style="font-size:11px; color:var(--text-tertiary); text-align:center; margin-top:18px;">Versión v2 (Gemini y ChatGPT). ZOOPA / 498 Advisory Services &middot; GEORadar &middot; Junio 2026.</p>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>11</span></div>
+</div>
+
+<!-- 10 METODOLOGÍA -->
+<div class="page" id="metodologia">
+  <div class="section-header"><span class="section-number">10</span><h2 class="section-title">Metodología</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">No auditamos una marca-empresa, sino <strong>cómo dos IAs representan el Mundial a los aficionados</strong>. Sobre una columna vertebral de 4 preguntas CORE comparables por persona, se añaden capas de embudo, áreas temáticas y casos especiales. El objetivo es detectar sesgo por origen, idioma y <strong>motor</strong>.</p>
+
+  <div class="two-col">
+    <div class="insight"><div class="insight-title">Qué se puede afirmar ya</div><p>Cómo responde cada IA a cada perfil, qué favoritos nombra, cómo recomienda viajar y elegir sede, las diferencias entre personas (sesgo por origen) y las diferencias entre motores (Gemini frente a ChatGPT).</p></div>
+    <div class="insight warning"><div class="insight-title">Qué queda pendiente</div><p>El contraste de la predicción de la IA con las cuotas reales a cierre del torneo (H5) y la lectura por ventanas temporales (durante y post-evento). Esta v2 es la foto pre-evento.</p></div>
+  </div>
+
+  <div class="subsection-title">Dos notas técnicas importantes</div>
+  <p style="font-size:11px; color:var(--text-secondary); margin-bottom:10px;">1. Las diferencias observadas entre <strong>Gemini</strong> y <strong>ChatGPT</strong> son consistentes y publicables. Conviene confirmarlas con ejecuciones adicionales antes de difundir cifras absolutas; este corte es la foto pre-evento.</p>
+  <p style="font-size:11px; color:var(--text-secondary); margin-bottom:12px;">2. El sistema detecta como entidades el propio evento, pero <strong>no registra todavía las selecciones ni las sedes como entidades comparables</strong>. Por eso el ranking competitivo clásico no aplica y el análisis se construye sobre el texto. Para la versión definitiva se recomienda registrarlas, de modo que el favoritismo y el sesgo se puedan también cuantificar.</p>
+
+  <div class="insight">
+    <div class="insight-title">Volumen y alcance</div>
+    <p><strong>4.690 respuestas</strong> (2.345 por motor), <strong>17 perfiles</strong>, <strong>4 idiomas</strong>, 3 fases de embudo y 6 áreas temáticas. Cobertura del 96-97%: las dos IAs entran al tema casi siempre.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>12</span></div>
+</div>
+
+<!-- 11 ESTUDIO DE PROMPTS -->
+<div class="page" id="prompts">
+  <div class="section-header"><span class="section-number">11</span><h2 class="section-title">Estudio de prompts</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Se diseñaron <strong>2.345 preguntas</strong> que un aficionado real haría a la IA, lanzadas a <strong>los dos motores</strong> (<strong>4.690 respuestas</strong> en total). Repartidas en <strong>17 perfiles</strong>, <strong>4 idiomas</strong> (español, inglés, portugués y francés), 3 fases de embudo y 6 áreas temáticas.</p>
+
+  <div class="metric-grid cols-3">
+    <div class="metric-card"><div class="metric-card-label">Reconocimiento</div><div class="metric-card-value">~1.200</div><div class="metric-card-desc">El aficionado explora: qué es, quién juega, cómo va</div></div>
+    <div class="metric-card"><div class="metric-card-label">Consideración</div><div class="metric-card-value">~660</div><div class="metric-card-desc">Compara opciones: sede, viaje, presupuesto</div></div>
+    <div class="metric-card"><div class="metric-card-label">Decisión</div><div class="metric-card-value">~470</div><div class="metric-card-desc">Quiere actuar: entradas, reservas, recomendación</div></div>
+  </div>
+
+  <div class="table-title">Perfiles (selección)</div>
+  <table>
+    <tr><th>Perfil</th><th>Origen</th><th>Idioma</th><th>Rol en el estudio</th></tr>
+    <tr><td>Mateo</td><td>Argentina</td><td>Español</td><td>Aficionado campeón vigente, presupuesto ajustado</td></tr>
+    <tr><td>Beatriz</td><td>Brasil</td><td>Portugués</td><td>Único perfil en portugués</td></tr>
+    <tr><td>Pablo</td><td>España</td><td>Español</td><td>Aficionado familiar con dos hijos</td></tr>
+    <tr><td>Thomas / Émilie / Mehdi</td><td>Francia / Canadá / Marruecos</td><td>Francés</td><td>Eje francófono</td></tr>
+    <tr><td>James / Stefan / Mike</td><td>UK / Alemania / USA</td><td>Inglés</td><td>Eje anglófono</td></tr>
+    <tr><td>Aisha</td><td>Sudáfrica</td><td>Inglés</td><td>Apostante, perfil cuantitativo</td></tr>
+    <tr><td>Diego</td><td>Uruguay</td><td>Español</td><td>Crítico, foco en derechos humanos</td></tr>
+    <tr><td>Patricia / Eduardo</td><td>USA / México</td><td>Inglés / Español</td><td>Capa B2B (sponsor, sportsbook)</td></tr>
+  </table>
+
+  <div class="insight positive">
+    <div class="insight-title">Las 4 preguntas CORE comparables</div>
+    <p>Cada aficionado hace, en su idioma y a los dos motores, las mismas preguntas clave: <strong>"¿Quién ganará?"</strong>, <strong>"¿Vale la pena viajar desde mi país?"</strong>, <strong>"¿México, USA o Canadá?"</strong> y <strong>"¿Quién es Tim Payne y por qué se ha hecho viral?"</strong>. Son la materia prima comparativa: misma pregunta, distinto origen, distinto motor.</p>
+  </div>
+
+  <div class="insight">
+    <div class="insight-title">Nota de diseño</div>
+    <p>Las preguntas son las de un aficionado natural y no inducen una respuesta concreta. Cuando la IA nombra una selección, un jugador o una sede, lo hace <strong>por elección propia</strong>. Esa elección espontánea, comparada entre motores, es lo que mide el estudio.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>13</span></div>
+</div>
+
+<!-- 12 GLOSARIO -->
+<div class="page" id="glosario">
+  <div class="section-header"><span class="section-number">12</span><h2 class="section-title">Glosario y leyenda de valores</h2></div>
+  <p style="font-size:11.5px; color:var(--text-secondary); margin-bottom:14px;">Esta auditoría es atípica: la marca observada no es una empresa, es el <strong>evento Mundial FIFA 2026</strong>, y lo que medimos es <strong>cómo dos IAs representan el torneo a aficionados de distintos países</strong>. El análisis se apoya menos en el ranking competitivo clásico y más en el <strong>contenido literal de las respuestas</strong> comparado entre perfiles y entre los dos motores.</p>
+
+  <div class="table-title">Métricas que sí aplican a este estudio</div>
+  <table>
+    <tr><th>Métrica</th><th>Qué mide</th><th>Cómo leerla</th></tr>
+    <tr><td><strong>Sentimiento</strong></td><td>El tono de la IA al hablar del torneo (-1 a +1)</td><td>Cerca de 0 = neutral y factual; positivo = entusiasta; negativo = crítico</td></tr>
+    <tr><td><strong>BIS</strong></td><td>Calidad global de la mención (0-100)</td><td>40-60 aparece sin destacar; 60-75 bien posicionado</td></tr>
+    <tr><td><strong>Comparación cross-persona</strong></td><td>Diferencia de respuesta a la <em>misma</em> pregunta según el origen</td><td>Mide el sesgo por origen, idioma y perfil</td></tr>
+    <tr><td><strong>Comparación por motor</strong></td><td>Diferencia entre Gemini y ChatGPT ante la misma pregunta</td><td>El eje nuevo de esta v2: dónde las dos IAs se contradicen</td></tr>
+  </table>
+
+  <div class="table-title" style="margin-top:18px;">Código de color de los motores</div>
+  <table>
+    <tr><th>Motor</th><th>Marca visual</th><th>Notas</th></tr>
+    <tr><td><span class="engine-badge gemini">Gemini</span></td><td>Azul</td><td>Gemini, de Google. Responde de memoria.</td></tr>
+    <tr><td><span class="engine-badge chatgpt">ChatGPT</span></td><td>Rosa</td><td>ChatGPT, de OpenAI. Busca y cita fuentes web.</td></tr>
+  </table>
+
+  <div class="insight">
+    <div class="insight-title">Media del estudio</div>
+    <p>Sentimiento medio: <strong>0,00</strong> en ambos motores (prácticamente neutral). BIS medio: <strong>54,5</strong> en Gemini y <strong>54,8</strong> en ChatGPT. A nivel de métrica los dos motores se parecen mucho: la diferencia real está en el <strong>contenido</strong> de las respuestas, no en los números.</p>
+  </div>
+  <div class="page-footer"><span>Mundial FIFA 2026 &middot; Auditoría GEO (v2 Gemini y ChatGPT) &middot; Junio 2026</span><span>14</span></div>
+</div>
+
+</div><!-- .report -->
+</body>
+</html>
