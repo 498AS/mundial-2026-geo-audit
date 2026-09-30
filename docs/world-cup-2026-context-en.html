@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup 2026 - Context Dossier | GEORadar by 498 Advance</title>
+  <meta name="description" content="Consolidated reference dossier on the FIFA World Cup 2026 (USA, Mexico, Canada): format, venues, business model, sponsorship, broadcast rights, prize money and economic impact. GEORadar by 498 Advance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#f8f8fa; --surface:#ffffff; --text:#111114; --text-secondary:#5c5c6b;
+      --text-tertiary:#8a8a96; --positive:#16a34a; --negative:#dc2626; --warning:#d97706;
+      --accent:#2563eb; --border:rgba(0,0,0,0.06); --border-strong:rgba(0,0,0,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Inter",system-ui,sans-serif; font-size:12px; line-height:1.7; color:var(--text); background:var(--bg); }
+    a { color:inherit; }
+
+    /* ---------- page model ---------- */
+    .report { max-width:210mm; margin:0 auto; padding:0 16px; }
+    @page { size:A4; margin:14mm 0 18mm; }
+    @media screen {
+      .sheet { width:210mm; background:var(--surface); border-radius:16px; border:1px solid var(--border);
+               box-shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.06);
+               padding:40px 48px 44px; margin:24px auto; }
+      .cover { margin:24px auto; }
+      .print-footer { display:none; }
+    }
+    @media print {
+      body { background:#fff; }
+      .report { max-width:none; padding:0; }
+      .sheet { width:auto; margin:0; padding:0 16mm; border:none; border-radius:0; box-shadow:none; background:#fff; }
+      .sidebar, .sidebar-toggle { display:none !important; }
+      .cover { border-radius:0 !important; margin:0 !important; break-after:page;
+               min-height:0 !important; height:246mm !important; padding:32px 40px !important; }
+      .cover-main { margin:24px 0 18px !important; }
+      .cover-title { font-size:46px !important; }
+      .cover-brand { margin-top:24px !important; padding-top:20px !important; }
+      .cover-foot { margin-top:12px !important; padding-top:12px !important; }
+      .sheet + .sheet { break-before:page; }
+      .print-footer { display:flex; position:fixed; bottom:6mm; left:16mm; right:16mm;
+                      justify-content:space-between; align-items:center;
+                      font-size:8px; font-weight:600; letter-spacing:0.6px; text-transform:uppercase;
+                      color:var(--text-tertiary); border-top:1px solid var(--border); padding-top:5px; }
+      .print-footer svg { height:11px; width:auto; opacity:.55; }
+      section { break-before:page; }
+      section:first-of-type { break-before:avoid; }
+      h2, h3, .subsection-title, .table-title { break-after:avoid; }
+      table, .metric-grid, .callout, .insight, .kv { break-inside:avoid; }
+      tr { break-inside:avoid; }
+      table { margin-bottom:9px; }
+      .subsection-title { margin:13px 0 7px; }
+      p { margin-bottom:7px; }
+      ul, ol { margin-bottom:9px; }
+      .insight { padding:12px 16px; margin-bottom:10px; }
+      .metric-grid { margin-bottom:12px; }
+      .pb { break-before:page; }
+    }
+
+    /* ---------- sidebar ---------- */
+    .sidebar { position:fixed; top:0; left:0; bottom:0; width:232px; z-index:1000; background:rgba(255,255,255,0.95);
+               backdrop-filter:blur(16px); color:var(--text-secondary); padding:22px 14px; overflow-y:auto;
+               font-size:10.5px; border-right:1px solid var(--border); box-shadow:4px 0 24px rgba(0,0,0,0.04);
+               border-radius:0 16px 16px 0; transition:transform .3s ease; }
+    .sidebar-logo { margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+    .sidebar-logo svg { width:128px; height:auto; display:block; color:#111114; }
+    .sidebar-logo small { display:block; margin-top:8px; font-size:9px; font-weight:600; letter-spacing:1px;
+                          text-transform:uppercase; color:var(--text-tertiary); }
+    .sidebar-item { display:flex; align-items:baseline; gap:8px; padding:5px 9px; margin-bottom:1px; border-radius:8px;
+                    transition:all .15s ease; text-decoration:none; color:var(--text-secondary); }
+    .sidebar-item:hover { color:var(--text); background:rgba(0,0,0,0.03); }
+    .sidebar-item-num { font-weight:700; min-width:18px; font-size:9px; color:var(--text-tertiary); }
+    .sidebar-item-text { font-weight:500; font-size:10.5px; }
+    .sidebar-toggle { position:fixed; top:14px; left:14px; z-index:1001; width:36px; height:36px; background:var(--surface);
+                      color:var(--text); border:1px solid var(--border); border-radius:10px; display:none;
+                      align-items:center; justify-content:center; cursor:pointer; font-size:16px;
+                      box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+    @media screen and (min-width:980px) { .report { margin-left:248px; } }
+    @media screen and (max-width:979px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:translateX(0); } .sidebar-toggle { display:flex; } }
+
+    /* ---------- cover ---------- */
+    .cover { width:210mm; min-height:297mm; padding:52px; background:linear-gradient(165deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);
+             color:#fff; border-radius:16px; display:flex; flex-direction:column; justify-content:space-between;
+             box-shadow:0 4px 24px rgba(0,0,0,0.12); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .cover-top { display:flex; justify-content:space-between; align-items:flex-start; }
+    .cover-badge { font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+                   border:1px solid rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; }
+    .cover-date { font-size:11px; color:rgba(255,255,255,0.5); text-align:right; }
+    .cover-main { margin:48px 0 32px; }
+    .cover-label { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:18px; }
+    .cover-title { font-size:52px; font-weight:900; line-height:1.03; letter-spacing:-2.2px; margin-bottom:22px; }
+    .cover-subtitle { font-size:14px; color:rgba(255,255,255,0.65); max-width:540px; line-height:1.75; }
+    .cover-brand { display:flex; align-items:center; gap:20px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.1); }
+    .cover-brand-logo { background:#fff; border-radius:12px; padding:12px 16px; display:flex; align-items:center; }
+    .cover-brand-logo svg { width:168px; height:auto; display:block; color:#1d1d1b; }
+    .cover-brand-info h2 { font-size:19px; font-weight:800; letter-spacing:-0.3px; }
+    .cover-brand-info p { font-size:11.5px; color:rgba(255,255,255,0.45); margin-top:4px; }
+    .cover-brand-info a { color:rgba(147,197,253,0.9); text-decoration:none; font-weight:600; }
+    .cover-metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .cover-metric { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:20px 16px;
+                    text-align:center; border-radius:12px; }
+    .cover-metric-value { font-size:32px; font-weight:900; letter-spacing:-1.5px; }
+    .cover-metric-label { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:6px; }
+    .cover-foot { text-align:center; padding-top:14px; border-top:1px solid rgba(255,255,255,0.06); margin-top:14px;
+                  font-size:10px; color:rgba(255,255,255,0.3); }
+    .cover-foot a { color:rgba(255,255,255,0.45); text-decoration:none; }
+
+    /* ---------- typography ---------- */
+    .section-header { display:flex; align-items:baseline; gap:14px; margin-bottom:22px; padding-bottom:12px; border-bottom:2px solid var(--text); }
+    .section-number { font-size:36px; font-weight:900; color:rgba(0,0,0,0.08); line-height:1; }
+    .section-title { font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+    .subsection-title { font-size:13px; font-weight:800; letter-spacing:-0.2px; margin:20px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border-strong); }
+    .table-title { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin:16px 0 8px; color:var(--text-secondary); }
+    p { font-size:11.5px; color:var(--text-secondary); line-height:1.75; margin-bottom:10px; }
+    p strong, li strong { color:var(--text); font-weight:700; }
+    ul, ol { margin:0 0 12px 18px; font-size:11.5px; color:var(--text-secondary); line-height:1.7; }
+    li { margin-bottom:4px; }
+    .lead { font-size:12.5px; color:var(--text); }
+
+    /* ---------- components ---------- */
+    .metric-grid { display:grid; gap:10px; margin-bottom:16px; }
+    .metric-grid.cols-2 { grid-template-columns:repeat(2,1fr); }
+    .metric-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
+    .metric-grid.cols-4 { grid-template-columns:repeat(4,1fr); }
+    .metric-card { background:var(--surface); padding:16px 18px; border-radius:12px; border:1px solid var(--border); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+    .metric-card.accent-positive { border-color:rgba(22,163,74,0.15); background:rgba(22,163,74,0.03); }
+    .metric-card.accent-negative { border-color:rgba(220,38,38,0.15); background:rgba(220,38,38,0.03); }
+    .metric-card.accent-warning { border-color:rgba(217,119,6,0.15); background:rgba(217,119,6,0.03); }
+    .metric-card.accent-blue { border-color:rgba(37,99,235,0.15); background:rgba(37,99,235,0.03); }
+    .metric-card-label { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-tertiary); margin-bottom:6px; }
+    .metric-card-value { font-size:26px; font-weight:900; letter-spacing:-1.4px; line-height:1; }
+    .metric-card-desc { font-size:10px; color:var(--text-secondary); margin-top:6px; line-height:1.45; }
+    .insight { border-radius:10px; background:rgba(37,99,235,0.04); border:1px solid rgba(37,99,235,0.12); padding:15px 18px; margin-bottom:14px; }
+    .insight.warning { background:rgba(217,119,6,0.04); border-color:rgba(217,119,6,0.12); }
+    .insight.negative { background:rgba(220,38,38,0.04); border-color:rgba(220,38,38,0.12); }
+    .insight-title { font-size:11px; font-weight:800; margin-bottom:5px; }
+    .insight p, .insight ul { font-size:11px; color:var(--text-secondary); line-height:1.65; margin-bottom:0; }
+    .callout { background:#1e293b; color:#f1f5f9; padding:18px 22px; margin:16px 0; border-radius:12px;
+               -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .callout p { font-size:11.5px; line-height:1.7; color:#cbd5e1; margin-bottom:0; }
+    .callout strong { color:#f1f5f9; }
+    table { width:100%; border-collapse:collapse; font-size:10.5px; margin-bottom:14px; }
+    th { background:#f0f0f3; color:#333; padding:8px 10px; text-align:left; font-weight:700; font-size:9px;
+         text-transform:uppercase; letter-spacing:0.5px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    th:first-child { border-radius:8px 0 0 0; } th:last-child { border-radius:0 8px 0 0; }
+    td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+    td.num, th.num { text-align:right; }
+    tr.highlight td { background:rgba(37,99,235,0.05); font-weight:700; }
+    tr.total td { background:#f6f6f8; font-weight:800; }
+    .tag { display:inline-block; font-size:8px; font-weight:700; padding:2px 7px; letter-spacing:0.5px;
+           text-transform:uppercase; border-radius:4px; background:#e8e8ee; color:#4b5563; }
+    .tag.blue { background:#dbeafe; color:#1d4ed8; } .tag.green { background:#dcfce7; color:#15803d; }
+    .tag.amber { background:#fef3c7; color:#b45309; } .tag.red { background:#fee2e2; color:#b91c1c; }
+    .kv { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:14px; }
+    .index-row { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--border); }
+    .index-row-left { display:flex; align-items:baseline; gap:16px; }
+    .index-num { font-size:10px; font-weight:800; color:var(--text-tertiary); min-width:22px; }
+    .index-name { font-size:12px; font-weight:700; }
+    .index-sub { font-size:10px; color:var(--text-tertiary); }
+    .doc-note { font-size:10px; color:var(--text-tertiary); line-height:1.6; }
+    .sources h4 { font-size:11px; font-weight:800; margin:16px 0 6px; }
+    .sources ul { margin-left:16px; font-size:10.5px; }
+    .sources a { color:var(--accent); text-decoration:none; }
+    .brandbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:26px;
+                padding-top:16px; border-top:2px solid var(--text); }
+    .brandbar svg { height:26px; width:auto; color:#111114; }
+    .brandbar-text { font-size:10px; color:var(--text-tertiary); text-align:right; line-height:1.6; }
+    .brandbar-text a { color:var(--accent); text-decoration:none; font-weight:700; }
+  </style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <svg role="img" aria-label="GEORadar" fill="currentColor" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 759.46 195.64">
+<path d="M94.74,62.86c3.23,5.39,4.85,11.59,4.85,18.58s-1.79,13.63-5.35,19.49c-3.57,5.86-8.66,10.5-15.26,13.94s-14.54,5.15-23.83,5.15-17.58-1.88-24.44-5.65c-1.75,1.35-2.63,3.02-2.63,5.04s.74,3.74,2.23,5.15,4.34,2.56,8.59,3.44,10.47,1.51,18.68,1.92c5.92.27,11.68.88,17.28,1.81,5.58.95,10.61,2.46,15.05,4.55,4.44,2.09,7.99,5.02,10.61,8.78s3.94,8.69,3.94,14.75c0,5.53-1.44,10.2-4.34,14.03-2.9,3.83-6.8,6.9-11.71,9.2-4.92,2.3-10.34,3.97-16.26,5.04-5.92,1.07-11.92,1.62-17.98,1.62-8.22,0-15.79-.88-22.72-2.63-6.94-1.75-12.52-4.44-16.77-8.08-4.25-3.64-6.36-8.29-6.36-13.94,0-4.44,1.18-8.25,3.53-11.41,2.35-3.16,5.22-5.69,8.59-7.57-6.87-4.3-10.31-10.43-10.31-18.38,0-4.58,1.18-8.48,3.53-11.71,2.35-3.23,5.35-5.58,8.99-7.06-7.94-7.27-11.92-16.42-11.92-27.48,0-7.13,1.79-13.63,5.35-19.49s8.69-10.54,15.35-14.03c6.67-3.5,14.57-5.25,23.74-5.25,5.66,0,10.8.7,15.45,2.12s8.78,3.33,12.43,5.76c4.4,3.17,8.52,6.69,11.71,12.33l-.03-.04ZM54.34,175.78c9.96,0,17.61-.95,22.93-2.83,5.32-1.88,7.99-4.38,7.99-7.48,0-4.32-2.83-7.17-8.48-8.59-5.66-1.42-13.61-2.39-23.83-2.93-7.27-.4-13.54-1.21-18.79-2.42-3.77,2.56-5.66,6.13-5.66,10.71,0,2.02.74,4.07,2.23,6.16,1.48,2.09,4.11,3.83,7.88,5.25,3.77,1.42,9.02,2.12,15.75,2.12h0ZM55.15,54.78c-5.11,0-9.13,1.42-12.01,4.25-2.9,2.83-4.92,6.29-6.06,10.4-1.14,4.11-1.72,8.11-1.72,12.01s.58,7.92,1.72,12.01c1.14,4.11,3.16,7.57,6.06,10.4,2.9,2.83,6.9,4.25,12.01,4.25s8.99-1.42,11.61-4.25,4.41-6.29,5.35-10.4,1.42-8.11,1.42-12.01-.47-7.9-1.42-12.01-2.72-7.57-5.35-10.4c-2.63-2.83-6.5-4.25-11.61-4.25Z"/>
+<path d="M234.76,45.06c5.11,2.25,9.4,5.33,12.87,9.26,3.46,3.93,6.01,8.31,7.63,13.14,1.62,4.83,2.37,9.77,2.25,14.79-.12,5.03-1.19,9.83-3.2,14.41-2.92,6.64-7.1,11.89-12.54,15.76-5.45,3.87-11.38,6.18-17.82,6.94-6.43.76-12.66-.18-18.67-2.82-5.11-2.25-9.39-5.3-12.83-9.17-3.44-3.86-6.01-8.18-7.72-12.94s-2.48-9.7-2.32-14.82c.16-5.12,1.29-10.05,3.37-14.81,2.88-6.55,6.98-11.75,12.32-15.62,5.33-3.86,11.23-6.2,17.68-7s12.77.15,18.96,2.87h.02ZM214.25,107.48c1.7.75,3.78,1.13,6.24,1.14s4.96-.76,7.52-2.32c2.55-1.55,4.7-4.3,6.43-8.25,1.38-3.14,2.3-6.88,2.76-11.23.46-4.34.42-8.75-.13-13.22s-1.74-8.47-3.56-12c-1.82-3.53-4.39-6.02-7.71-7.48-3.68-1.62-7.46-1.65-11.36-.09-3.89,1.56-6.88,4.71-8.97,9.46-1.34,3.05-2.25,6.77-2.73,11.16-.48,4.39-.45,8.82.1,13.29s1.76,8.48,3.63,12.03c1.87,3.55,4.46,6.05,7.78,7.51Z"/>
+<path d="M341.19,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5s-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04,1.76-2.69,2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M459.31,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM438.74,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28,2.01-1.52,3.45-3.06,4.34-4.63.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M546.91,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.29c-.29,0-.44-.15-.44-.44.2-2.25.42-4.46.66-6.61s.56-4.31.96-6.47c-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,7.44,0,13.76,2.3,18.96,6.91v-9.41c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.59.19-1,.59-1.25.39-.24.93-.46,1.62-.66,7.74-2.55,13.79-5.09,18.15-7.64,4.36-2.55,7.52-4.56,9.48-6.03.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v90.09h0ZM526.33,72.21c0-4.6-1.5-8.52-4.48-11.76-2.99-3.23-6.93-4.85-11.83-4.85s-8.38,1.03-11.02,3.09-4.48,4.8-5.51,8.23-1.54,7.2-1.54,11.32c0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,2.65,0,4.95-.66,6.91-1.98s3.55-2.96,4.78-4.92c1.22-1.96,2.03-3.82,2.42-5.58v-24.12Z"/>
+<path d="M634.5,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98s-3.16-11-3.16-18.15c0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM613.92,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28s3.45-3.06,4.34-4.63c.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M682.85,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5-1.47,1.96-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04s2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M177.8,68.03c-1.55-4.86-4.02-9.28-7.42-13.26-3.4-3.99-7.64-7.14-12.72-9.47-6.15-2.82-12.45-3.88-18.92-3.18s-12.4,2.94-17.79,6.72c-5.4,3.78-9.59,8.92-12.57,15.42-2.17,4.72-3.37,9.64-3.61,14.75-.25,5.12.45,10.07,2.08,14.86,1.63,4.79,4.13,9.15,7.51,13.06,3.38,3.92,7.6,7.04,12.68,9.37,5.97,2.74,12.17,3.78,18.62,3.12,6.44-.65,12.42-2.87,17.93-6.65,2.95-2.03,5.55-4.46,7.78-7.29.49-.62.14-1.55-.64-1.69l-8.06-1.42c-.57-.1-1.14.11-1.53.53-2.41,2.68-9.98,5.72-18.78,5.72-2.46,0-4.53-.46-6.22-1.24-3.3-1.51-5.85-4.06-7.66-7.63-1.68-3.33-2.78-7.04-3.31-11.14l46.03-5.49,7.15-.8c.87-.11,1.48-1.05,1.46-1.93-.07-4.17-.74-8.29-2.03-12.34l.02-.02ZM125.17,74.37c.55-4.38,1.53-8.09,2.91-11.11,2.16-4.72,5.21-7.82,9.12-9.32,3.92-1.49,7.7-1.4,11.35.28,3.29,1.51,5.82,4.05,7.59,7.6,1.67,3.37,2.76,7.16,3.28,11.36l-34.68,6.78c.05-1.87.19-3.74.42-5.59h.01Z"/>
+<circle cx="99.02" cy="39.95" r="11.96"/>
+<rect fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="8" x="249.76" y="114.04" width="45.23" height="5.24" rx="2.62" ry="2.62"/>
+</svg>
+    <small>Context dossier &middot; EN</small>
+  </div>
+  <a class="sidebar-item" href="#s1"><span class="sidebar-item-num">01</span><span class="sidebar-item-text">Executive summary</span></a>
+  <a class="sidebar-item" href="#s2"><span class="sidebar-item-num">02</span><span class="sidebar-item-text">Tournament basics</span></a>
+  <a class="sidebar-item" href="#s3"><span class="sidebar-item-num">03</span><span class="sidebar-item-text">Host cities and stadiums</span></a>
+  <a class="sidebar-item" href="#s4"><span class="sidebar-item-num">04</span><span class="sidebar-item-text">Qualified teams</span></a>
+  <a class="sidebar-item" href="#s5"><span class="sidebar-item-num">05</span><span class="sidebar-item-text">Competition format</span></a>
+  <a class="sidebar-item" href="#s6"><span class="sidebar-item-num">06</span><span class="sidebar-item-text">Business model</span></a>
+  <a class="sidebar-item" href="#s7"><span class="sidebar-item-num">07</span><span class="sidebar-item-text">Sponsors and partners</span></a>
+  <a class="sidebar-item" href="#s8"><span class="sidebar-item-num">08</span><span class="sidebar-item-text">Broadcast rights</span></a>
+  <a class="sidebar-item" href="#s9"><span class="sidebar-item-num">09</span><span class="sidebar-item-text">Revenue streams</span></a>
+  <a class="sidebar-item" href="#s10"><span class="sidebar-item-num">10</span><span class="sidebar-item-text">Prize money</span></a>
+  <a class="sidebar-item" href="#s11"><span class="sidebar-item-num">11</span><span class="sidebar-item-text">Economic impact</span></a>
+  <a class="sidebar-item" href="#s12"><span class="sidebar-item-num">12</span><span class="sidebar-item-text">Investment and infrastructure</span></a>
+  <a class="sidebar-item" href="#s13"><span class="sidebar-item-num">13</span><span class="sidebar-item-text">Hospitality</span></a>
+  <a class="sidebar-item" href="#s14"><span class="sidebar-item-num">14</span><span class="sidebar-item-text">Technology innovations</span></a>
+  <a class="sidebar-item" href="#s15"><span class="sidebar-item-num">15</span><span class="sidebar-item-text">Risks and controversies</span></a>
+  <a class="sidebar-item" href="#s16"><span class="sidebar-item-num">16</span><span class="sidebar-item-text">Operational calendar</span></a>
+  <a class="sidebar-item" href="#s17"><span class="sidebar-item-num">17</span><span class="sidebar-item-text">Why it is a case study</span></a>
+  <a class="sidebar-item" href="#s18"><span class="sidebar-item-num">18</span><span class="sidebar-item-text">Sources</span></a>
+</div>
+<button class="sidebar-toggle" id="sidebarToggle" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<div class="print-footer">
+  <span>GEORadar by 498 Advance &middot; 498advance.com</span>
+  <span>FIFA World Cup 2026 &middot; Context dossier</span>
+</div>
+
+<div class="report">
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-badge">Context dossier &middot; Reference file</div>
+    <div class="cover-date">Data as of May 2026<br>English edition &middot; September 2026</div>
+  </div>
+  <div class="cover-main">
+    <div class="cover-label">USA &middot; Mexico &middot; Canada &middot; 11 June – 19 July 2026</div>
+    <h1 class="cover-title">FIFA<br>WORLD CUP<br>2026</h1>
+    <p class="cover-subtitle">The format, the venues and above all the business model of the first 48-team, three-host World Cup: dynamic pricing, a 30% resale commission, tier-1 sponsorship sold out, premium hospitality and broadcast rights split by language and platform. The consolidated reference file behind the GEORadar audit of the tournament.</p>
+    <div class="cover-brand">
+      <div class="cover-brand-logo"><svg role="img" aria-label="GEORadar" fill="currentColor" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 759.46 195.64">
+<path d="M94.74,62.86c3.23,5.39,4.85,11.59,4.85,18.58s-1.79,13.63-5.35,19.49c-3.57,5.86-8.66,10.5-15.26,13.94s-14.54,5.15-23.83,5.15-17.58-1.88-24.44-5.65c-1.75,1.35-2.63,3.02-2.63,5.04s.74,3.74,2.23,5.15,4.34,2.56,8.59,3.44,10.47,1.51,18.68,1.92c5.92.27,11.68.88,17.28,1.81,5.58.95,10.61,2.46,15.05,4.55,4.44,2.09,7.99,5.02,10.61,8.78s3.94,8.69,3.94,14.75c0,5.53-1.44,10.2-4.34,14.03-2.9,3.83-6.8,6.9-11.71,9.2-4.92,2.3-10.34,3.97-16.26,5.04-5.92,1.07-11.92,1.62-17.98,1.62-8.22,0-15.79-.88-22.72-2.63-6.94-1.75-12.52-4.44-16.77-8.08-4.25-3.64-6.36-8.29-6.36-13.94,0-4.44,1.18-8.25,3.53-11.41,2.35-3.16,5.22-5.69,8.59-7.57-6.87-4.3-10.31-10.43-10.31-18.38,0-4.58,1.18-8.48,3.53-11.71,2.35-3.23,5.35-5.58,8.99-7.06-7.94-7.27-11.92-16.42-11.92-27.48,0-7.13,1.79-13.63,5.35-19.49s8.69-10.54,15.35-14.03c6.67-3.5,14.57-5.25,23.74-5.25,5.66,0,10.8.7,15.45,2.12s8.78,3.33,12.43,5.76c4.4,3.17,8.52,6.69,11.71,12.33l-.03-.04ZM54.34,175.78c9.96,0,17.61-.95,22.93-2.83,5.32-1.88,7.99-4.38,7.99-7.48,0-4.32-2.83-7.17-8.48-8.59-5.66-1.42-13.61-2.39-23.83-2.93-7.27-.4-13.54-1.21-18.79-2.42-3.77,2.56-5.66,6.13-5.66,10.71,0,2.02.74,4.07,2.23,6.16,1.48,2.09,4.11,3.83,7.88,5.25,3.77,1.42,9.02,2.12,15.75,2.12h0ZM55.15,54.78c-5.11,0-9.13,1.42-12.01,4.25-2.9,2.83-4.92,6.29-6.06,10.4-1.14,4.11-1.72,8.11-1.72,12.01s.58,7.92,1.72,12.01c1.14,4.11,3.16,7.57,6.06,10.4,2.9,2.83,6.9,4.25,12.01,4.25s8.99-1.42,11.61-4.25,4.41-6.29,5.35-10.4,1.42-8.11,1.42-12.01-.47-7.9-1.42-12.01-2.72-7.57-5.35-10.4c-2.63-2.83-6.5-4.25-11.61-4.25Z"/>
+<path d="M234.76,45.06c5.11,2.25,9.4,5.33,12.87,9.26,3.46,3.93,6.01,8.31,7.63,13.14,1.62,4.83,2.37,9.77,2.25,14.79-.12,5.03-1.19,9.83-3.2,14.41-2.92,6.64-7.1,11.89-12.54,15.76-5.45,3.87-11.38,6.18-17.82,6.94-6.43.76-12.66-.18-18.67-2.82-5.11-2.25-9.39-5.3-12.83-9.17-3.44-3.86-6.01-8.18-7.72-12.94s-2.48-9.7-2.32-14.82c.16-5.12,1.29-10.05,3.37-14.81,2.88-6.55,6.98-11.75,12.32-15.62,5.33-3.86,11.23-6.2,17.68-7s12.77.15,18.96,2.87h.02ZM214.25,107.48c1.7.75,3.78,1.13,6.24,1.14s4.96-.76,7.52-2.32c2.55-1.55,4.7-4.3,6.43-8.25,1.38-3.14,2.3-6.88,2.76-11.23.46-4.34.42-8.75-.13-13.22s-1.74-8.47-3.56-12c-1.82-3.53-4.39-6.02-7.71-7.48-3.68-1.62-7.46-1.65-11.36-.09-3.89,1.56-6.88,4.71-8.97,9.46-1.34,3.05-2.25,6.77-2.73,11.16-.48,4.39-.45,8.82.1,13.29s1.76,8.48,3.63,12.03c1.87,3.55,4.46,6.05,7.78,7.51Z"/>
+<path d="M341.19,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5s-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04,1.76-2.69,2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M459.31,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM438.74,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28,2.01-1.52,3.45-3.06,4.34-4.63.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M546.91,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.29c-.29,0-.44-.15-.44-.44.2-2.25.42-4.46.66-6.61s.56-4.31.96-6.47c-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,7.44,0,13.76,2.3,18.96,6.91v-9.41c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.59.19-1,.59-1.25.39-.24.93-.46,1.62-.66,7.74-2.55,13.79-5.09,18.15-7.64,4.36-2.55,7.52-4.56,9.48-6.03.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v90.09h0ZM526.33,72.21c0-4.6-1.5-8.52-4.48-11.76-2.99-3.23-6.93-4.85-11.83-4.85s-8.38,1.03-11.02,3.09-4.48,4.8-5.51,8.23-1.54,7.2-1.54,11.32c0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,2.65,0,4.95-.66,6.91-1.98s3.55-2.96,4.78-4.92c1.22-1.96,2.03-3.82,2.42-5.58v-24.12Z"/>
+<path d="M634.5,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98s-3.16-11-3.16-18.15c0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM613.92,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28s3.45-3.06,4.34-4.63c.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M682.85,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5-1.47,1.96-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04s2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M177.8,68.03c-1.55-4.86-4.02-9.28-7.42-13.26-3.4-3.99-7.64-7.14-12.72-9.47-6.15-2.82-12.45-3.88-18.92-3.18s-12.4,2.94-17.79,6.72c-5.4,3.78-9.59,8.92-12.57,15.42-2.17,4.72-3.37,9.64-3.61,14.75-.25,5.12.45,10.07,2.08,14.86,1.63,4.79,4.13,9.15,7.51,13.06,3.38,3.92,7.6,7.04,12.68,9.37,5.97,2.74,12.17,3.78,18.62,3.12,6.44-.65,12.42-2.87,17.93-6.65,2.95-2.03,5.55-4.46,7.78-7.29.49-.62.14-1.55-.64-1.69l-8.06-1.42c-.57-.1-1.14.11-1.53.53-2.41,2.68-9.98,5.72-18.78,5.72-2.46,0-4.53-.46-6.22-1.24-3.3-1.51-5.85-4.06-7.66-7.63-1.68-3.33-2.78-7.04-3.31-11.14l46.03-5.49,7.15-.8c.87-.11,1.48-1.05,1.46-1.93-.07-4.17-.74-8.29-2.03-12.34l.02-.02ZM125.17,74.37c.55-4.38,1.53-8.09,2.91-11.11,2.16-4.72,5.21-7.82,9.12-9.32,3.92-1.49,7.7-1.4,11.35.28,3.29,1.51,5.82,4.05,7.59,7.6,1.67,3.37,2.76,7.16,3.28,11.36l-34.68,6.78c.05-1.87.19-3.74.42-5.59h.01Z"/>
+<circle cx="99.02" cy="39.95" r="11.96"/>
+<rect fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="8" x="249.76" y="114.04" width="45.23" height="5.24" rx="2.62" ry="2.62"/>
+</svg></div>
+      <div class="cover-brand-info">
+        <h2>GEORadar by 498 Advance</h2>
+        <p><a href="https://498advance.com">498advance.com</a> &middot; AI visibility intelligence</p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-metrics">
+    <div class="cover-metric"><div class="cover-metric-value">48</div><div class="cover-metric-label">Teams</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">104</div><div class="cover-metric-label">Matches</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">16</div><div class="cover-metric-label">Stadiums</div></div>
+    <div class="cover-metric"><div class="cover-metric-value">$11B</div><div class="cover-metric-label">Cycle revenue</div></div>
+  </div>
+  <div class="cover-foot">Sources: FIFA official &middot; FIFA Socioeconomic Impact Analysis (Mar 2025) &middot; CNBC &middot; Al Jazeera &middot; ESPN &middot; SportsPro &middot; WEF &middot; NY/NJ Host Committee &mdash; <a href="https://498advance.com">498advance.com</a></div>
+</div>
+
+<!-- ============ CONTENTS ============ -->
+<div class="sheet">
+  <div class="section-header"><span class="section-number">00</span><h2 class="section-title">Contents</h2></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">01</span><div><span class="index-name">Executive summary</span><br><span class="index-sub">the records, and why the business model matters</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">02</span><div><span class="index-name">Tournament basics</span><br><span class="index-sub">dates, teams, matches, venues, mascots</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">03</span><div><span class="index-name">Host cities and stadiums</span><br><span class="index-sub">16 venues across three countries, and the geographic clusters</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">04</span><div><span class="index-name">Qualified teams</span><br><span class="index-sub">48 teams, slots by confederation, top seeds and debutants</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">05</span><div><span class="index-name">Competition format</span><br><span class="index-sub">12 groups, a new round of 32, and the criticism it attracts</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">06</span><div><span class="index-name">Business model</span><br><span class="index-sub">the 2026 novelty: five innovations and $11B of revenue</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">07</span><div><span class="index-name">Sponsors and partners</span><br><span class="index-sub">the tier pyramid, sold out for the first time</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">08</span><div><span class="index-name">Broadcast and media rights</span><br><span class="index-sub">$3.92B, fragmented by language and platform</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">09</span><div><span class="index-name">Revenue streams, broken down</span><br><span class="index-sub">line by line, plus the Club World Cup precedent</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">10</span><div><span class="index-name">Prize money</span><br><span class="index-sub">$871M, nearly double Qatar 2022</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">11</span><div><span class="index-name">Estimated economic impact</span><br><span class="index-sub">global, by country and by city &mdash; with the caveats</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">12</span><div><span class="index-name">Investment and infrastructure</span><br><span class="index-sub">no new stadiums, and what that changes</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">13</span><div><span class="index-name">Hospitality and premium experiences</span><br><span class="index-sub">five tiers, up to $73,200 per person</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">14</span><div><span class="index-name">Technology and product innovations</span><br><span class="index-sub">on the pitch, for the fan, for the broadcaster</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">15</span><div><span class="index-name">Risks, controversies and criticism</span><br><span class="index-sub">pricing, geopolitics, logistics, inflation, reputation</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">16</span><div><span class="index-name">Operational calendar</span><br><span class="index-sub">from the opening match to the final</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">17</span><div><span class="index-name">Why this World Cup is a unique case study</span><br><span class="index-sub">ten reasons in one page</span></div></div></div>
+  <div class="index-row"><div class="index-row-left"><span class="index-num">18</span><div><span class="index-name">Sources consulted</span><br><span class="index-sub">official, business model, economic impact, broadcast</span></div></div></div>
+
+  <div class="callout" style="margin-top:22px;">
+    <p><strong>About this file.</strong> This is the English edition of the consolidated context file behind the GEORadar audit of the FIFA World Cup 2026 &mdash; a study of how ChatGPT and Gemini describe the tournament to fans in 16 countries and 4 languages. Data is current as of 26 May 2026; any moving data point (dynamic prices, play-off results) may have changed since. Produced by <strong>GEORadar by 498 Advance</strong> &mdash; 498advance.com</p>
+  </div>
+</div>
+
+<!-- ============ 01 ============ -->
+<div class="sheet">
+<section id="s1">
+  <div class="section-header"><span class="section-number">01</span><h2 class="section-title">Executive summary</h2></div>
+  <p class="lead">The <strong>FIFA World Cup 2026</strong> is the <strong>23rd edition</strong> of the FIFA World Cup. It runs from <strong>11 June to 19 July 2026</strong> across <strong>the United States, Mexico and Canada</strong>, and sets several historic records.</p>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card accent-blue"><div class="metric-card-label">Host countries</div><div class="metric-card-value">3</div><div class="metric-card-desc">A first. The previous maximum was 2 (Japan-Korea 2002).</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">Teams</div><div class="metric-card-value">48</div><div class="metric-card-desc">Up from 32 in Qatar 2022 &mdash; the biggest expansion since 1998.</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">Matches</div><div class="metric-card-value">104</div><div class="metric-card-desc">Over 39 days, vs 64 in 2022 &rarr; +62%.</div></div>
+    <div class="metric-card accent-positive"><div class="metric-card-label">Prize pool</div><div class="metric-card-value">$871M</div><div class="metric-card-desc">Almost 2&times; the $440M of Qatar 2022. Winner: $50M.</div></div>
+  </div>
+
+  <h3 class="subsection-title">The records</h3>
+  <ul>
+    <li><strong>First World Cup with 3 host countries</strong> (the previous maximum was 2, Japan-Korea 2002).</li>
+    <li><strong>First World Cup with 48 national teams</strong> (vs. 32 in Qatar 2022).</li>
+    <li><strong>104 matches</strong> over 39 days (vs. 64 in 2022) &rarr; +62% more matches.</li>
+    <li><strong>The most expensive and most lucrative World Cup ever</strong>: projected revenue of ~$11B across the 2023-26 cycle; ~$8.9B directly attributable to the event.</li>
+    <li><strong>Record total prize pool of $871M</strong> (almost 2&times; the $440M of Qatar 2022). Winner: $50M.</li>
+    <li><strong>First use of dynamic pricing</strong> (real-time algorithmic prices) across the entire ticket inventory.</li>
+    <li><strong>Mexico becomes the first country to host 3 World Cups</strong> (1970, 1986, 2026).</li>
+    <li>It will also be the <strong>most expensive World Cup ever for the spectator</strong>: Cat 1 final tickets opened at $6,000 and passed $32,000 by May 2026.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Why the business model matters.</strong> FIFA is experimenting with dynamic pricing, a resale marketplace charging a 30% commission, sponsorship expanded to 16 tier-1 slots sold out in full, premium hospitality, and broadcast rights split by language and platform. The 2026 World Cup is the laboratory where Infantino is testing FIFA's conversion into an NFL/NBA-style entity: yield maximisation per seat, premium segmentation and recurring rents.</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 02 ============ -->
+<div class="sheet">
+<section id="s2">
+  <div class="section-header"><span class="section-number">02</span><h2 class="section-title">Tournament basics</h2></div>
+  <table>
+    <thead><tr><th style="width:32%">Item</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Edition</td><td>23rd FIFA World Cup</td></tr>
+      <tr><td>Hosts</td><td>United States, Mexico, Canada</td></tr>
+      <tr><td>Dates</td><td>11 Jun &ndash; 19 Jul 2026 (39 days)</td></tr>
+      <tr><td>Teams</td><td>48</td></tr>
+      <tr><td>Matches</td><td>104</td></tr>
+      <tr><td>Groups</td><td>12 groups of 4 teams</td></tr>
+      <tr><td>Stadiums</td><td>16</td></tr>
+      <tr><td>Host cities</td><td>16 (11 USA, 3 Mexico, 2 Canada)</td></tr>
+      <tr class="highlight"><td>Opening match</td><td>Estadio Azteca, <strong>Mexico City</strong> (11 Jun)</td></tr>
+      <tr class="highlight"><td>Final</td><td><strong>MetLife Stadium</strong>, East Rutherford, New Jersey (19 Jul)</td></tr>
+      <tr><td>Semi-finals</td><td>AT&amp;T Stadium (Dallas) &middot; Mercedes-Benz Stadium (Atlanta)</td></tr>
+      <tr><td>Mascots</td><td>"Maple", "Zayu" and "Clutch" (moose, jaguar, eagle &mdash; one per host country)</td></tr>
+      <tr><td>Official ball</td><td>adidas TBD</td></tr>
+      <tr><td>Final draw</td><td>5 Dec 2025 &middot; Kennedy Center, Washington D.C.</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+
+<!-- ============ 03 ============ -->
+<div class="sheet">
+<section id="s3">
+  <div class="section-header"><span class="section-number">03</span><h2 class="section-title">Host cities and stadiums</h2></div>
+  <p>Sixteen official stadiums, with the capacities used for the World Cup.</p>
+
+  <h3 class="subsection-title">United States (11 venues)</h3>
+  <table>
+    <thead><tr><th>City</th><th>Stadium</th><th class="num">Capacity</th><th>NFL team</th><th>Key role</th></tr></thead>
+    <tbody>
+      <tr><td>Arlington (Dallas/Fort Worth)</td><td><strong>AT&amp;T Stadium</strong></td><td class="num">92,967</td><td>Dallas Cowboys</td><td>Semi-final</td></tr>
+      <tr class="highlight"><td>East Rutherford (NY/NJ)</td><td><strong>MetLife Stadium</strong></td><td class="num">~78,576</td><td>NY Giants/Jets</td><td><strong>FINAL</strong> + 7 more</td></tr>
+      <tr><td>Atlanta</td><td><strong>Mercedes-Benz Stadium</strong></td><td class="num">~75,000</td><td>Atlanta Falcons</td><td>Semi-final</td></tr>
+      <tr><td>Philadelphia</td><td><strong>Lincoln Financial Field</strong></td><td class="num">~75,000</td><td>Philadelphia Eagles</td><td>Round of 16</td></tr>
+      <tr><td>Boston (Foxborough)</td><td><strong>Gillette Stadium</strong></td><td class="num">~70,000</td><td>New England Patriots</td><td>Quarter-final</td></tr>
+      <tr><td>Houston</td><td><strong>NRG Stadium</strong></td><td class="num">~72,000</td><td>Houston Texans</td><td>Round of 16</td></tr>
+      <tr><td>Los Angeles (Inglewood)</td><td><strong>SoFi Stadium</strong></td><td class="num">~70,000</td><td>LA Rams/Chargers</td><td>Round of 16</td></tr>
+      <tr><td>San Francisco Bay (Santa Clara)</td><td><strong>Levi's Stadium</strong></td><td class="num">~70,909</td><td>San Francisco 49ers</td><td>Group stage</td></tr>
+      <tr><td>Seattle</td><td><strong>Lumen Field</strong></td><td class="num">~69,000</td><td>Seattle Seahawks</td><td>Group stage</td></tr>
+      <tr><td>Miami Gardens</td><td><strong>Hard Rock Stadium</strong></td><td class="num">~65,000</td><td>Miami Dolphins</td><td>Third-place play-off</td></tr>
+      <tr><td>Kansas City</td><td><strong>Arrowhead Stadium</strong></td><td class="num">~76,000</td><td>Kansas City Chiefs</td><td>Group stage</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Mexico (3 venues)</h3>
+  <table>
+    <thead><tr><th>City</th><th>Stadium</th><th class="num">Capacity</th><th>Key role</th></tr></thead>
+    <tbody>
+      <tr class="highlight"><td>Mexico City</td><td><strong>Estadio Azteca / Banorte</strong></td><td class="num">~87,500</td><td><strong>Opening match</strong></td></tr>
+      <tr><td>Guadalajara</td><td><strong>Estadio Akron</strong></td><td class="num">~48,000</td><td>Group stage</td></tr>
+      <tr><td>Monterrey (Guadalupe)</td><td><strong>Estadio BBVA</strong></td><td class="num">~53,500</td><td>Group stage</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pb">
+  <h3 class="subsection-title">Canada (2 venues)</h3>
+  <table>
+    <thead><tr><th>City</th><th>Stadium</th><th class="num">Capacity</th><th>Key role</th></tr></thead>
+    <tbody>
+      <tr><td>Vancouver</td><td><strong>BC Place</strong></td><td class="num">~48,821</td><td>Round of 16 &middot; Canada home matches</td></tr>
+      <tr><td>Toronto</td><td><strong>BMO Field</strong> (expanded)</td><td class="num">~45,736</td><td>Eastern zone opener</td></tr>
+    </tbody>
+  </table>
+
+  <div class="insight">
+    <div class="insight-title">Official geographic clustering (to minimise travel during the group stage)</div>
+    <p><strong>West</strong>: Vancouver &middot; Seattle &middot; San Francisco &middot; Los Angeles &middot; Guadalajara<br>
+    <strong>Central</strong>: Mexico City &middot; Monterrey &middot; Houston &middot; Dallas &middot; Kansas City &middot; Atlanta<br>
+    <strong>East</strong>: Toronto &middot; Boston &middot; Philadelphia &middot; NY/NJ &middot; Miami</p>
+  </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ 04 ============ -->
+<div class="sheet">
+<section id="s4">
+  <div class="section-header"><span class="section-number">04</span><h2 class="section-title">Qualified teams (48)</h2></div>
+
+  <h3 class="subsection-title">Distribution by confederation</h3>
+  <table>
+    <thead><tr><th>Confederation</th><th class="num">Direct slots</th><th class="num">Play-off slots</th><th class="num">Total</th></tr></thead>
+    <tbody>
+      <tr><td>UEFA (Europe)</td><td class="num">16</td><td class="num">0</td><td class="num">16</td></tr>
+      <tr><td>CAF (Africa)</td><td class="num">9</td><td class="num">1</td><td class="num">9-10</td></tr>
+      <tr><td>AFC (Asia)</td><td class="num">8</td><td class="num">1</td><td class="num">8-9</td></tr>
+      <tr><td>CONMEBOL (South America)</td><td class="num">6</td><td class="num">1</td><td class="num">6-7</td></tr>
+      <tr><td>CONCACAF (North/Central America &amp; Caribbean)</td><td class="num">3 + <strong>3 hosts</strong></td><td class="num">2</td><td class="num">6-8</td></tr>
+      <tr><td>OFC (Oceania)</td><td class="num">1</td><td class="num">1</td><td class="num">1-2</td></tr>
+      <tr><td>Inter-confederation play-off</td><td class="num">&mdash;</td><td class="num">6 teams for 2 slots</td><td class="num">2</td></tr>
+      <tr class="total"><td>TOTAL</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">48</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Top seeds (Pot 1) &mdash; Groups A&ndash;L</h3>
+  <table>
+    <thead><tr><th>Group</th><th>Top seed</th><th>Group</th><th>Top seed</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td><strong>Mexico</strong> <span class="tag blue">host</span></td><td>G</td><td><strong>Belgium</strong></td></tr>
+      <tr><td>B</td><td><strong>Canada</strong> <span class="tag blue">host</span></td><td>H</td><td><strong>Spain</strong></td></tr>
+      <tr><td>C</td><td><strong>Brazil</strong></td><td>I</td><td><strong>France</strong></td></tr>
+      <tr><td>D</td><td><strong>United States</strong> <span class="tag blue">host</span></td><td>J</td><td><strong>Argentina</strong> <span class="tag green">holders</span></td></tr>
+      <tr><td>E</td><td><strong>Germany</strong></td><td>K</td><td><strong>Portugal</strong></td></tr>
+      <tr><td>F</td><td><strong>Netherlands</strong></td><td>L</td><td><strong>England</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Notable debutants</h3>
+  <ul>
+    <li><strong>Uzbekistan</strong> (AFC) &mdash; first World Cup.</li>
+    <li><strong>Jordan</strong> (AFC) &mdash; first World Cup (qualified 5 Jun 2025).</li>
+    <li><strong>Cape Verde</strong> (CAF) &mdash; first World Cup.</li>
+    <li><strong>Cura&ccedil;ao</strong> (CONCACAF) &mdash; first World Cup (qualified with a 0-0 draw vs Jamaica).</li>
+  </ul>
+
+  <h3 class="subsection-title">Full list (indicative, subject to play-offs)</h3>
+  <table>
+    <thead><tr><th style="width:18%">Confederation</th><th>Teams</th></tr></thead>
+    <tbody>
+      <tr><td><strong>UEFA (16)</strong></td><td>Germany &middot; Spain &middot; France &middot; England &middot; Portugal &middot; Netherlands &middot; Belgium &middot; Italy &middot; Croatia &middot; Poland &middot; Switzerland &middot; Austria &middot; Denmark &middot; Serbia &middot; T&uuml;rkiye &middot; Czechia</td></tr>
+      <tr><td><strong>CONMEBOL (6 + play-off)</strong></td><td>Argentina &middot; Brazil &middot; Uruguay &middot; Colombia &middot; Ecuador &middot; Paraguay &middot; (Bolivia/Venezuela via play-off)</td></tr>
+      <tr><td><strong>CONCACAF (3 hosts + 3 direct + 2 play-off)</strong></td><td>Mexico &middot; USA &middot; Canada &middot; Costa Rica &middot; Panama &middot; Jamaica &middot; Cura&ccedil;ao &middot; (Honduras/Suriname via play-off)</td></tr>
+      <tr><td><strong>CAF (9)</strong></td><td>Morocco &middot; Senegal &middot; Egypt &middot; Algeria &middot; Nigeria &middot; Tunisia &middot; Ivory Coast &middot; Cameroon &middot; Cape Verde + (1 play-off)</td></tr>
+      <tr><td><strong>AFC (8)</strong></td><td>Japan &middot; South Korea &middot; Saudi Arabia &middot; Iran &middot; Australia &middot; Qatar &middot; Uzbekistan &middot; Jordan + (1 play-off)</td></tr>
+      <tr><td><strong>OFC (1)</strong></td><td>New Zealand + (1 play-off)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="insight warning">
+    <div class="insight-title">Caveat</div>
+    <p>The final field was settled by the inter-confederation play-offs played in <strong>March 2026</strong> in Mexico (Guadalajara and Monterrey).</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 05 ============ -->
+<div class="sheet">
+<section id="s5">
+  <div class="section-header"><span class="section-number">05</span><h2 class="section-title">Competition format</h2></div>
+
+  <div class="kv">
+    <div class="insight">
+      <div class="insight-title">Group stage</div>
+      <ul>
+        <li>12 groups (A&ndash;L) of 4 teams.</li>
+        <li>3 matches per team &rarr; 72 group-stage matches.</li>
+        <li>Qualification for the round of 32: top 2 from each group (24 teams) plus <strong>the 8 best third-placed teams</strong> (out of 12).</li>
+      </ul>
+    </div>
+    <div class="insight">
+      <div class="insight-title">Knockout stage</div>
+      <ul>
+        <li><strong>Round of 32</strong> &mdash; a new stage introduced in 2026.</li>
+        <li>Round of 16.</li>
+        <li>Quarter-finals.</li>
+        <li>Semi-finals.</li>
+        <li>Third-place play-off + Final.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="subsection-title">Criticism of the format</h3>
+  <ul>
+    <li>The "8 best third-placed teams" system can create <strong>perverse incentives</strong> on the final matchday (teams calculating how to lose by fewer goals).</li>
+    <li>The original idea of <strong>16 groups of 3</strong> was dropped because of the risk of collusion (the "Gij&oacute;n 1982" problem).</li>
+    <li><strong>Length</strong>: a champion now has to play <strong>8 matches</strong> (vs 7 under the previous format).</li>
+  </ul>
+</section>
+</div>
+
+<!-- ============ 06 ============ -->
+<div class="sheet">
+<section id="s6">
+  <div class="section-header"><span class="section-number">06</span><h2 class="section-title">Business model (the 2026 novelty)</h2></div>
+
+  <h3 class="subsection-title">6.1 Overview &mdash; Infantino's "FIFA 2.0"</h3>
+  <p>The 2026 World Cup is the <strong>first large-scale implementation of the "NFL / Live Nation-style" model</strong> FIFA has been building since 2018.</p>
+  <table>
+    <thead><tr><th>Vector</th><th>Qatar 2022 model</th><th>USA-MX-CA 2026 model</th></tr></thead>
+    <tbody>
+      <tr><td>Sponsorship</td><td>11&ndash;13 global tier sponsors</td><td><strong>16 tier-1 sponsors (SOLD OUT)</strong></td></tr>
+      <tr><td>Tickets</td><td>Fixed price per category</td><td>Algorithmic <strong>dynamic pricing</strong></td></tr>
+      <tr><td>Resale</td><td>External secondary market</td><td><strong>FIFA Marketplace</strong>, <strong>30%</strong> commission</td></tr>
+      <tr><td>Hospitality</td><td>~10% of capacity</td><td><strong>15&ndash;18% of capacity</strong>, packages up to $73,200/person</td></tr>
+      <tr><td>Broadcast rights</td><td>Country packages</td><td>Segmented by <strong>language + platform + streaming</strong></td></tr>
+      <tr><td>Prize money</td><td>$440M</td><td><strong>$871M (+98%)</strong></td></tr>
+      <tr><td>Direct-to-consumer streaming</td><td>&mdash;</td><td><strong>FIFA+</strong> + <strong>FOX One</strong> + DAZN</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">6.2 Total projected revenue (2023-26 cycle)</h3>
+  <table>
+    <thead><tr><th>Source</th><th class="num">Amount (USD)</th><th class="num">% of total</th></tr></thead>
+    <tbody>
+      <tr><td>TV/streaming broadcast rights</td><td class="num"><strong>$3.92B</strong></td><td class="num">36%</td></tr>
+      <tr><td>Ticketing + Hospitality <span class="doc-note">(FIFA projection; independent estimates put it at $7.44B)</span></td><td class="num"><strong>$3.10B</strong></td><td class="num">28%</td></tr>
+      <tr><td>Marketing/Sponsorship</td><td class="num"><strong>$2.70B</strong></td><td class="num">25%</td></tr>
+      <tr><td>Licensing, merchandising, other</td><td class="num"><strong>$1.18B</strong></td><td class="num">11%</td></tr>
+      <tr class="total"><td>Total 2023-26 cycle</td><td class="num">~$11.0B</td><td class="num">100%</td></tr>
+      <tr><td><em>of which attributable to the 2026 World Cup</em></td><td class="num"><strong>~$8.9B</strong></td><td class="num">&mdash;</td></tr>
+    </tbody>
+  </table>
+  <div class="insight">
+    <p>Independent estimates point to <strong>$14&ndash;19B</strong> in total revenue if the high scenario for ticketing + hospitality + resale materialises.</p>
+  </div>
+
+  <h3 class="subsection-title">6.3 The five big model innovations</h3>
+
+  <div class="table-title">1 &middot; Dynamic pricing (real-time variable pricing)</div>
+  <ul>
+    <li>Prices fluctuate with demand, exactly as with airlines or Ticketmaster.</li>
+    <li>Cat 1, opening match in Mexico City: launched at ~$600 &rarr; now &gt;$2,500.</li>
+    <li>Cat 1, final: launched at ~$6,000 &rarr; passed <strong>$32,000</strong> in May 2026.</li>
+    <li>Cat 3 (cheapest) for the final: <strong>&gt;$1,000</strong>.</li>
+    <li><strong>Face-value ceiling for the final</strong>: $11,000 (vs $1,607 in Qatar 2022 &rarr; +588% in 4 years).</li>
+  </ul>
+
+  <div class="table-title">2 &middot; FIFA Marketplace (official resale with commission)</div>
+  <ul>
+    <li>FIFA takes <strong>30% of every resale transaction</strong>.</li>
+    <li>A ticket bought at $1,500 and resold at $30,000 = <strong>$9,000 of pure margin</strong> for FIFA.</li>
+    <li>It turns the fan into a "retailer" of their own inventory.</li>
+  </ul>
+
+  <div class="table-title">3 &middot; Expanded sponsorship tier (sold out, March 2026)</div>
+  <ul>
+    <li>16 tier-1 slots sold &mdash; a first in World Cup history.</li>
+    <li>Aggregate yield of the sponsorship package: ~$2.7B.</li>
+  </ul>
+
+  <div class="table-title">4 &middot; Scaled-up premium hospitality</div>
+  <ul>
+    <li>15&ndash;18% of capacity given over to corporate packages.</li>
+    <li>MetLife Stadium (final): packages from <strong>$3,500 to $73,200/person</strong> for 8 matches.</li>
+    <li>European corporate travel budgets up 30&ndash;40% vs 2022.</li>
+  </ul>
+
+  <div class="table-title">5 &middot; Direct-to-consumer streaming (D2C)</div>
+  <ul>
+    <li><strong>FOX One</strong> (USA, EN): new app carrying all 104 matches as streaming.</li>
+    <li><strong>FIFA+</strong>: FIFA's own platform with behind-the-scenes content and ad revenue.</li>
+    <li><strong>DAZN</strong> (Spain and others): paid exclusive plus a free sub-licence to RTVE.</li>
+  </ul>
+</section>
+</div>
+
+<!-- ============ 07 ============ -->
+<div class="sheet">
+<section id="s7">
+  <div class="section-header"><span class="section-number">07</span><h2 class="section-title">Sponsors and partners</h2></div>
+
+  <h3 class="subsection-title">Tier 1 &mdash; FIFA Partners (global, multi-event, 4 years)</h3>
+  <p>Estimated investment: <strong>&gt;$500M per brand across the full cycle</strong>.</p>
+  <table>
+    <thead><tr><th>Partner</th><th>Sector</th><th>Origin</th></tr></thead>
+    <tbody>
+      <tr><td><strong>adidas</strong></td><td>Sportswear / Official ball</td><td>Germany</td></tr>
+      <tr><td><strong>Coca-Cola</strong></td><td>Beverages</td><td>USA</td></tr>
+      <tr><td><strong>Hyundai-Kia</strong></td><td>Automotive</td><td>South Korea</td></tr>
+      <tr><td><strong>Visa</strong></td><td>Payments</td><td>USA</td></tr>
+      <tr><td><strong>Aramco</strong></td><td>Energy</td><td>Saudi Arabia</td></tr>
+      <tr><td><strong>Lenovo</strong></td><td>Technology</td><td>China</td></tr>
+      <tr><td><strong>Qatar Airways</strong></td><td>Airlines</td><td>Qatar</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Tier 2 &mdash; World Cup Sponsors (event-specific)</h3>
+  <p>Estimated investment: <strong>$65M &ndash; $95M</strong> per brand.</p>
+  <table>
+    <thead><tr><th>Sponsor</th><th>Sector</th><th>Sponsor</th><th>Sector</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bank of America</strong></td><td>Banking</td><td><strong>McDonald's</strong></td><td>QSR</td></tr>
+      <tr><td><strong>Verizon</strong></td><td>Telecoms</td><td><strong>Mengniu Dairy</strong></td><td>Dairy (China)</td></tr>
+      <tr><td><strong>Frito-Lay (PepsiCo)</strong></td><td>Snacks</td><td><strong>Unilever</strong></td><td>FMCG</td></tr>
+      <tr><td><strong>AB InBev (Budweiser)</strong></td><td>Beer</td><td><strong>Hisense</strong></td><td>Consumer electronics (China)</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Tier 3 &mdash; Regional Supporters</h3>
+  <p>Split by block: North America, LatAm, Europe, MENA, Asia-Pacific, Africa.</p>
+
+  <div class="metric-grid cols-3">
+    <div class="metric-card accent-blue"><div class="metric-card-label">Sponsorship revenue</div><div class="metric-card-value">$2.7B</div><div class="metric-card-desc">Total across the 2023-26 cycle.</div></div>
+    <div class="metric-card accent-positive"><div class="metric-card-label">Tier-1 slots</div><div class="metric-card-value">16/16</div><div class="metric-card-desc">First World Cup 100% sold out, as of March 2026.</div></div>
+    <div class="metric-card accent-warning"><div class="metric-card-label">Crypto fintech</div><div class="metric-card-value">0</div><div class="metric-card-desc">Notable absence: Binance did not renew after Qatar 2022.</div></div>
+  </div>
+  <p>Heavy Asian weighting across the roster: Lenovo, Hisense, Mengniu, Hyundai-Kia, Qatar Airways and Aramco.</p>
+</section>
+</div>
+
+<!-- ============ 08 ============ -->
+<div class="sheet">
+<section id="s8">
+  <div class="section-header"><span class="section-number">08</span><h2 class="section-title">Broadcast and media rights</h2></div>
+  <p class="lead">Total broadcasting revenue: <strong>~$3.92B</strong> &mdash; the single largest revenue line.</p>
+
+  <table>
+    <thead><tr><th style="width:18%">Market</th><th>Rights holders</th></tr></thead>
+    <tbody>
+      <tr><td><strong>United States</strong></td><td><strong>FOX Sports</strong> (English): contract through 2026, combined value with Telemundo of <strong>$1.25B</strong> signed back in 2011 &middot; <strong>Telemundo</strong> (Spanish, NBCUniversal): <strong>92 matches free-to-air</strong> plus full coverage on Peacock &middot; <strong>FOX One</strong>: new streaming app carrying all 104 matches.</td></tr>
+      <tr><td><strong>Canada</strong></td><td>Bell Media (CTV/TSN) + TVA Sports (French).</td></tr>
+      <tr><td><strong>Mexico</strong></td><td>Televisa-Univision + TV Azteca (free national coverage required by law).</td></tr>
+      <tr><td><strong>United Kingdom</strong></td><td>BBC + ITV: shared free-to-air package, no subscription.</td></tr>
+      <tr><td><strong>Spain</strong></td><td><strong>RTVE</strong> (free-to-air): paid <strong>&euro;55M (~$60M)</strong> for the package, covering every Spain match, the opening match, the semi-finals and the final &middot; <strong>Mediapro + DAZN</strong>: paid rights to all 104 matches, DAZN as the exclusive paid streaming outlet. A "public TV for the national team, pay-TV for everything else" model.</td></tr>
+      <tr><td><strong>Latin America</strong></td><td>Televisa, TV Azteca (Mexico) &middot; TyC Sports, TV P&uacute;blica (Argentina) &middot; Globo, SporTV (Brazil) &middot; DirecTV Sports (rest of the region, paid).</td></tr>
+      <tr><td><strong>Australia</strong></td><td>SBS: all 104 matches free-to-air (an unbroken tradition since 1986).</td></tr>
+      <tr><td><strong>Rest of the world</strong></td><td>beIN Sports (MENA + Asia-Pacific) &middot; CCTV (mainland China) &middot; NHK (Japan) &middot; SuperSport (sub-Saharan Africa).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Key trend.</strong> FIFA is fragmenting the packages &mdash; language &times; platform &times; free vs pay &mdash; to maximise yield. This is a break with the historic "one national broadcaster" model.</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 09 ============ -->
+<div class="sheet">
+<section id="s9">
+  <div class="section-header"><span class="section-number">09</span><h2 class="section-title">Revenue streams, broken down</h2></div>
+
+  <h3 class="subsection-title">For FIFA (2023-26 cycle)</h3>
+  <table>
+    <thead><tr><th>Revenue line</th><th class="num">Value (USD)</th><th>Mechanics</th></tr></thead>
+    <tbody>
+      <tr><td>Broadcasting</td><td class="num">$3.92B</td><td>Auctioned by market, fragmented by language/platform</td></tr>
+      <tr><td>Ticketing</td><td class="num">$1.6&ndash;4.0B</td><td>Dynamic pricing + categories 1-4 + Marketplace 30% commission</td></tr>
+      <tr><td>Hospitality</td><td class="num">$1.5&ndash;3.4B</td><td>Corporate packages $3,500&ndash;$73,200 via On Location (Endeavor/IMG)</td></tr>
+      <tr><td>Tier 1 sponsorship</td><td class="num">~$1.8B</td><td>7 partners &times; $250-500M per cycle</td></tr>
+      <tr><td>Tier 2 sponsorship</td><td class="num">~$0.9B</td><td>8 sponsors &times; ~$80-100M</td></tr>
+      <tr><td>Licensing / Merchandising</td><td class="num">~$0.6B</td><td>adidas (apparel), Panini (stickers), EA Sports (video game)</td></tr>
+      <tr><td>FIFA+ (D2C streaming)</td><td class="num">~$0.3B</td><td>Ads + B2B subscriptions</td></tr>
+      <tr><td>Side events (Fan Festivals)</td><td class="num">~$0.2B</td><td>Sponsorship + activations</td></tr>
+      <tr class="total"><td>TOTAL</td><td class="num">~$11B</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">The FIFA Club World Cup 2025 &mdash; the predecessor model</h3>
+  <ul>
+    <li>Total prize money: <strong>$1,000M</strong> ($475M participation + $525M performance).</li>
+    <li>DAZN paid <strong>~$1B</strong> for the global rights to the Club World Cup.</li>
+    <li>12 European clubs took ~$306M (58% of the pool); 20 non-European clubs shared $219M.</li>
+    <li>Additional revenue into the FIFA cycle: <strong>$2B</strong>.</li>
+  </ul>
+</section>
+</div>
+
+<!-- ============ 10 ============ -->
+<div class="sheet">
+<section id="s10">
+  <div class="section-header"><span class="section-number">10</span><h2 class="section-title">Prize money</h2></div>
+  <p class="lead">Record total pool: <strong>$871M</strong> (+98% vs Qatar 2022). Approved by the FIFA Council on 28 April 2026 in Vancouver, raising the original $727M by a further 15%.</p>
+
+  <h3 class="subsection-title">Breakdown by stage (estimated)</h3>
+  <table>
+    <thead><tr><th>Stage / Result</th><th class="num">Prize per team (USD)</th></tr></thead>
+    <tbody>
+      <tr class="highlight"><td><strong>Champion</strong></td><td class="num"><strong>$50M</strong></td></tr>
+      <tr><td>Runner-up (final)</td><td class="num">$35M</td></tr>
+      <tr><td>3rd (losing semi-finalist)</td><td class="num">$28M</td></tr>
+      <tr><td>4th (losing semi-finalist)</td><td class="num">$25M</td></tr>
+      <tr><td>5th&ndash;8th (quarter-final exit)</td><td class="num">$19M</td></tr>
+      <tr><td>9th&ndash;16th (round of 16 exit)</td><td class="num">$13M</td></tr>
+      <tr><td>17th&ndash;32nd (round of 32 exit)</td><td class="num">$9M</td></tr>
+      <tr><td>33rd&ndash;48th (group stage)</td><td class="num">$6.5M</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Guaranteed payments</h3>
+  <ul>
+    <li><strong>$12.5M per qualified team</strong>: $10M qualification money + <strong>$2.5M preparation funding</strong> (new &mdash; for training camps, logistics and staff).</li>
+    <li><strong>$655M</strong> performance pool (vs $440M in Qatar 2022 &rarr; +49%).</li>
+  </ul>
+
+  <h3 class="subsection-title">Comparison with Qatar 2022</h3>
+  <table>
+    <thead><tr><th>Item</th><th class="num">Qatar 2022</th><th class="num">USA-MX-CA 2026</th><th class="num">&Delta;</th></tr></thead>
+    <tbody>
+      <tr><td>Total prize money</td><td class="num">$440M</td><td class="num">$871M</td><td class="num"><strong>+98%</strong></td></tr>
+      <tr><td>Winner</td><td class="num">$42M</td><td class="num">$50M</td><td class="num">+19%</td></tr>
+      <tr><td>Runner-up</td><td class="num">$30M</td><td class="num">$35M</td><td class="num">+17%</td></tr>
+      <tr><td>Minimum per team</td><td class="num">$9M</td><td class="num">$12.5M</td><td class="num">+39%</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+
+<!-- ============ 11 ============ -->
+<div class="sheet">
+<section id="s11">
+  <div class="section-header"><span class="section-number">11</span><h2 class="section-title">Estimated economic impact</h2></div>
+
+  <h3 class="subsection-title">Global</h3>
+  <div class="metric-grid cols-4">
+    <div class="metric-card accent-blue"><div class="metric-card-label">Global GDP</div><div class="metric-card-value">$40.9B</div><div class="metric-card-desc">Upper bound of the FIFA projection.</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">Global employment</div><div class="metric-card-value">824K</div><div class="metric-card-desc">Full-time equivalent jobs.</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">Gross global output</div><div class="metric-card-value">$80.1B</div><div class="metric-card-desc">Total economic output.</div></div>
+    <div class="metric-card accent-blue"><div class="metric-card-label">US tourist spend</div><div class="metric-card-value">$6.4B</div><div class="metric-card-desc">Joint FIFA + WTO study.</div></div>
+  </div>
+
+  <h3 class="subsection-title">United States</h3>
+  <ul>
+    <li><strong>Total output</strong>: $30.5B &middot; <strong>boost to national GDP</strong>: $17.2B.</li>
+    <li><strong>Jobs</strong>: ~185,000 FTE &middot; <strong>visitors</strong>: ~3.5M additional international visitors.</li>
+  </ul>
+  <table>
+    <thead><tr><th>City / Region</th><th class="num">Economic impact</th></tr></thead>
+    <tbody>
+      <tr class="highlight"><td><strong>NY/NJ</strong></td><td class="num">$3.3B + 26,000 jobs + 1.2M visitors</td></tr>
+      <tr><td>Dallas/Fort Worth</td><td class="num">$2.1B (estimated)</td></tr>
+      <tr><td>Atlanta</td><td class="num">$1.8B (estimated)</td></tr>
+      <tr><td>Los Angeles</td><td class="num">$1.6B</td></tr>
+      <tr><td>Houston</td><td class="num">$1.3B</td></tr>
+      <tr><td>Miami</td><td class="num">$1.2B</td></tr>
+      <tr><td>Boston</td><td class="num">$1.0B</td></tr>
+      <tr><td>Seattle</td><td class="num">$0.9B</td></tr>
+    </tbody>
+  </table>
+
+  <div class="kv">
+    <div class="insight">
+      <div class="insight-title">Canada</div>
+      <p>Total impact <strong>CAD 3.8B</strong> ($2.8B USD) &middot; GDP boost CAD 2.0B &middot; wages CAD 1.3B &middot; ~<strong>24,000 jobs</strong>.</p>
+    </div>
+    <div class="insight">
+      <div class="insight-title">Mexico</div>
+      <p>Official estimates (SECTUR + FIFA Mexico): <strong>~$3.0B USD</strong> of impact + 24,000 direct jobs &middot; approximately <strong>5.5M visitors</strong>, domestic and international.</p>
+    </div>
+  </div>
+
+  <div class="insight negative">
+    <div class="insight-title">Critical caveats</div>
+    <ul>
+      <li>Independent economists note that mega-event projections <strong>routinely overstate</strong> real impact by 30-40%.</li>
+      <li>Post-Qatar 2022 studies showed a net impact below the projection.</li>
+      <li><strong>Crowding out</strong>: part of the tourist spend displaces other sectors rather than adding incremental demand.</li>
+      <li><strong>White elephants</strong>: stadiums left underused (see Brazil 2014, South Africa 2010).</li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<!-- ============ 12 ============ -->
+<div class="sheet">
+<section id="s12">
+  <div class="section-header"><span class="section-number">12</span><h2 class="section-title">Investment and infrastructure</h2></div>
+
+  <h3 class="subsection-title">Direct public investment</h3>
+  <ul>
+    <li><strong>No stadiums are being built from scratch</strong> &mdash; all 16 already existed. That cuts the cost dramatically versus Qatar 2022 (~$220B) or Russia 2018 (~$11.6B).</li>
+    <li><strong>Specific renovations</strong>: new roof at BMO Field, Lumen Field expansion, Estadio Akron refurbishment, MetLife Stadium upgrades for football (temporary natural turf over artificial).</li>
+  </ul>
+
+  <h3 class="subsection-title">Private investment</h3>
+  <table>
+    <thead><tr><th>Investor</th><th>Investment</th></tr></thead>
+    <tbody>
+      <tr><td><strong>On Location</strong> (Endeavor/IMG)</td><td>Exclusive hospitality partner &mdash; ~$200M of its own investment in infrastructure and staffing</td></tr>
+      <tr><td><strong>adidas</strong></td><td>Brand activations and Fan Festivals (~$150M estimated)</td></tr>
+      <tr><td><strong>Coca-Cola</strong></td><td>~$120M in activations</td></tr>
+      <tr><td><strong>Visa</strong></td><td>Funds the cashless infrastructure across all 16 stadiums</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Transport investment (USA)</h3>
+  <ul>
+    <li>Airport upgrades: Dallas-Fort Worth, Atlanta (ATL), JFK/Newark, LAX, Miami.</li>
+    <li>Mass transit: expanded service in NY/NJ (NJ Transit), Boston (MBTA), LA (Metro Expo Line).</li>
+    <li>Estimated US infrastructure cost: <strong>$2.5&ndash;3.5B</strong>, public plus private.</li>
+  </ul>
+
+  <h3 class="subsection-title">Security investment</h3>
+  <ul>
+    <li>Joint operation across the FBI, Secret Service, RCMP (Canada) and National Guard (Mexico).</li>
+    <li>Estimated security budget: <strong>$1.0B</strong> spread across the three countries.</li>
+  </ul>
+</section>
+</div>
+
+<!-- ============ 13 ============ -->
+<div class="sheet">
+<section id="s13">
+  <div class="section-header"><span class="section-number">13</span><h2 class="section-title">Hospitality and premium experiences</h2></div>
+  <p class="lead">Official provider: <strong>On Location</strong>, an <strong>Endeavor/IMG</strong> subsidiary.</p>
+
+  <h3 class="subsection-title">Hospitality package tiers</h3>
+  <table>
+    <thead><tr><th>Tier</th><th>Product</th><th class="num">Price (USD/person/match)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bronze</strong></td><td>Cat 1 seat + light catering</td><td class="num">$1,500 &ndash; $3,500</td></tr>
+      <tr><td><strong>Silver</strong></td><td>Premium lounge + open bar</td><td class="num">$3,500 &ndash; $8,000</td></tr>
+      <tr><td><strong>Gold</strong></td><td>Shared suite + chef + VIP parking</td><td class="num">$8,000 &ndash; $18,000</td></tr>
+      <tr><td><strong>Platinum</strong></td><td>Private suite + concierge + meet &amp; greet</td><td class="num">$18,000 &ndash; $40,000</td></tr>
+      <tr class="highlight"><td><strong>Diamond Trophy</strong></td><td>Locker-room access + dinner with former players</td><td class="num">$40,000 &ndash; $73,200</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Multi-match packages (MetLife, final venue)</h3>
+  <ul>
+    <li><strong>All 8 matches at MetLife</strong> (including the Final): $3,500 &ndash; $73,200/person.</li>
+    <li>"Final + Semi-final" package: ~$45,000.</li>
+    <li>"Follow Your Team" (6+ matches with your national team): ~$80,000.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Yield for FIFA.</strong> Hospitality generates <strong>~30% of revenue per seat</strong> from <strong>~15-18% of capacity</strong>. Estimated FIFA margin: <strong>35-45%</strong> on hospitality revenue, after the On Location fee.</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 14 ============ -->
+<div class="sheet">
+<section id="s14">
+  <div class="section-header"><span class="section-number">14</span><h2 class="section-title">Technology and product innovations</h2></div>
+
+  <h3 class="subsection-title">On the pitch</h3>
+  <ul>
+    <li><strong>VAR + semi-automated offside technology</strong> (carried over from Qatar 2022).</li>
+    <li><strong>Connected Ball</strong> (adidas): a 500Hz IMU sensor inside the ball for automatic touch detection.</li>
+    <li><strong>Real-time statistics</strong> available through the FIFA+ app: player positions, pressing, expected goals.</li>
+  </ul>
+
+  <h3 class="subsection-title">For the fan</h3>
+  <ul>
+    <li><strong>FIFA+ app</strong>: behind-the-scenes coverage, alerts, community.</li>
+    <li><strong>Cashless payments</strong>: Visa only in every stadium &mdash; controversial, given the payment exclusivity.</li>
+    <li><strong>Digital identity</strong>: opt-in facial-recognition entry (mainly in the USA).</li>
+    <li><strong>Real-time translation</strong>: AR glasses with subtitles for foreign visitors (NY/NJ pilot).</li>
+  </ul>
+
+  <h3 class="subsection-title">For the broadcaster</h3>
+  <ul>
+    <li><strong>Multi-angle 8K</strong>: 8K production for the final.</li>
+    <li><strong>Player-cam</strong>: dedicated cameras on star players.</li>
+    <li><strong>AI commentary</strong>: synthetic commentary in minority languages.</li>
+  </ul>
+
+  <div class="insight warning">
+    <div class="insight-title">Sustainability</div>
+    <p>FIFA's target is <strong>net-zero carbon on FIFA operations</strong>, excluding fan travel, with the footprint offset through verified credits. The criticism: the 48-team, three-country format <strong>raises the travel footprint by ~40%</strong> versus 2022.</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 15 ============ -->
+<div class="sheet">
+<section id="s15">
+  <div class="section-header"><span class="section-number">15</span><h2 class="section-title">Risks, controversies and criticism</h2></div>
+
+  <h3 class="subsection-title">15.1 Criticism of the pricing model</h3>
+  <ul>
+    <li><strong>Peter Moore</strong> (former Liverpool CEO) called dynamic pricing <strong>"dystopian"</strong> and exclusionary for the traditional fan base.</li>
+    <li><strong>Football Supporters Europe</strong> (FSE) has argued that the effective price is <strong>6&times;</strong> that of Qatar 2022.</li>
+    <li>For comparison: <strong>Super Bowl LX costs less</strong> than a Cat 1 ticket to the 2026 World Cup final.</li>
+  </ul>
+
+  <h3 class="subsection-title">15.2 Geopolitics</h3>
+  <ul>
+    <li><strong>US visa restrictions</strong>: citizens of several countries (Cuba, Iran, Yemen) face entry difficulties &rarr; an impact on fans of qualified teams.</li>
+    <li><strong>Political tension with Canada and Mexico</strong> (Trump 2.0 administration): presidential guarantees of free movement during the World Cup have been offered.</li>
+  </ul>
+
+  <h3 class="subsection-title">15.3 Logistics</h3>
+  <ul>
+    <li><strong>Distances between venues</strong> (Vancouver &harr; Miami = 5,700 km, a 6-hour flight) are a challenge for teams and fans alike.</li>
+    <li>Partly mitigated by the geographic clustering of groups.</li>
+  </ul>
+
+  <h3 class="subsection-title">15.4 Local inflation</h3>
+  <ul>
+    <li>Hotels in NY/NJ and Mexico City have raised rates by <strong>300-500%</strong> for peak weeks.</li>
+    <li>Special Airbnb restrictions in Mexico City and Toronto.</li>
+  </ul>
+
+  <h3 class="subsection-title">15.5 FIFA reputational risk</h3>
+  <ul>
+    <li>Questions over the weight of Saudi sponsors (Aramco) and the award of the 2034 World Cup to Saudi Arabia.</li>
+    <li>Independent audits into <strong>prize-money distribution</strong> and the opacity of the allocation.</li>
+  </ul>
+</section>
+</div>
+
+<!-- ============ 16 ============ -->
+<div class="sheet">
+<section id="s16">
+  <div class="section-header"><span class="section-number">16</span><h2 class="section-title">Operational calendar</h2></div>
+  <table>
+    <thead><tr><th style="width:26%">Date</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr class="highlight"><td>11 Jun 2026</td><td>Opening match &middot; Mexico vs ___ &middot; Estadio Azteca (Mexico City)</td></tr>
+      <tr><td>11&ndash;27 Jun 2026</td><td>Group stage (72 matches)</td></tr>
+      <tr><td>28 Jun &ndash; 3 Jul 2026</td><td>Round of 32 (16 matches)</td></tr>
+      <tr><td>4&ndash;7 Jul 2026</td><td>Round of 16 (8 matches)</td></tr>
+      <tr><td>9&ndash;11 Jul 2026</td><td>Quarter-finals (4 matches)</td></tr>
+      <tr><td>14&ndash;15 Jul 2026</td><td>Semi-finals &middot; AT&amp;T (Dallas) + Mercedes-Benz (Atlanta)</td></tr>
+      <tr><td>18 Jul 2026</td><td>Third-place play-off &middot; Hard Rock Stadium (Miami)</td></tr>
+      <tr class="highlight"><td><strong>19 Jul 2026</strong></td><td><strong>FINAL &middot; MetLife Stadium (NY/NJ)</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+
+<!-- ============ 17 ============ -->
+<div class="sheet">
+<section id="s17">
+  <div class="section-header"><span class="section-number">17</span><h2 class="section-title">Why this World Cup is a unique case study</h2></div>
+  <ol>
+    <li><strong>The largest sporting event in history by revenue</strong> (~$11B across the cycle, ~$8.9B directly attributable).</li>
+    <li><strong>The first World Cup with tier-1 sponsorship 100% sold out</strong>, as of March 2026.</li>
+    <li><strong>The first time dynamic pricing covers the entire inventory</strong>.</li>
+    <li><strong>The first time FIFA runs its own Marketplace</strong> (30% commission on resales).</li>
+    <li><strong>The largest format expansion</strong> (32 &rarr; 48 teams) since 1998.</li>
+    <li><strong>Three hosts</strong> for the first time.</li>
+    <li><strong>Mexico</strong>, the first country to host 3 World Cups (1970, 1986, 2026).</li>
+    <li><strong>A final at MetLife Stadium</strong>, the first World Cup on US soil since 1994 (that final was in Pasadena).</li>
+    <li><strong>Record prize money</strong>: $871M, almost 2&times; Qatar 2022.</li>
+    <li><strong>The "NFL" model</strong>: heavy premium segmentation, with hospitality at 30% of revenue per seat from 15-18% of capacity.</li>
+  </ol>
+
+  <div class="callout">
+    <p><strong>The GEORadar angle.</strong> An event this dense in numbers, narratives and competing interests is also a stress test for generative AI: what ChatGPT, Gemini and the other engines tell a fan about where to travel, who will win and what it will cost. That is what the GEORadar audit of the tournament measures &mdash; across 16 fan profiles and 4 languages.</p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 18 ============ -->
+<div class="sheet">
+<section id="s18">
+  <div class="section-header"><span class="section-number">18</span><h2 class="section-title">Sources consulted</h2></div>
+  <div class="sources">
+    <h4>FIFA official</h4>
+    <ul>
+      <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026">FIFA &mdash; Canada Mexico USA 2026 (official site)</a></li>
+      <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/host-cities">FIFA &mdash; Host Cities</a></li>
+      <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/stadium-information-details">FIFA &mdash; Stadium information</a></li>
+      <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/world-cup-2026-who-has-qualified">FIFA &mdash; Qualified teams</a></li>
+      <li><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-draw-results">FIFA &mdash; Final Draw results</a></li>
+      <li><a href="https://digitalhub.fifa.com/m/152f754a8e1b3727/original/FIFA-World-Cup-2026-Socioeconomic-impact-analysis.pdf">FIFA Socioeconomic Impact Analysis (PDF, Mar 2025)</a></li>
+    </ul>
+
+    <h4>Wikipedia</h4>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup">2026 FIFA World Cup</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_broadcasting_rights">2026 FIFA World Cup broadcasting rights</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw">2026 FIFA World Cup draw</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification">2026 FIFA World Cup qualification</a></li>
+    </ul>
+
+    <h4>Business model</h4>
+    <ul>
+      <li><a href="https://www.cnbc.com/2026/05/04/fifa-world-cup-team-payouts-ticket-prices.html">CNBC &mdash; World Cup prize pool nears $900M</a></li>
+      <li><a href="https://www.aljazeera.com/sports/2026/4/27/fifa-world-cup-2026-dynamic-pricing-match-tickets-peter-moore">Al Jazeera &mdash; Dynamic pricing 'dystopian' (Peter Moore)</a></li>
+      <li><a href="https://www.espn.com/soccer/story/_/id/46147005/2026-world-cup-tickets-fifa-dynamic-pricing-prices">ESPN &mdash; FIFA confirms use of dynamic pricing</a></li>
+      <li><a href="https://europeanbusinessmagazine.com/business-fifa-world-cup-2026-dynamic-pricing-business/">European Business Magazine &mdash; The $11,000 World Cup</a></li>
+      <li><a href="https://footballbenchmark.com/w/fifa-club-world-cup-2025-breaking-down-the-billion-dollar-prize-money-and-its-impact-on-clubs">Football Benchmark &mdash; Club World Cup 2025 prize money</a></li>
+      <li><a href="https://www.insideworldfootball.com/2026/03/23/fifa-reports-2-6bn-revenue-2025-projects-14bn-2027-30-cycle/">Inside World Football &mdash; FIFA reports $2.6bn 2025</a></li>
+      <li><a href="https://theconversation.com/soaring-ticket-prices-could-help-fifa-pull-in-15b-this-world-cup-cycle-where-does-the-money-come-from-where-does-it-go-277128">The Conversation &mdash; $15B World Cup cycle</a></li>
+    </ul>
+
+    <h4>Economic impact</h4>
+    <ul>
+      <li><a href="https://www.weforum.org/stories/2026/04/fifa-world-cup-sports-economy-growth/">WEF &mdash; World Cup sports economy growth</a></li>
+      <li><a href="https://nynjfwc26.com/press-releases/3-billion-in-economic-impact/">NY/NJ Host Committee &mdash; $3.3B economic impact</a></li>
+      <li><a href="https://partnersrealestate.com/research/market-edge-by-partners-fifa-world-cup-2026/">Partners Real Estate &mdash; Economic Impact ATL/DFW/HOU/SAT</a></li>
+    </ul>
+
+    <h4>Broadcast rights</h4>
+    <ul>
+      <li><a href="https://www.sportspro.com/news/2026-fifa-world-cup-spanish-rtve-mediapro-rights-deal-march-2025/">SportsPro &mdash; RTVE &amp; Mediapro Spain deal</a></li>
+      <li><a href="https://www.sportcal.com/media/dazn-to-show-world-cup-in-spain-through-mediapro-distribution-deal/">Sportcal &mdash; DAZN Spain through Mediapro</a></li>
+    </ul>
+  </div>
+
+  <p class="doc-note" style="margin-top:18px;">Original file compiled by Claude Code on 2026-05-26; English edition 2026-09-29. Figures last verified May 2026. Any moving data point (dynamic prices, play-offs) may have changed since.</p>
+
+  <div class="brandbar">
+    <svg role="img" aria-label="GEORadar" fill="currentColor" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 759.46 195.64">
+<path d="M94.74,62.86c3.23,5.39,4.85,11.59,4.85,18.58s-1.79,13.63-5.35,19.49c-3.57,5.86-8.66,10.5-15.26,13.94s-14.54,5.15-23.83,5.15-17.58-1.88-24.44-5.65c-1.75,1.35-2.63,3.02-2.63,5.04s.74,3.74,2.23,5.15,4.34,2.56,8.59,3.44,10.47,1.51,18.68,1.92c5.92.27,11.68.88,17.28,1.81,5.58.95,10.61,2.46,15.05,4.55,4.44,2.09,7.99,5.02,10.61,8.78s3.94,8.69,3.94,14.75c0,5.53-1.44,10.2-4.34,14.03-2.9,3.83-6.8,6.9-11.71,9.2-4.92,2.3-10.34,3.97-16.26,5.04-5.92,1.07-11.92,1.62-17.98,1.62-8.22,0-15.79-.88-22.72-2.63-6.94-1.75-12.52-4.44-16.77-8.08-4.25-3.64-6.36-8.29-6.36-13.94,0-4.44,1.18-8.25,3.53-11.41,2.35-3.16,5.22-5.69,8.59-7.57-6.87-4.3-10.31-10.43-10.31-18.38,0-4.58,1.18-8.48,3.53-11.71,2.35-3.23,5.35-5.58,8.99-7.06-7.94-7.27-11.92-16.42-11.92-27.48,0-7.13,1.79-13.63,5.35-19.49s8.69-10.54,15.35-14.03c6.67-3.5,14.57-5.25,23.74-5.25,5.66,0,10.8.7,15.45,2.12s8.78,3.33,12.43,5.76c4.4,3.17,8.52,6.69,11.71,12.33l-.03-.04ZM54.34,175.78c9.96,0,17.61-.95,22.93-2.83,5.32-1.88,7.99-4.38,7.99-7.48,0-4.32-2.83-7.17-8.48-8.59-5.66-1.42-13.61-2.39-23.83-2.93-7.27-.4-13.54-1.21-18.79-2.42-3.77,2.56-5.66,6.13-5.66,10.71,0,2.02.74,4.07,2.23,6.16,1.48,2.09,4.11,3.83,7.88,5.25,3.77,1.42,9.02,2.12,15.75,2.12h0ZM55.15,54.78c-5.11,0-9.13,1.42-12.01,4.25-2.9,2.83-4.92,6.29-6.06,10.4-1.14,4.11-1.72,8.11-1.72,12.01s.58,7.92,1.72,12.01c1.14,4.11,3.16,7.57,6.06,10.4,2.9,2.83,6.9,4.25,12.01,4.25s8.99-1.42,11.61-4.25,4.41-6.29,5.35-10.4,1.42-8.11,1.42-12.01-.47-7.9-1.42-12.01-2.72-7.57-5.35-10.4c-2.63-2.83-6.5-4.25-11.61-4.25Z"/>
+<path d="M234.76,45.06c5.11,2.25,9.4,5.33,12.87,9.26,3.46,3.93,6.01,8.31,7.63,13.14,1.62,4.83,2.37,9.77,2.25,14.79-.12,5.03-1.19,9.83-3.2,14.41-2.92,6.64-7.1,11.89-12.54,15.76-5.45,3.87-11.38,6.18-17.82,6.94-6.43.76-12.66-.18-18.67-2.82-5.11-2.25-9.39-5.3-12.83-9.17-3.44-3.86-6.01-8.18-7.72-12.94s-2.48-9.7-2.32-14.82c.16-5.12,1.29-10.05,3.37-14.81,2.88-6.55,6.98-11.75,12.32-15.62,5.33-3.86,11.23-6.2,17.68-7s12.77.15,18.96,2.87h.02ZM214.25,107.48c1.7.75,3.78,1.13,6.24,1.14s4.96-.76,7.52-2.32c2.55-1.55,4.7-4.3,6.43-8.25,1.38-3.14,2.3-6.88,2.76-11.23.46-4.34.42-8.75-.13-13.22s-1.74-8.47-3.56-12c-1.82-3.53-4.39-6.02-7.71-7.48-3.68-1.62-7.46-1.65-11.36-.09-3.89,1.56-6.88,4.71-8.97,9.46-1.34,3.05-2.25,6.77-2.73,11.16-.48,4.39-.45,8.82.1,13.29s1.76,8.48,3.63,12.03c1.87,3.55,4.46,6.05,7.78,7.51Z"/>
+<path d="M341.19,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5s-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04,1.76-2.69,2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M459.31,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM438.74,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28,2.01-1.52,3.45-3.06,4.34-4.63.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M546.91,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.29c-.29,0-.44-.15-.44-.44.2-2.25.42-4.46.66-6.61s.56-4.31.96-6.47c-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98-2.11-4.95-3.16-11-3.16-18.15,0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,7.44,0,13.76,2.3,18.96,6.91v-9.41c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.59.19-1,.59-1.25.39-.24.93-.46,1.62-.66,7.74-2.55,13.79-5.09,18.15-7.64,4.36-2.55,7.52-4.56,9.48-6.03.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v90.09h0ZM526.33,72.21c0-4.6-1.5-8.52-4.48-11.76-2.99-3.23-6.93-4.85-11.83-4.85s-8.38,1.03-11.02,3.09-4.48,4.8-5.51,8.23-1.54,7.2-1.54,11.32c0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,2.65,0,4.95-.66,6.91-1.98s3.55-2.96,4.78-4.92c1.22-1.96,2.03-3.82,2.42-5.58v-24.12Z"/>
+<path d="M634.5,92.64c0,3.53.54,6.69,1.62,9.48,1.08,2.79,3.43,4.43,7.05,4.92,1.18.1,1.76.74,1.76,1.91v4.85c0,1.37-.73,2.06-2.2,2.06-4.8,0-8.8.27-11.98.81-3.19.54-5.93,1.23-8.23,2.06-2.3.83-4.58,1.74-6.83,2.72-.39.19-.73.29-1.03.29h-.44c-.2,0-.29-.2-.29-.59s.1-1.35.29-2.87c.2-1.52.42-3.23.66-5.14.24-1.91.46-3.55.66-4.92-.49,1.27-1.54,2.99-3.16,5.14-1.62,2.16-3.97,4.09-7.05,5.81-3.09,1.71-7.13,2.57-12.13,2.57-3.33,0-6.88-.69-10.66-2.06-3.77-1.37-7.33-3.58-10.66-6.61-3.33-3.04-6.05-7.03-8.16-11.98s-3.16-11-3.16-18.15c0-9.11,1.64-16.48,4.92-22.12,3.28-5.63,7.54-9.77,12.79-12.42,5.24-2.65,10.8-3.97,16.68-3.97,4.8,0,9.21.73,13.23,2.2,4.02,1.47,7.54,3.58,10.58,6.32,2.55-1.08,4.73-2.08,6.54-3.01s3.36-1.89,4.63-2.87c.49-.39,1-.78,1.54-1.18.54-.39,1.15-.78,1.84-1.18.29-.2.54-.29.73-.29h.15c.2,0,.29.1.29.29v47.91l.02.02ZM613.92,69.57c-.29-1.96-1.01-4.14-2.13-6.54-1.13-2.4-2.82-4.46-5.07-6.17s-5.29-2.57-9.11-2.57c-4.7,0-8.38,1.15-11.02,3.45-2.65,2.3-4.48,5.27-5.51,8.89-1.03,3.63-1.54,7.5-1.54,11.61,0,9.41,1.89,16.85,5.66,22.34,3.77,5.49,8.65,8.23,14.62,8.23,3.53,0,6.29-.76,8.3-2.28s3.45-3.06,4.34-4.63c.88-1.57,1.37-2.5,1.47-2.79v-29.54h0Z"/>
+<path d="M682.85,61.78c2.65-5.68,6.32-9.99,11.02-12.93,4.7-2.94,9.65-4.41,14.84-4.41,4.6,0,8.52,1.27,11.76,3.82,3.23,2.55,4.85,6.32,4.85,11.32,0,2.16-.2,4.07-.59,5.73-.39,1.67-1.47,2.89-3.23,3.67l-13.82,5.58c-.59.2-1.03.29-1.32.29-.88,0-1.32-.44-1.32-1.32,0-.29.1-.73.29-1.32.59-1.37.96-2.69,1.1-3.97.15-1.27.22-2.4.22-3.38,0-2.65-.66-4.58-1.98-5.8s-2.96-1.84-4.92-1.84c-2.25,0-4.36.69-6.32,2.06-1.96,1.37-3.67,3.04-5.14,5-1.47,1.96-2.55,3.87-3.23,5.73v27.04c0,3.92.88,7.23,2.65,9.92,1.76,2.7,4.46,4.04,8.08,4.04h.29c1.47,0,2.2.73,2.2,2.2v4.41c0,1.47-.73,2.2-2.2,2.2h-42.77c-1.47,0-2.2-.73-2.2-2.2v-4.41c0-1.47.73-2.2,2.2-2.2h.29c3.62,0,6.32-1.35,8.08-4.04s2.65-6,2.65-9.92v-18.52c0-2.65-.17-5.19-.51-7.64s-1.1-4.53-2.28-6.25c-1.18-1.71-3.14-2.72-5.88-3.01-1.18-.1-1.76-.73-1.76-1.91v-5c0-.98.73-1.62,2.2-1.91,6.96-1.08,13.05-2.79,18.3-5.14,5.24-2.35,8.79-4.21,10.66-5.59.29-.19.54-.29.73-.29h.29c.19,0,.29.1.29.29,0,.1-.12.83-.37,2.2s-.54,3.11-.88,5.22-.73,4.26-1.18,6.47-.81,4.14-1.1,5.81h.01Z"/>
+<path d="M177.8,68.03c-1.55-4.86-4.02-9.28-7.42-13.26-3.4-3.99-7.64-7.14-12.72-9.47-6.15-2.82-12.45-3.88-18.92-3.18s-12.4,2.94-17.79,6.72c-5.4,3.78-9.59,8.92-12.57,15.42-2.17,4.72-3.37,9.64-3.61,14.75-.25,5.12.45,10.07,2.08,14.86,1.63,4.79,4.13,9.15,7.51,13.06,3.38,3.92,7.6,7.04,12.68,9.37,5.97,2.74,12.17,3.78,18.62,3.12,6.44-.65,12.42-2.87,17.93-6.65,2.95-2.03,5.55-4.46,7.78-7.29.49-.62.14-1.55-.64-1.69l-8.06-1.42c-.57-.1-1.14.11-1.53.53-2.41,2.68-9.98,5.72-18.78,5.72-2.46,0-4.53-.46-6.22-1.24-3.3-1.51-5.85-4.06-7.66-7.63-1.68-3.33-2.78-7.04-3.31-11.14l46.03-5.49,7.15-.8c.87-.11,1.48-1.05,1.46-1.93-.07-4.17-.74-8.29-2.03-12.34l.02-.02ZM125.17,74.37c.55-4.38,1.53-8.09,2.91-11.11,2.16-4.72,5.21-7.82,9.12-9.32,3.92-1.49,7.7-1.4,11.35.28,3.29,1.51,5.82,4.05,7.59,7.6,1.67,3.37,2.76,7.16,3.28,11.36l-34.68,6.78c.05-1.87.19-3.74.42-5.59h.01Z"/>
+<circle cx="99.02" cy="39.95" r="11.96"/>
+<rect fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="8" x="249.76" y="114.04" width="45.23" height="5.24" rx="2.62" ry="2.62"/>
+</svg>
+    <div class="brandbar-text">
+      <strong>GEORadar by 498 Advance</strong><br>
+      <a href="https://498advance.com">498advance.com</a>
+    </div>
+  </div>
+</section>
+</div>
+
+</div><!-- /report -->
+</body>
+</html>
